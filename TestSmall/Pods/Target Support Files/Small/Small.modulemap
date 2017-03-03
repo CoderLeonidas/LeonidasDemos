@@ -1,0 +1,6 @@
+framework module Small {
+  umbrella header "Small-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,24 @@
+PODS:
+  - Small (0.0.1):
+    - ZipArchive
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - Small (from `https://github.com/wequick/Small.git`)
+
+EXTERNAL SOURCES:
+  Small:
+    :git: https://github.com/wequick/Small.git
+
+CHECKOUT OPTIONS:
+  Small:
+    :commit: 7a0e2a658210746b87a52650de359b5fba32505e
+    :git: https://github.com/wequick/Small.git
+
+SPEC CHECKSUMS:
+  Small: 9685895e2b0d5b067016152124b550344cb58cff
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+PODFILE CHECKSUM: 3d9f4e80a17933a61c8dae83c52cbda232c1a2d5
+
+COCOAPODS: 1.2.0
