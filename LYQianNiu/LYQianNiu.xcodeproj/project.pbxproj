@@ -9,12 +9,26 @@
 /* Begin PBXBuildFile section */
 		2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C71B1E6D56FB001278CA /* AppDelegate.m */; };
 		2632C71F1E6D56FB001278CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C71E1E6D56FB001278CA /* main.m */; };
-		2632C7221E6D56FB001278CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7211E6D56FB001278CA /* ViewController.m */; };
 		2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */; };
 		2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7261E6D56FB001278CA /* Assets.xcassets */; };
-		2632C72A1E6D56FB001278CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7281E6D56FB001278CA /* Main.storyboard */; };
 		2632C7351E6D56FB001278CA /* LYQianNiuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7341E6D56FB001278CA /* LYQianNiuTests.m */; };
 		2632C7401E6D56FB001278CA /* LYQianNiuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C73F1E6D56FB001278CA /* LYQianNiuUITests.m */; };
+		2632C7671E6D5FA2001278CA /* LYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7651E6D5FA2001278CA /* LYLoginViewController.m */; };
+		2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */; };
+		2632C7871E6D669C001278CA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7861E6D669C001278CA /* MainMenu.xib */; };
+		2632C79D1E6D8FC4001278CA /* LYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C79C1E6D8FC4001278CA /* LYView.m */; };
+		2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C79F1E6D97DE001278CA /* LoginLeft.png */; };
+		2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */; };
+		2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */; };
+		2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */; };
+		2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */; };
+		2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */; };
+		2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */; };
+		2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */; };
+		2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */; };
+		2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */; };
+		2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */; };
+		2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B51E6DA218001278CA /* login_photo_self.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +53,8 @@
 		2632C71A1E6D56FB001278CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2632C71B1E6D56FB001278CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2632C71E1E6D56FB001278CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2632C7201E6D56FB001278CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2632C7211E6D56FB001278CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2632C7241E6D56FB001278CA /* LYQianNiu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LYQianNiu.xcdatamodel; sourceTree = "<group>"; };
 		2632C7261E6D56FB001278CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2632C7291E6D56FB001278CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2632C72B1E6D56FB001278CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2632C7301E6D56FB001278CA /* LYQianNiuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYQianNiuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2632C7341E6D56FB001278CA /* LYQianNiuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYQianNiuTests.m; sourceTree = "<group>"; };
@@ -51,6 +62,24 @@
 		2632C73B1E6D56FB001278CA /* LYQianNiuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYQianNiuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2632C73F1E6D56FB001278CA /* LYQianNiuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYQianNiuUITests.m; sourceTree = "<group>"; };
 		2632C7411E6D56FB001278CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2632C7641E6D5FA2001278CA /* LYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoginViewController.h; sourceTree = "<group>"; };
+		2632C7651E6D5FA2001278CA /* LYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLoginViewController.m; sourceTree = "<group>"; };
+		2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLoginViewController.xib; sourceTree = "<group>"; };
+		2632C7861E6D669C001278CA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		2632C79B1E6D8FC4001278CA /* LYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYView.h; sourceTree = "<group>"; };
+		2632C79C1E6D8FC4001278CA /* LYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYView.m; sourceTree = "<group>"; };
+		2632C79F1E6D97DE001278CA /* LoginLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LoginLeft.png; path = ../../../../../Desktop/LoginLeft.png; sourceTree = "<group>"; };
+		2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_32x32@2x.png"; sourceTree = "<group>"; };
+		2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_32x32@1x.png"; sourceTree = "<group>"; };
+		2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_entry_pre.png; sourceTree = "<group>"; };
+		2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_Arrow_Down.png; sourceTree = "<group>"; };
+		2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_Arrow_Up.png; sourceTree = "<group>"; };
+		2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_key_nor2.png; sourceTree = "<group>"; };
+		2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_ali_nor_small.png; sourceTree = "<group>"; };
+		2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_ali_nor.png; sourceTree = "<group>"; };
+		2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor_small.png; sourceTree = "<group>"; };
+		2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor.png; sourceTree = "<group>"; };
+		2632C7B51E6DA218001278CA /* login_photo_self.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_photo_self.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +130,9 @@
 		2632C7191E6D56FB001278CA /* LYQianNiu */ = {
 			isa = PBXGroup;
 			children = (
-				2632C71A1E6D56FB001278CA /* AppDelegate.h */,
-				2632C71B1E6D56FB001278CA /* AppDelegate.m */,
-				2632C7201E6D56FB001278CA /* ViewController.h */,
-				2632C7211E6D56FB001278CA /* ViewController.m */,
-				2632C7261E6D56FB001278CA /* Assets.xcassets */,
-				2632C7281E6D56FB001278CA /* Main.storyboard */,
-				2632C72B1E6D56FB001278CA /* Info.plist */,
-				2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */,
+				2632C79A1E6D8FB0001278CA /* SubClasses */,
+				2632C7521E6D5892001278CA /* Login */,
+				2632C7501E6D584D001278CA /* Other */,
 				2632C71D1E6D56FB001278CA /* Supporting Files */,
 			);
 			path = LYQianNiu;
@@ -117,7 +141,11 @@
 		2632C71D1E6D56FB001278CA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */,
+				2632C7861E6D669C001278CA /* MainMenu.xib */,
+				2632C72B1E6D56FB001278CA /* Info.plist */,
 				2632C71E1E6D56FB001278CA /* main.m */,
+				2632C79E1E6D97B3001278CA /* Pics */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +166,62 @@
 				2632C7411E6D56FB001278CA /* Info.plist */,
 			);
 			path = LYQianNiuUITests;
+			sourceTree = "<group>";
+		};
+		2632C7501E6D584D001278CA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7261E6D56FB001278CA /* Assets.xcassets */,
+				2632C71A1E6D56FB001278CA /* AppDelegate.h */,
+				2632C71B1E6D56FB001278CA /* AppDelegate.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		2632C7521E6D5892001278CA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2632C75E1E6D5F4D001278CA /* ViewController */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2632C75E1E6D5F4D001278CA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7641E6D5FA2001278CA /* LYLoginViewController.h */,
+				2632C7651E6D5FA2001278CA /* LYLoginViewController.m */,
+				2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2632C79A1E6D8FB0001278CA /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2632C79B1E6D8FC4001278CA /* LYView.h */,
+				2632C79C1E6D8FC4001278CA /* LYView.m */,
+			);
+			name = SubClasses;
+			sourceTree = "<group>";
+		};
+		2632C79E1E6D97B3001278CA /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7B51E6DA218001278CA /* login_photo_self.png */,
+				2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */,
+				2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */,
+				2632C79F1E6D97DE001278CA /* LoginLeft.png */,
+				2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */,
+				2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */,
+				2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */,
+				2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */,
+				2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */,
+				2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */,
+				2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */,
+				2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */,
+			);
+			name = Pics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +333,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
+				2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */,
+				2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */,
+				2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */,
+				2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */,
+				2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */,
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
-				2632C72A1E6D56FB001278CA /* Main.storyboard in Resources */,
+				2632C7871E6D669C001278CA /* MainMenu.xib in Resources */,
+				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
+				2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */,
+				2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */,
+				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
+				2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */,
+				2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */,
+				2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +372,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2632C7671E6D5FA2001278CA /* LYLoginViewController.m in Sources */,
 				2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */,
-				2632C7221E6D56FB001278CA /* ViewController.m in Sources */,
 				2632C71F1E6D56FB001278CA /* main.m in Sources */,
 				2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */,
+				2632C79D1E6D8FC4001278CA /* LYView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,17 +410,6 @@
 			targetProxy = 2632C73C1E6D56FB001278CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2632C7281E6D56FB001278CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2632C7291E6D56FB001278CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2632C7421E6D56FB001278CA /* Debug */ = {

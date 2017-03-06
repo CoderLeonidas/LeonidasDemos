@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LYLoginViewController.h"
 @interface AppDelegate ()
+@property (weak) IBOutlet NSWindow *window;
+@property (nonatomic, strong) LYLoginViewController *loginVC;
 
 - (IBAction)saveAction:(id)sender;
 
@@ -17,14 +19,32 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    self.window.contentViewController = self.loginVC;
+    [self setupTitleBar];
+    [self.window.windowController showWindow:nil];
 }
-
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
 }
 
+#pragma mark - LazyLoading
+
+- (LYLoginViewController *)loginVC {
+    if (!_loginVC) {
+        _loginVC = [[LYLoginViewController alloc] initWithNibName:@"LYLoginViewController" bundle:nil];
+        _loginVC.view.frame = self.window.contentView.bounds;
+    }
+    return _loginVC;
+}
+
+#pragma mark - TitleBar 
+
+- (void)setupTitleBar {
+
+    self.window.titlebarAppearsTransparent = YES;
+    [self.window standardWindowButton:NSWindowZoomButton].hidden = YES;
+    [self.window standardWindowButton:NSWindowMiniaturizeButton].hidden = YES;
+}
 
 #pragma mark - Core Data stack
 

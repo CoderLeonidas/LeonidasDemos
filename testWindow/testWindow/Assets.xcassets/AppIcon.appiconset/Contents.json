@@ -11,15 +11,13 @@
       "scale" : "2x"
     },
     {
-      "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "appIcon_32x32@1x.png",
+      "size" : "32x32",
       "scale" : "1x"
     },
     {
-      "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "appIcon_32x32@2x.png",
+      "size" : "32x32",
       "scale" : "2x"
     },
     {
