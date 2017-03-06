@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C71B1E6D56FB001278CA /* AppDelegate.m */; };
+		2632C71F1E6D56FB001278CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C71E1E6D56FB001278CA /* main.m */; };
+		2632C7221E6D56FB001278CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7211E6D56FB001278CA /* ViewController.m */; };
+		2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */; };
+		2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7261E6D56FB001278CA /* Assets.xcassets */; };
+		2632C72A1E6D56FB001278CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7281E6D56FB001278CA /* Main.storyboard */; };
+		2632C7351E6D56FB001278CA /* LYQianNiuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7341E6D56FB001278CA /* LYQianNiuTests.m */; };
+		2632C7401E6D56FB001278CA /* LYQianNiuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C73F1E6D56FB001278CA /* LYQianNiuUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2632C7311E6D56FB001278CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2632C70F1E6D56FB001278CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2632C7161E6D56FB001278CA;
+			remoteInfo = LYQianNiu;
+		};
+		2632C73C1E6D56FB001278CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2632C70F1E6D56FB001278CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2632C7161E6D56FB001278CA;
+			remoteInfo = LYQianNiu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2632C7171E6D56FB001278CA /* LYQianNiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYQianNiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2632C71A1E6D56FB001278CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2632C71B1E6D56FB001278CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2632C71E1E6D56FB001278CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2632C7201E6D56FB001278CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2632C7211E6D56FB001278CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2632C7241E6D56FB001278CA /* LYQianNiu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LYQianNiu.xcdatamodel; sourceTree = "<group>"; };
+		2632C7261E6D56FB001278CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2632C7291E6D56FB001278CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2632C72B1E6D56FB001278CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2632C7301E6D56FB001278CA /* LYQianNiuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYQianNiuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2632C7341E6D56FB001278CA /* LYQianNiuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYQianNiuTests.m; sourceTree = "<group>"; };
+		2632C7361E6D56FB001278CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2632C73B1E6D56FB001278CA /* LYQianNiuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYQianNiuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2632C73F1E6D56FB001278CA /* LYQianNiuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYQianNiuUITests.m; sourceTree = "<group>"; };
+		2632C7411E6D56FB001278CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2632C7141E6D56FB001278CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C72D1E6D56FB001278CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C7381E6D56FB001278CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2632C70E1E6D56FB001278CA = {
+			isa = PBXGroup;
+			children = (
+				2632C7191E6D56FB001278CA /* LYQianNiu */,
+				2632C7331E6D56FB001278CA /* LYQianNiuTests */,
+				2632C73E1E6D56FB001278CA /* LYQianNiuUITests */,
+				2632C7181E6D56FB001278CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2632C7181E6D56FB001278CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7171E6D56FB001278CA /* LYQianNiu.app */,
+				2632C7301E6D56FB001278CA /* LYQianNiuTests.xctest */,
+				2632C73B1E6D56FB001278CA /* LYQianNiuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2632C7191E6D56FB001278CA /* LYQianNiu */ = {
+			isa = PBXGroup;
+			children = (
+				2632C71A1E6D56FB001278CA /* AppDelegate.h */,
+				2632C71B1E6D56FB001278CA /* AppDelegate.m */,
+				2632C7201E6D56FB001278CA /* ViewController.h */,
+				2632C7211E6D56FB001278CA /* ViewController.m */,
+				2632C7261E6D56FB001278CA /* Assets.xcassets */,
+				2632C7281E6D56FB001278CA /* Main.storyboard */,
+				2632C72B1E6D56FB001278CA /* Info.plist */,
+				2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */,
+				2632C71D1E6D56FB001278CA /* Supporting Files */,
+			);
+			path = LYQianNiu;
+			sourceTree = "<group>";
+		};
+		2632C71D1E6D56FB001278CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2632C71E1E6D56FB001278CA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2632C7331E6D56FB001278CA /* LYQianNiuTests */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7341E6D56FB001278CA /* LYQianNiuTests.m */,
+				2632C7361E6D56FB001278CA /* Info.plist */,
+			);
+			path = LYQianNiuTests;
+			sourceTree = "<group>";
+		};
+		2632C73E1E6D56FB001278CA /* LYQianNiuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2632C73F1E6D56FB001278CA /* LYQianNiuUITests.m */,
+				2632C7411E6D56FB001278CA /* Info.plist */,
+			);
+			path = LYQianNiuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2632C7161E6D56FB001278CA /* LYQianNiu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2632C7441E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiu" */;
+			buildPhases = (
+				2632C7131E6D56FB001278CA /* Sources */,
+				2632C7141E6D56FB001278CA /* Frameworks */,
+				2632C7151E6D56FB001278CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYQianNiu;
+			productName = LYQianNiu;
+			productReference = 2632C7171E6D56FB001278CA /* LYQianNiu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2632C72F1E6D56FB001278CA /* LYQianNiuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2632C7471E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuTests" */;
+			buildPhases = (
+				2632C72C1E6D56FB001278CA /* Sources */,
+				2632C72D1E6D56FB001278CA /* Frameworks */,
+				2632C72E1E6D56FB001278CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2632C7321E6D56FB001278CA /* PBXTargetDependency */,
+			);
+			name = LYQianNiuTests;
+			productName = LYQianNiuTests;
+			productReference = 2632C7301E6D56FB001278CA /* LYQianNiuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2632C73A1E6D56FB001278CA /* LYQianNiuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2632C74A1E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuUITests" */;
+			buildPhases = (
+				2632C7371E6D56FB001278CA /* Sources */,
+				2632C7381E6D56FB001278CA /* Frameworks */,
+				2632C7391E6D56FB001278CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2632C73D1E6D56FB001278CA /* PBXTargetDependency */,
+			);
+			name = LYQianNiuUITests;
+			productName = LYQianNiuUITests;
+			productReference = 2632C73B1E6D56FB001278CA /* LYQianNiuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2632C70F1E6D56FB001278CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Leon;
+				TargetAttributes = {
+					2632C7161E6D56FB001278CA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H2H4C4T387;
+						ProvisioningStyle = Automatic;
+					};
+					2632C72F1E6D56FB001278CA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H2H4C4T387;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2632C7161E6D56FB001278CA;
+					};
+					2632C73A1E6D56FB001278CA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H2H4C4T387;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2632C7161E6D56FB001278CA;
+					};
+				};
+			};
+			buildConfigurationList = 2632C7121E6D56FB001278CA /* Build configuration list for PBXProject "LYQianNiu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2632C70E1E6D56FB001278CA;
+			productRefGroup = 2632C7181E6D56FB001278CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2632C7161E6D56FB001278CA /* LYQianNiu */,
+				2632C72F1E6D56FB001278CA /* LYQianNiuTests */,
+				2632C73A1E6D56FB001278CA /* LYQianNiuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2632C7151E6D56FB001278CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
+				2632C72A1E6D56FB001278CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C72E1E6D56FB001278CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C7391E6D56FB001278CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2632C7131E6D56FB001278CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */,
+				2632C7221E6D56FB001278CA /* ViewController.m in Sources */,
+				2632C71F1E6D56FB001278CA /* main.m in Sources */,
+				2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C72C1E6D56FB001278CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2632C7351E6D56FB001278CA /* LYQianNiuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2632C7371E6D56FB001278CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2632C7401E6D56FB001278CA /* LYQianNiuUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2632C7321E6D56FB001278CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2632C7161E6D56FB001278CA /* LYQianNiu */;
+			targetProxy = 2632C7311E6D56FB001278CA /* PBXContainerItemProxy */;
+		};
+		2632C73D1E6D56FB001278CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2632C7161E6D56FB001278CA /* LYQianNiu */;
+			targetProxy = 2632C73C1E6D56FB001278CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2632C7281E6D56FB001278CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2632C7291E6D56FB001278CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2632C7421E6D56FB001278CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2632C7431E6D56FB001278CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2632C7451E6D56FB001278CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2632C7461E6D56FB001278CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2632C7481E6D56FB001278CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYQianNiu.app/Contents/MacOS/LYQianNiu";
+			};
+			name = Debug;
+		};
+		2632C7491E6D56FB001278CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYQianNiu.app/Contents/MacOS/LYQianNiu";
+			};
+			name = Release;
+		};
+		2632C74B1E6D56FB001278CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYQianNiu;
+			};
+			name = Debug;
+		};
+		2632C74C1E6D56FB001278CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = H2H4C4T387;
+				INFOPLIST_FILE = LYQianNiuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYQianNiu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2632C7121E6D56FB001278CA /* Build configuration list for PBXProject "LYQianNiu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2632C7421E6D56FB001278CA /* Debug */,
+				2632C7431E6D56FB001278CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2632C7441E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2632C7451E6D56FB001278CA /* Debug */,
+				2632C7461E6D56FB001278CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2632C7471E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2632C7481E6D56FB001278CA /* Debug */,
+				2632C7491E6D56FB001278CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2632C74A1E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2632C74B1E6D56FB001278CA /* Debug */,
+				2632C74C1E6D56FB001278CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2632C7231E6D56FB001278CA /* LYQianNiu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2632C7241E6D56FB001278CA /* LYQianNiu.xcdatamodel */,
+			);
+			currentVersion = 2632C7241E6D56FB001278CA /* LYQianNiu.xcdatamodel */;
+			path = LYQianNiu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2632C70F1E6D56FB001278CA /* Project object */;
+}
