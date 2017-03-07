@@ -10,6 +10,8 @@
 #import "LYMainViewContainer.h"
 @interface LYMainWindowController ()
 
+
+
 @property (nonatomic, strong) LYMainViewContainer *mainViewContainer;
 @end
 

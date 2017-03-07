@@ -7,8 +7,12 @@
 //
 
 #import "LYMainViewContainer.h"
-
+#import "LYNavigationViewController.h"
 @interface LYMainViewContainer ()
+@property (weak) IBOutlet NSView *leftContrainerView;
+@property (weak) IBOutlet NSView *rightContainerView;
+
+@property (nonatomic, strong) LYNavigationViewController *naviVC;
 
 @end
 
@@ -16,9 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor orangeColor].CGColor;
+    [self setViews];
+}
+
+- (void)setViews {
+    self.naviVC.view.frame = self.leftContrainerView.bounds;
+    [self.leftContrainerView addSubview:self.naviVC.view];
+}
+
+#pragma mark - Lazy Loading
+
+- (LYNavigationViewController *)naviVC {
+    if (!_naviVC) {
+        _naviVC = [[LYNavigationViewController alloc] init];
+    }
+    return _naviVC;
 }
 
 @end
