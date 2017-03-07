@@ -29,6 +29,10 @@
 		2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */; };
 		2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */; };
 		2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B51E6DA218001278CA /* login_photo_self.png */; };
+		2632C7BC1E6DA42B001278CA /* LYMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */; };
+		2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */; };
+		2632C7C11E6DC58F001278CA /* LYMainViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */; };
+		2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,12 @@
 		2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor_small.png; sourceTree = "<group>"; };
 		2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor.png; sourceTree = "<group>"; };
 		2632C7B51E6DA218001278CA /* login_photo_self.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_photo_self.png; sourceTree = "<group>"; };
+		2632C7B91E6DA42B001278CA /* LYMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainWindowController.h; sourceTree = "<group>"; };
+		2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainWindowController.m; sourceTree = "<group>"; };
+		2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMainWindowController.xib; sourceTree = "<group>"; };
+		2632C7BE1E6DC58F001278CA /* LYMainViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainViewContainer.h; sourceTree = "<group>"; };
+		2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainViewContainer.m; sourceTree = "<group>"; };
+		2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMainViewContainer.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 		2632C7191E6D56FB001278CA /* LYQianNiu */ = {
 			isa = PBXGroup;
 			children = (
+				2632C7B81E6DA414001278CA /* MainWindow */,
 				2632C79A1E6D8FB0001278CA /* SubClasses */,
 				2632C7521E6D5892001278CA /* Login */,
 				2632C7501E6D584D001278CA /* Other */,
@@ -222,6 +233,19 @@
 				2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */,
 			);
 			name = Pics;
+			sourceTree = "<group>";
+		};
+		2632C7B81E6DA414001278CA /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7BE1E6DC58F001278CA /* LYMainViewContainer.h */,
+				2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */,
+				2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */,
+				2632C7B91E6DA42B001278CA /* LYMainWindowController.h */,
+				2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */,
+				2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */,
+			);
+			name = MainWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
+				2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */,
 				2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */,
 				2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */,
 				2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */,
@@ -342,6 +367,7 @@
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
 				2632C7871E6D669C001278CA /* MainMenu.xib in Resources */,
 				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
+				2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */,
 				2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */,
 				2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */,
 				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
@@ -373,10 +399,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2632C7671E6D5FA2001278CA /* LYLoginViewController.m in Sources */,
+				2632C7C11E6DC58F001278CA /* LYMainViewContainer.m in Sources */,
 				2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */,
 				2632C71F1E6D56FB001278CA /* main.m in Sources */,
 				2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */,
 				2632C79D1E6D8FC4001278CA /* LYView.m in Sources */,
+				2632C7BC1E6DA42B001278CA /* LYMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +626,7 @@
 				2632C7461E6D56FB001278CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2632C7471E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuTests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +635,7 @@
 				2632C7491E6D56FB001278CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2632C74A1E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuUITests" */ = {
 			isa = XCConfigurationList;
@@ -614,6 +644,7 @@
 				2632C74C1E6D56FB001278CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

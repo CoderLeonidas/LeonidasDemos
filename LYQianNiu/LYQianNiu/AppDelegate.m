@@ -25,14 +25,14 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
+    
 }
 
 #pragma mark - LazyLoading
 
 - (LYLoginViewController *)loginVC {
     if (!_loginVC) {
-        _loginVC = [[LYLoginViewController alloc] initWithNibName:@"LYLoginViewController" bundle:nil];
-        _loginVC.view.frame = self.window.contentView.bounds;
+        _loginVC = [[LYLoginViewController alloc] init];
     }
     return _loginVC;
 }
@@ -40,7 +40,7 @@
 #pragma mark - TitleBar 
 
 - (void)setupTitleBar {
-
+    //隐藏titlebar按钮
     self.window.titlebarAppearsTransparent = YES;
     [self.window standardWindowButton:NSWindowZoomButton].hidden = YES;
     [self.window standardWindowButton:NSWindowMiniaturizeButton].hidden = YES;
@@ -98,7 +98,7 @@
         NSURL *url = [applicationDocumentsDirectory URLByAppendingPathComponent:@"LYQianNiu.storedata"];
         if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
             // Replace this implementation with code to handle the error appropriately.
-             
+            
             /*
              Typical reasons for an error here include:
              * The persistent store is not accessible, due to permissions or data protection when the device is locked.
@@ -139,7 +139,7 @@
     }
     _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-
+    
     return _managedObjectContext;
 }
 
@@ -148,7 +148,7 @@
 - (IBAction)saveAction:(id)sender {
     // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
     NSManagedObjectContext *context = self.managedObjectContext;
-
+    
     if (![context commitEditing]) {
         NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));
     }
@@ -167,7 +167,7 @@
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender {
     // Save changes in the application's managed object context before the application terminates.
     NSManagedObjectContext *context = _managedObjectContext;
-
+    
     if (!context) {
         return NSTerminateNow;
     }
@@ -183,13 +183,13 @@
     
     NSError *error = nil;
     if (![context save:&error]) {
-
+        
         // Customize this code block to include application-specific recovery steps.
         BOOL result = [sender presentError:error];
         if (result) {
             return NSTerminateCancel;
         }
-
+        
         NSString *question = NSLocalizedString(@"Could not save changes while quitting. Quit anyway?", @"Quit without saves error question message");
         NSString *info = NSLocalizedString(@"Quitting now will lose any changes you have made since the last successful save", @"Quit without saves error question info");
         NSString *quitButton = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
@@ -199,15 +199,16 @@
         [alert setInformativeText:info];
         [alert addButtonWithTitle:quitButton];
         [alert addButtonWithTitle:cancelButton];
-
+        
         NSInteger answer = [alert runModal];
         
         if (answer == NSAlertSecondButtonReturn) {
             return NSTerminateCancel;
         }
     }
-
+    
     return NSTerminateNow;
 }
 
 @end
+

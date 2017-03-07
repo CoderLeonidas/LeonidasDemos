@@ -9,6 +9,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LYLoginViewController">
             <connections>
+                <outlet property="avatarImageView" destination="L8n-Sq-4Pz" id="0cx-SH-yYz"/>
+                <outlet property="loginBtn" destination="quw-t5-7Hl" id="3W8-lA-BNj"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -23,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="axesIndependently" image="LoginLeft" id="psc-N1-kus"/>
                 </imageView>
-                <box fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myS-kg-avg">
+                <box fixedFrame="YES" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myS-kg-avg">
                     <rect key="frame" x="205" y="57" width="258" height="207"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView" id="Kze-qn-g1x">
@@ -76,6 +78,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="loginBtnClicked:" target="-2" id="1sL-wW-XZa"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wy9-JE-hH1">
                                 <rect key="frame" x="33" y="85" width="28" height="21"/>

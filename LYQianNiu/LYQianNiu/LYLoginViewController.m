@@ -7,10 +7,11 @@
 //
 
 #import "LYLoginViewController.h"
-#import "LYLoginViewController.h"
+#import "LYMainWindowController.h"
 
 @interface LYLoginViewController ()
-@property (nonatomic, strong) LYLoginViewController *loginVC;
+
+@property (nonatomic, strong) LYMainWindowController *mainWC;
 @end
 
 @implementation LYLoginViewController
@@ -20,17 +21,29 @@
     
 }
 
+#pragma mark - IBAction
+
+- (IBAction)loginBtnClicked:(id)sender {
+    //登录成功，关闭登录窗口
+    [self.mainWC showWindow:self];
+    [self.view.window close];
+}
+
 #pragma mark - Lazy Loading 
 
--(LYLoginViewController *)loginVC {
-    if (!_loginVC) {
-        _loginVC = [[LYLoginViewController alloc] initWithNibName:@"LYLoginViewController" bundle:nil];
+-(LYMainWindowController *)mainWC {
+    if (!_mainWC) {
         
-        NSRect frame = self.view.window.frame;
-        [_loginVC.view setFrame:frame];
+        _mainWC = [[LYMainWindowController alloc] initWithWindowNibName:@"LYMainWindowController"];
+        //不用下面方法创建，这个方法创建出来的window是nil
+//        _mainWC = [[LYMainWindowController alloc] initWithWindowNibName:@"LYMainWindowController" owner:self];
+//        [_mainWC.window setFrame: NSMakeRect(500, 500, 900, 600) display:YES];
     }
-    return _loginVC;
+    
+    return _mainWC;
 }
+
+
 
 
 @end

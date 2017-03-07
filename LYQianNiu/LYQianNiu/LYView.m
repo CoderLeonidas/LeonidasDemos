@@ -10,8 +10,9 @@
 
 @implementation LYView
 
+//绘制白色view背景
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor whiteColor] setFill];
+    [[NSColor redColor] setFill];
     NSRectFill(dirtyRect);
     [super drawRect:dirtyRect];
 }
