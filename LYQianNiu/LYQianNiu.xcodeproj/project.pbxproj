@@ -17,12 +17,32 @@
 		2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */; };
 		2632C7871E6D669C001278CA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7861E6D669C001278CA /* MainMenu.xib */; };
 		2632C79D1E6D8FC4001278CA /* LYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C79C1E6D8FC4001278CA /* LYView.m */; };
+		2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C79F1E6D97DE001278CA /* LoginLeft.png */; };
+		2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */; };
+		2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */; };
+		2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */; };
+		2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */; };
+		2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */; };
+		2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */; };
+		2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */; };
+		2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */; };
+		2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */; };
+		2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */; };
+		2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7B51E6DA218001278CA /* login_photo_self.png */; };
 		2632C7BC1E6DA42B001278CA /* LYMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */; };
 		2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */; };
 		2632C7C11E6DC58F001278CA /* LYMainViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */; };
 		2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */; };
 		2632C7EF1E6EB178001278CA /* LYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2632C7ED1E6EB178001278CA /* LYNavigationViewController.m */; };
 		2632C7F01E6EB178001278CA /* LYNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7EE1E6EB178001278CA /* LYNavigationViewController.xib */; };
+		2632C7F21E6EB8A7001278CA /* Statusbar_History.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7F11E6EB8A7001278CA /* Statusbar_History.png */; };
+		2632C7F41E6EB8B8001278CA /* Statusbar_Messages_Hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7F31E6EB8B8001278CA /* Statusbar_Messages_Hover.png */; };
+		2632C7F61E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7F51E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png */; };
+		2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7F71E6EB8FA001278CA /* Statusbar_SellerCenter.png */; };
+		2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7F91E6EB914001278CA /* WWMainWindowSearchIcon.png */; };
+		2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */; };
+		2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */; };
+		2632C8001E6EBAB3001278CA /* qipao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FF1E6EBAB3001278CA /* qipao.png */; };
 		2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */; };
 		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
 		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
@@ -32,8 +52,8 @@
 		2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */; };
 		2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */; };
 		2698E2B01E6FF28A009CED7B /* TestCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2AF1E6FF28A009CED7B /* TestCode.m */; };
+		2698E2B31E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */; };
 		26B43CFE1E7133A6000C339B /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B43CFD1E7133A6000C339B /* View.xib */; };
-		26B56B6C1E7176C90085AAED /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B6B1E7176C90085AAED /* Resource */; };
 		61914314DA1468E6E44F96D2 /* libPods-LYQianNiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */; };
 		8A902B1B8939B41933E7AEC6 /* libPods-LYQianNiuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */; };
 		91978F3E08593D3EA15E40D4 /* libPods-LYQianNiuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */; };
@@ -77,6 +97,18 @@
 		2632C7861E6D669C001278CA /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		2632C79B1E6D8FC4001278CA /* LYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYView.h; sourceTree = "<group>"; };
 		2632C79C1E6D8FC4001278CA /* LYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYView.m; sourceTree = "<group>"; };
+		2632C79F1E6D97DE001278CA /* LoginLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LoginLeft.png; path = ../../../../../Desktop/LoginLeft.png; sourceTree = "<group>"; };
+		2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_32x32@2x.png"; sourceTree = "<group>"; };
+		2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_32x32@1x.png"; sourceTree = "<group>"; };
+		2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_entry_pre.png; sourceTree = "<group>"; };
+		2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_Arrow_Down.png; sourceTree = "<group>"; };
+		2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_Arrow_Up.png; sourceTree = "<group>"; };
+		2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_key_nor2.png; sourceTree = "<group>"; };
+		2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_ali_nor_small.png; sourceTree = "<group>"; };
+		2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_ali_nor.png; sourceTree = "<group>"; };
+		2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor_small.png; sourceTree = "<group>"; };
+		2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ico_tao_nor.png; sourceTree = "<group>"; };
+		2632C7B51E6DA218001278CA /* login_photo_self.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_photo_self.png; sourceTree = "<group>"; };
 		2632C7B91E6DA42B001278CA /* LYMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainWindowController.h; sourceTree = "<group>"; };
 		2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainWindowController.m; sourceTree = "<group>"; };
 		2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYMainWindowController.xib; sourceTree = "<group>"; };
@@ -86,6 +118,14 @@
 		2632C7EC1E6EB178001278CA /* LYNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYNavigationViewController.h; sourceTree = "<group>"; };
 		2632C7ED1E6EB178001278CA /* LYNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYNavigationViewController.m; sourceTree = "<group>"; };
 		2632C7EE1E6EB178001278CA /* LYNavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYNavigationViewController.xib; sourceTree = "<group>"; };
+		2632C7F11E6EB8A7001278CA /* Statusbar_History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Statusbar_History.png; sourceTree = "<group>"; };
+		2632C7F31E6EB8B8001278CA /* Statusbar_Messages_Hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Statusbar_Messages_Hover.png; sourceTree = "<group>"; };
+		2632C7F51E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWGroupAddNewButtonHighlighted.png; sourceTree = "<group>"; };
+		2632C7F71E6EB8FA001278CA /* Statusbar_SellerCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Statusbar_SellerCenter.png; sourceTree = "<group>"; };
+		2632C7F91E6EB914001278CA /* WWMainWindowSearchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWMainWindowSearchIcon.png; sourceTree = "<group>"; };
+		2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWGroupIconUngrouped.png; sourceTree = "<group>"; };
+		2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WWMessageManagerTribeIcon.tiff; sourceTree = "<group>"; };
+		2632C7FF1E6EBAB3001278CA /* qipao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qipao.png; sourceTree = "<group>"; };
 		2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightContainerViewController.h; sourceTree = "<group>"; };
 		2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightContainerViewController.m; sourceTree = "<group>"; };
 		2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightContainerViewController.xib; sourceTree = "<group>"; };
@@ -101,8 +141,8 @@
 		2698E2AE1E6FF28A009CED7B /* TestCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCode.h; sourceTree = "<group>"; };
 		2698E2AF1E6FF28A009CED7B /* TestCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCode.m; sourceTree = "<group>"; };
 		2698E2B11E6FF36E009CED7B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWMainWindowSearchIcon32X32.png; sourceTree = "<group>"; };
 		26B43CFD1E7133A6000C339B /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
-		26B56B6B1E7176C90085AAED /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests.release.xcconfig"; sourceTree = "<group>"; };
 		51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +223,7 @@
 				2632C7861E6D669C001278CA /* MainMenu.xib */,
 				2632C72B1E6D56FB001278CA /* Info.plist */,
 				2632C71E1E6D56FB001278CA /* main.m */,
-				26B56B6B1E7176C90085AAED /* Resource */,
+				2632C79E1E6D97B3001278CA /* Resouces */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -244,6 +284,34 @@
 				2632C79C1E6D8FC4001278CA /* LYView.m */,
 			);
 			name = "子类";
+			sourceTree = "<group>";
+		};
+		2632C79E1E6D97B3001278CA /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7B51E6DA218001278CA /* login_photo_self.png */,
+				2632C7A11E6D97E7001278CA /* appIcon_32x32@2x.png */,
+				2632C7A21E6D97E7001278CA /* appIcon_32x32@1x.png */,
+				2632C79F1E6D97DE001278CA /* LoginLeft.png */,
+				2632C7A71E6DA0E8001278CA /* login_Arrow_Down.png */,
+				2632C7A81E6DA0E8001278CA /* login_Arrow_Up.png */,
+				2632C7A91E6DA0E8001278CA /* login_ico_key_nor2.png */,
+				2632C7A51E6DA0AC001278CA /* login_ico_entry_pre.png */,
+				2632C7AD1E6DA167001278CA /* login_ico_ali_nor_small.png */,
+				2632C7AE1E6DA167001278CA /* login_ico_ali_nor.png */,
+				2632C7AF1E6DA167001278CA /* login_ico_tao_nor_small.png */,
+				2632C7F11E6EB8A7001278CA /* Statusbar_History.png */,
+				2632C7B01E6DA167001278CA /* login_ico_tao_nor.png */,
+				2632C7F31E6EB8B8001278CA /* Statusbar_Messages_Hover.png */,
+				2632C7F51E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png */,
+				2632C7FF1E6EBAB3001278CA /* qipao.png */,
+				2632C7F71E6EB8FA001278CA /* Statusbar_SellerCenter.png */,
+				2632C7F91E6EB914001278CA /* WWMainWindowSearchIcon.png */,
+				2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */,
+				2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */,
+				2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */,
+			);
+			name = Resouces;
 			sourceTree = "<group>";
 		};
 		2632C7B81E6DA414001278CA /* 主界面 */ = {
@@ -479,18 +547,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
 				2698E29F1E6FE353009CED7B /* LYImageTextField.xib in Resources */,
+				2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */,
+				2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */,
 				2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */,
+				2632C7F21E6EB8A7001278CA /* Statusbar_History.png in Resources */,
 				2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */,
+				2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */,
+				2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */,
+				2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */,
+				2632C7F41E6EB8B8001278CA /* Statusbar_Messages_Hover.png in Resources */,
+				2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */,
 				2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */,
+				2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */,
+				2698E2B31E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png in Resources */,
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
 				2632C7871E6D669C001278CA /* MainMenu.xib in Resources */,
 				2632C7F01E6EB178001278CA /* LYNavigationViewController.xib in Resources */,
 				2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */,
+				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
 				26B43CFE1E7133A6000C339B /* View.xib in Resources */,
 				2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */,
+				2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */,
 				2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */,
-				26B56B6C1E7176C90085AAED /* Resource in Resources */,
+				2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */,
+				2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */,
+				2632C8001E6EBAB3001278CA /* qipao.png in Resources */,
+				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
+				2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */,
+				2632C7F61E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png in Resources */,
+				2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */,
+				2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
