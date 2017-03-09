@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LYRightContainerViewController">
+            <connections>
+                <outlet property="leftContainer" destination="YoM-TZ-9dd" id="c9Z-Ge-GHg"/>
+                <outlet property="rightContainer" destination="y4G-hT-gfn" id="dXo-Rf-CoW"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dck-co-Ix8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <customView id="YoM-TZ-9dd">
+                            <rect key="frame" x="0.0" y="0.0" width="125" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="160" id="GEO-sy-jks"/>
+                            </constraints>
+                        </customView>
+                        <customView id="y4G-hT-gfn">
+                            <rect key="frame" x="126" y="0.0" width="474" height="600"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="y4G-hT-gfn" firstAttribute="height" secondItem="YoM-TZ-9dd" secondAttribute="height" id="KXM-7e-FwD"/>
+                    </constraints>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="250"/>
+                    </holdingPriorities>
+                </splitView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dck-co-Ix8" secondAttribute="trailing" id="clv-FC-c5f"/>
+                <constraint firstItem="dck-co-Ix8" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="eoi-ey-s2C"/>
+                <constraint firstItem="dck-co-Ix8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="gCg-dM-Y0b"/>
+                <constraint firstAttribute="bottom" secondItem="dck-co-Ix8" secondAttribute="bottom" id="kh3-AD-i50"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>

@@ -8,11 +8,13 @@
 
 #import "LYMainViewContainer.h"
 #import "LYNavigationViewController.h"
+#import "LYRightContainerViewController.h"
 @interface LYMainViewContainer ()
 @property (weak) IBOutlet NSView *leftContrainerView;
 @property (weak) IBOutlet NSView *rightContainerView;
 
 @property (nonatomic, strong) LYNavigationViewController *naviVC;
+@property (nonatomic, strong) LYRightContainerViewController *rightContainerVC;
 
 @end
 
@@ -26,6 +28,9 @@
 - (void)setViews {
     self.naviVC.view.frame = self.leftContrainerView.bounds;
     [self.leftContrainerView addSubview:self.naviVC.view];
+    
+    self.rightContainerVC.view.frame = self.rightContainerView.bounds;
+    [self.rightContainerView addSubview:self.rightContainerVC.view];
 }
 
 #pragma mark - Lazy Loading
@@ -35,6 +40,13 @@
         _naviVC = [[LYNavigationViewController alloc] init];
     }
     return _naviVC;
+}
+
+- (LYRightContainerViewController *)rightContainerVC {
+    if (!_rightContainerVC) {
+        _rightContainerVC = [[LYRightContainerViewController alloc] init];
+    }
+    return _rightContainerVC;
 }
 
 @end

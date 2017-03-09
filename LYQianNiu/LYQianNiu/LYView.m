@@ -12,7 +12,7 @@
 
 //绘制白色view背景
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor redColor] setFill];
+    [[NSColor whiteColor] setFill];
     NSRectFill(dirtyRect);
     [super drawRect:dirtyRect];
 }

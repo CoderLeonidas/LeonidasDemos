@@ -43,6 +43,20 @@
 		2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */; };
 		2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */; };
 		2632C8001E6EBAB3001278CA /* qipao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FF1E6EBAB3001278CA /* qipao.png */; };
+		2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */; };
+		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
+		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
+		2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2971E6FE310009CED7B /* LYLeftViewContainer.xib */; };
+		2698E29E1E6FE353009CED7B /* LYImageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E29C1E6FE353009CED7B /* LYImageTextField.m */; };
+		2698E29F1E6FE353009CED7B /* LYImageTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E29D1E6FE353009CED7B /* LYImageTextField.xib */; };
+		2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */; };
+		2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */; };
+		2698E2B01E6FF28A009CED7B /* TestCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2AF1E6FF28A009CED7B /* TestCode.m */; };
+		2698E2B31E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */; };
+		26B43CFE1E7133A6000C339B /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B43CFD1E7133A6000C339B /* View.xib */; };
+		61914314DA1468E6E44F96D2 /* libPods-LYQianNiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */; };
+		8A902B1B8939B41933E7AEC6 /* libPods-LYQianNiuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */; };
+		91978F3E08593D3EA15E40D4 /* libPods-LYQianNiuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		106B14345709567ABBEF17DE /* Pods-LYQianNiu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu.debug.xcconfig"; sourceTree = "<group>"; };
 		2632C7171E6D56FB001278CA /* LYQianNiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYQianNiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2632C71A1E6D56FB001278CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2632C71B1E6D56FB001278CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +126,31 @@
 		2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWGroupIconUngrouped.png; sourceTree = "<group>"; };
 		2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WWMessageManagerTribeIcon.tiff; sourceTree = "<group>"; };
 		2632C7FF1E6EBAB3001278CA /* qipao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qipao.png; sourceTree = "<group>"; };
+		2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightContainerViewController.h; sourceTree = "<group>"; };
+		2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightContainerViewController.m; sourceTree = "<group>"; };
+		2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightContainerViewController.xib; sourceTree = "<group>"; };
+		2698E2951E6FE310009CED7B /* LYLeftViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLeftViewContainer.h; sourceTree = "<group>"; };
+		2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLeftViewContainer.m; sourceTree = "<group>"; };
+		2698E2971E6FE310009CED7B /* LYLeftViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLeftViewContainer.xib; sourceTree = "<group>"; };
+		2698E29B1E6FE353009CED7B /* LYImageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageTextField.h; sourceTree = "<group>"; };
+		2698E29C1E6FE353009CED7B /* LYImageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYImageTextField.m; sourceTree = "<group>"; };
+		2698E29D1E6FE353009CED7B /* LYImageTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYImageTextField.xib; sourceTree = "<group>"; };
+		2698E2A11E6FE562009CED7B /* LYRightViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightViewContainer.h; sourceTree = "<group>"; };
+		2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightViewContainer.m; sourceTree = "<group>"; };
+		2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightViewContainer.xib; sourceTree = "<group>"; };
+		2698E2AE1E6FF28A009CED7B /* TestCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCode.h; sourceTree = "<group>"; };
+		2698E2AF1E6FF28A009CED7B /* TestCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCode.m; sourceTree = "<group>"; };
+		2698E2B11E6FF36E009CED7B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWMainWindowSearchIcon32X32.png; sourceTree = "<group>"; };
+		26B43CFD1E7133A6000C339B /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests.release.xcconfig"; sourceTree = "<group>"; };
+		51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu.release.xcconfig"; sourceTree = "<group>"; };
+		97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiuUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41429DCAF71F0C9E2C60099 /* Pods-LYQianNiuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE302B6F3DB377B1BF8102C9 /* Pods-LYQianNiuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuUITests/Pods-LYQianNiuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F6816226917AA20BB7D4BE5C /* Pods-LYQianNiuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuUITests/Pods-LYQianNiuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61914314DA1468E6E44F96D2 /* libPods-LYQianNiu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91978F3E08593D3EA15E40D4 /* libPods-LYQianNiuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A902B1B8939B41933E7AEC6 /* libPods-LYQianNiuUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +188,8 @@
 				2632C7331E6D56FB001278CA /* LYQianNiuTests */,
 				2632C73E1E6D56FB001278CA /* LYQianNiuUITests */,
 				2632C7181E6D56FB001278CA /* Products */,
+				DC7BCDCE67FB5CB38773B232 /* Pods */,
+				3E70971CEA7D4D9D233D173E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,9 +206,10 @@
 		2632C7191E6D56FB001278CA /* LYQianNiu */ = {
 			isa = PBXGroup;
 			children = (
-				2632C7B81E6DA414001278CA /* MainWindow */,
-				2632C79A1E6D8FB0001278CA /* SubClasses */,
-				2632C7521E6D5892001278CA /* Login */,
+				2632C7B81E6DA414001278CA /* 主界面 */,
+				2698E2B41E702F4F009CED7B /* 控件  */,
+				2632C79A1E6D8FB0001278CA /* 子类 */,
+				2632C7521E6D5892001278CA /* 登录窗口 */,
 				2632C7501E6D584D001278CA /* Other */,
 				2632C71D1E6D56FB001278CA /* Supporting Files */,
 			);
@@ -177,7 +223,7 @@
 				2632C7861E6D669C001278CA /* MainMenu.xib */,
 				2632C72B1E6D56FB001278CA /* Info.plist */,
 				2632C71E1E6D56FB001278CA /* main.m */,
-				2632C79E1E6D97B3001278CA /* Pics */,
+				2632C79E1E6D97B3001278CA /* Resouces */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,18 +250,21 @@
 			isa = PBXGroup;
 			children = (
 				2632C7261E6D56FB001278CA /* Assets.xcassets */,
+				2698E2AE1E6FF28A009CED7B /* TestCode.h */,
+				2698E2AF1E6FF28A009CED7B /* TestCode.m */,
+				2698E2B11E6FF36E009CED7B /* PrefixHeader.pch */,
 				2632C71A1E6D56FB001278CA /* AppDelegate.h */,
 				2632C71B1E6D56FB001278CA /* AppDelegate.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
 		};
-		2632C7521E6D5892001278CA /* Login */ = {
+		2632C7521E6D5892001278CA /* 登录窗口 */ = {
 			isa = PBXGroup;
 			children = (
 				2632C75E1E6D5F4D001278CA /* ViewController */,
 			);
-			name = Login;
+			name = "登录窗口";
 			sourceTree = "<group>";
 		};
 		2632C75E1E6D5F4D001278CA /* ViewController */ = {
@@ -228,16 +277,16 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		2632C79A1E6D8FB0001278CA /* SubClasses */ = {
+		2632C79A1E6D8FB0001278CA /* 子类 */ = {
 			isa = PBXGroup;
 			children = (
 				2632C79B1E6D8FC4001278CA /* LYView.h */,
 				2632C79C1E6D8FC4001278CA /* LYView.m */,
 			);
-			name = SubClasses;
+			name = "子类";
 			sourceTree = "<group>";
 		};
-		2632C79E1E6D97B3001278CA /* Pics */ = {
+		2632C79E1E6D97B3001278CA /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
 				2632C7B51E6DA218001278CA /* login_photo_self.png */,
@@ -258,34 +307,126 @@
 				2632C7FF1E6EBAB3001278CA /* qipao.png */,
 				2632C7F71E6EB8FA001278CA /* Statusbar_SellerCenter.png */,
 				2632C7F91E6EB914001278CA /* WWMainWindowSearchIcon.png */,
+				2698E2B21E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png */,
 				2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */,
 				2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */,
 			);
-			name = Pics;
+			name = Resouces;
 			sourceTree = "<group>";
 		};
-		2632C7B81E6DA414001278CA /* MainWindow */ = {
+		2632C7B81E6DA414001278CA /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
-				2632C7EB1E6EB128001278CA /* LeftNavigationViewController */,
-				2632C7BE1E6DC58F001278CA /* LYMainViewContainer.h */,
-				2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */,
-				2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */,
-				2632C7B91E6DA42B001278CA /* LYMainWindowController.h */,
-				2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */,
-				2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */,
+				2698E28D1E6FDE3B009CED7B /* 右侧大容器 */,
+				2632C7EB1E6EB128001278CA /* 左侧导航条 */,
+				2698E2A61E6FE8A2009CED7B /* 主界面容器 */,
+				2698E2A71E6FE8B9009CED7B /* 主窗口 */,
 			);
-			name = MainWindow;
+			name = "主界面";
 			sourceTree = "<group>";
 		};
-		2632C7EB1E6EB128001278CA /* LeftNavigationViewController */ = {
+		2632C7EB1E6EB128001278CA /* 左侧导航条 */ = {
 			isa = PBXGroup;
 			children = (
 				2632C7EC1E6EB178001278CA /* LYNavigationViewController.h */,
 				2632C7ED1E6EB178001278CA /* LYNavigationViewController.m */,
 				2632C7EE1E6EB178001278CA /* LYNavigationViewController.xib */,
 			);
-			name = LeftNavigationViewController;
+			name = "左侧导航条";
+			sourceTree = "<group>";
+		};
+		2698E28D1E6FDE3B009CED7B /* 右侧大容器 */ = {
+			isa = PBXGroup;
+			children = (
+				2698E2941E6FE2A0009CED7B /* 左侧会话列表容器 */,
+				2698E2A01E6FE542009CED7B /* 右侧聊天列表容器 */,
+				2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */,
+				2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */,
+				2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */,
+			);
+			name = "右侧大容器";
+			sourceTree = "<group>";
+		};
+		2698E2941E6FE2A0009CED7B /* 左侧会话列表容器 */ = {
+			isa = PBXGroup;
+			children = (
+				2698E2951E6FE310009CED7B /* LYLeftViewContainer.h */,
+				2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */,
+				2698E2971E6FE310009CED7B /* LYLeftViewContainer.xib */,
+			);
+			name = "左侧会话列表容器";
+			sourceTree = "<group>";
+		};
+		2698E29A1E6FE336009CED7B /* 搜索框 */ = {
+			isa = PBXGroup;
+			children = (
+				2698E29B1E6FE353009CED7B /* LYImageTextField.h */,
+				2698E29C1E6FE353009CED7B /* LYImageTextField.m */,
+				2698E29D1E6FE353009CED7B /* LYImageTextField.xib */,
+				26B43CFD1E7133A6000C339B /* View.xib */,
+			);
+			name = "搜索框";
+			sourceTree = "<group>";
+		};
+		2698E2A01E6FE542009CED7B /* 右侧聊天列表容器 */ = {
+			isa = PBXGroup;
+			children = (
+				2698E2A11E6FE562009CED7B /* LYRightViewContainer.h */,
+				2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */,
+				2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */,
+			);
+			name = "右侧聊天列表容器";
+			sourceTree = "<group>";
+		};
+		2698E2A61E6FE8A2009CED7B /* 主界面容器 */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7BE1E6DC58F001278CA /* LYMainViewContainer.h */,
+				2632C7BF1E6DC58F001278CA /* LYMainViewContainer.m */,
+				2632C7C01E6DC58F001278CA /* LYMainViewContainer.xib */,
+			);
+			name = "主界面容器";
+			sourceTree = "<group>";
+		};
+		2698E2A71E6FE8B9009CED7B /* 主窗口 */ = {
+			isa = PBXGroup;
+			children = (
+				2632C7B91E6DA42B001278CA /* LYMainWindowController.h */,
+				2632C7BA1E6DA42B001278CA /* LYMainWindowController.m */,
+				2632C7BB1E6DA42B001278CA /* LYMainWindowController.xib */,
+			);
+			name = "主窗口";
+			sourceTree = "<group>";
+		};
+		2698E2B41E702F4F009CED7B /* 控件  */ = {
+			isa = PBXGroup;
+			children = (
+				2698E29A1E6FE336009CED7B /* 搜索框 */,
+			);
+			name = "控件 ";
+			sourceTree = "<group>";
+		};
+		3E70971CEA7D4D9D233D173E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */,
+				51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */,
+				97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC7BCDCE67FB5CB38773B232 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				106B14345709567ABBEF17DE /* Pods-LYQianNiu.debug.xcconfig */,
+				96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */,
+				B41429DCAF71F0C9E2C60099 /* Pods-LYQianNiuTests.debug.xcconfig */,
+				4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */,
+				F6816226917AA20BB7D4BE5C /* Pods-LYQianNiuUITests.debug.xcconfig */,
+				EE302B6F3DB377B1BF8102C9 /* Pods-LYQianNiuUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,9 +436,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2632C7441E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiu" */;
 			buildPhases = (
+				B174EEDB77F4C4485A176269 /* [CP] Check Pods Manifest.lock */,
 				2632C7131E6D56FB001278CA /* Sources */,
 				2632C7141E6D56FB001278CA /* Frameworks */,
 				2632C7151E6D56FB001278CA /* Resources */,
+				1A063CC67E96928460EF5CDC /* [CP] Embed Pods Frameworks */,
+				4309586E82F730B245C3BEF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,9 +456,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2632C7471E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuTests" */;
 			buildPhases = (
+				C78F1D960247D6279C8D9755 /* [CP] Check Pods Manifest.lock */,
 				2632C72C1E6D56FB001278CA /* Sources */,
 				2632C72D1E6D56FB001278CA /* Frameworks */,
 				2632C72E1E6D56FB001278CA /* Resources */,
+				F173728967BF487EA790B0D9 /* [CP] Embed Pods Frameworks */,
+				65F03E378F93F282720803CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,9 +477,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2632C74A1E6D56FB001278CA /* Build configuration list for PBXNativeTarget "LYQianNiuUITests" */;
 			buildPhases = (
+				8BAB7B89AEDAE1FC840929F2 /* [CP] Check Pods Manifest.lock */,
 				2632C7371E6D56FB001278CA /* Sources */,
 				2632C7381E6D56FB001278CA /* Frameworks */,
 				2632C7391E6D56FB001278CA /* Resources */,
+				AB91629C57C342A47BDFE276 /* [CP] Embed Pods Frameworks */,
+				EA1C01AB257B58C4DEA28F34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,8 +548,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
+				2698E29F1E6FE353009CED7B /* LYImageTextField.xib in Resources */,
 				2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */,
 				2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */,
+				2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */,
 				2632C7F21E6EB8A7001278CA /* Statusbar_History.png in Resources */,
 				2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */,
 				2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */,
@@ -407,11 +559,15 @@
 				2632C7A01E6D97DE001278CA /* LoginLeft.png in Resources */,
 				2632C7F41E6EB8B8001278CA /* Statusbar_Messages_Hover.png in Resources */,
 				2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */,
+				2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */,
 				2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */,
+				2698E2B31E6FFCD0009CED7B /* WWMainWindowSearchIcon32X32.png in Resources */,
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
 				2632C7871E6D669C001278CA /* MainMenu.xib in Resources */,
 				2632C7F01E6EB178001278CA /* LYNavigationViewController.xib in Resources */,
+				2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */,
 				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
+				26B43CFE1E7133A6000C339B /* View.xib in Resources */,
 				2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */,
 				2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */,
 				2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */,
@@ -442,6 +598,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A063CC67E96928460EF5CDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4309586E82F730B245C3BEF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65F03E378F93F282720803CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BAB7B89AEDAE1FC840929F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB91629C57C342A47BDFE276 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiuUITests/Pods-LYQianNiuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B174EEDB77F4C4485A176269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C78F1D960247D6279C8D9755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA1C01AB257B58C4DEA28F34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiuUITests/Pods-LYQianNiuUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F173728967BF487EA790B0D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2632C7131E6D56FB001278CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -449,9 +743,14 @@
 			files = (
 				2632C7671E6D5FA2001278CA /* LYLoginViewController.m in Sources */,
 				2632C7C11E6DC58F001278CA /* LYMainViewContainer.m in Sources */,
+				2698E2B01E6FF28A009CED7B /* TestCode.m in Sources */,
+				2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */,
+				2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */,
 				2632C7251E6D56FB001278CA /* LYQianNiu.xcdatamodeld in Sources */,
+				2698E29E1E6FE353009CED7B /* LYImageTextField.m in Sources */,
 				2632C7EF1E6EB178001278CA /* LYNavigationViewController.m in Sources */,
 				2632C71F1E6D56FB001278CA /* main.m in Sources */,
+				2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */,
 				2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */,
 				2632C79D1E6D8FC4001278CA /* LYView.m in Sources */,
 				2632C7BC1E6DA42B001278CA /* LYMainWindowController.m in Sources */,
@@ -579,10 +878,13 @@
 		};
 		2632C7451E6D56FB001278CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106B14345709567ABBEF17DE /* Pods-LYQianNiu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2H4C4T387;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/luoyang/Documents/GitRepository/LeonidasDemos/LYQianNiu/LYQianNiu/PrefixHeader.pch;
 				INFOPLIST_FILE = LYQianNiu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiu;
@@ -592,10 +894,13 @@
 		};
 		2632C7461E6D56FB001278CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2H4C4T387;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/luoyang/Documents/GitRepository/LeonidasDemos/LYQianNiu/LYQianNiu/PrefixHeader.pch;
 				INFOPLIST_FILE = LYQianNiu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Leon.LYQianNiu;
@@ -605,6 +910,7 @@
 		};
 		2632C7481E6D56FB001278CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41429DCAF71F0C9E2C60099 /* Pods-LYQianNiuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -619,6 +925,7 @@
 		};
 		2632C7491E6D56FB001278CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -633,6 +940,7 @@
 		};
 		2632C74B1E6D56FB001278CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6816226917AA20BB7D4BE5C /* Pods-LYQianNiuUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2H4C4T387;
@@ -646,6 +954,7 @@
 		};
 		2632C74C1E6D56FB001278CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE302B6F3DB377B1BF8102C9 /* Pods-LYQianNiuUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = H2H4C4T387;
