@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [TestCode changeBGColor:[NSColor yellowColor] inView:self.view];
 }
 
 @end

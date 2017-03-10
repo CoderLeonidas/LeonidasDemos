@@ -9,7 +9,11 @@
         <customObject id="-2" userLabel="File's Owner" customClass="LYNavigationViewController">
             <connections>
                 <outlet property="avataBtn" destination="JGo-jk-gNf" id="0xG-BV-V43"/>
+                <outlet property="jinRiJieDaiBtn" destination="trC-e3-1L5" id="2f4-dj-N7V"/>
+                <outlet property="lianXiRenBtn" destination="mrX-hf-jf9" id="hoS-Gv-xgl"/>
+                <outlet property="qunZuBtn" destination="f3W-H8-T56" id="W2Z-Pl-V1w"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="zuiJinHuiHuaBtn" destination="rLA-33-6BV" id="1fv-Th-Igd"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -36,6 +40,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="jinRiJieDaiBtnClicked:" target="-2" id="xV5-pd-h2Z"/>
+                    </connections>
                 </button>
                 <button misplaced="YES" id="rLA-33-6BV">
                     <rect key="frame" x="20" y="375" width="40" height="40"/>
@@ -44,6 +51,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="zuiJinHuiHuaBtnClicked:" target="-2" id="rmS-Pk-Bwf"/>
+                    </connections>
                 </button>
                 <button misplaced="YES" id="mrX-hf-jf9">
                     <rect key="frame" x="20" y="317" width="40" height="40"/>
@@ -52,6 +62,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="lianXiRenBtnClicked:" target="-2" id="tVh-Kq-6S9"/>
+                    </connections>
                 </button>
                 <button misplaced="YES" id="f3W-H8-T56">
                     <rect key="frame" x="20" y="258" width="40" height="40"/>
@@ -60,6 +73,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="qunZuBtnClicked:" target="-2" id="MXq-aY-T12"/>
+                    </connections>
                 </button>
             </subviews>
         </customView>

@@ -10,7 +10,10 @@
 
 @interface LYNavigationViewController ()
 @property (weak) IBOutlet NSButton *avataBtn;
-- (IBAction)avataBtnClicked:(id)sender;
+@property (weak) IBOutlet NSButton *jinRiJieDaiBtn;
+@property (weak) IBOutlet NSButton *zuiJinHuiHuaBtn;
+@property (weak) IBOutlet NSButton *lianXiRenBtn;
+@property (weak) IBOutlet NSButton *qunZuBtn;
 
 @end
 
@@ -19,12 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: 调整背景色
-    self.view.wantsLayer = YES;
-    self.view.layer.backgroundColor = [NSColor colorWithRed:27 green:146 blue:237 alpha:0.5].CGColor;
     
 }
 
 - (IBAction)avataBtnClicked:(id)sender {
     NSLog(@"avataBtnClicked");
 }
+
+- (IBAction)jinRiJieDaiBtnClicked:(id)sender {
+
+}
+
+- (IBAction)lianXiRenBtnClicked:(id)sender {
+
+}
+
+- (IBAction)zuiJinHuiHuaBtnClicked:(id)sender {
+
+}
+- (IBAction)qunZuBtnClicked:(id)sender {
+
+}
+
+
 @end

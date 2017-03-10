@@ -18,23 +18,18 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="255" height="17"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-MH-Ybs">
                     <rect key="frame" x="0.0" y="0.0" width="22" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="22" id="9r8-p9-wmx"/>
-                        <constraint firstAttribute="height" constant="17" id="n8t-0G-fHa"/>
+                        <constraint firstAttribute="width" constant="22" id="nsn-k0-6Td"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yvO-mG-WO6"/>
                 </imageView>
-                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ww-yE-Hnl">
+                <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ww-yE-Hnl">
                     <rect key="frame" x="22" y="0.0" width="233" height="17"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="17" id="1IY-Xw-jbO"/>
-                        <constraint firstAttribute="width" constant="233" id="B1Z-Fq-0Cz"/>
-                    </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="搜索联系人、群组" drawsBackground="YES" id="S7Z-nx-PKQ">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" placeholderString="搜索联系人、群组" drawsBackground="YES" id="S7Z-nx-PKQ">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -42,14 +37,13 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="4eX-MH-Ybs" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Bxd-o7-5LY"/>
-                <constraint firstItem="0Ww-yE-Hnl" firstAttribute="height" secondItem="4eX-MH-Ybs" secondAttribute="height" id="LOv-yv-PKq"/>
-                <constraint firstItem="0Ww-yE-Hnl" firstAttribute="leading" secondItem="4eX-MH-Ybs" secondAttribute="trailing" id="P4k-gg-P9s"/>
-                <constraint firstAttribute="bottom" secondItem="0Ww-yE-Hnl" secondAttribute="bottom" id="TJ0-LN-Ete"/>
-                <constraint firstAttribute="trailing" secondItem="0Ww-yE-Hnl" secondAttribute="trailing" id="agf-o7-nk0"/>
-                <constraint firstItem="0Ww-yE-Hnl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="oel-bt-NxN"/>
-                <constraint firstItem="4eX-MH-Ybs" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="qyG-EF-TwP"/>
-                <constraint firstAttribute="bottom" secondItem="4eX-MH-Ybs" secondAttribute="bottom" id="tty-pe-pCr"/>
+                <constraint firstItem="0Ww-yE-Hnl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="2RH-Ps-dqP"/>
+                <constraint firstAttribute="trailing" secondItem="0Ww-yE-Hnl" secondAttribute="trailing" id="TRI-wS-VDh"/>
+                <constraint firstItem="4eX-MH-Ybs" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="TwX-g8-4zk"/>
+                <constraint firstAttribute="bottom" secondItem="0Ww-yE-Hnl" secondAttribute="bottom" id="d7M-KI-rFV"/>
+                <constraint firstAttribute="bottom" secondItem="4eX-MH-Ybs" secondAttribute="bottom" id="eks-Eo-BbX"/>
+                <constraint firstItem="0Ww-yE-Hnl" firstAttribute="leading" secondItem="4eX-MH-Ybs" secondAttribute="trailing" id="sAw-eh-G7u"/>
+                <constraint firstItem="4eX-MH-Ybs" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="yft-OT-w3G"/>
             </constraints>
             <point key="canvasLocation" x="22" y="77.5"/>
         </customView>

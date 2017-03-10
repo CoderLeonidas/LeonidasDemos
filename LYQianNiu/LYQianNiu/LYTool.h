@@ -1,5 +1,5 @@
 //
-//  TestCode.h
+//  LYTool.h
 //  LYQianNiu
 //
 //  Created by Leonidas on 2017/3/8.
@@ -7,6 +7,7 @@
 //
 
 
-@interface TestCode : NSObject
+@interface LYTool : NSObject
 + (void)changeBGColor:(NSColor*)aColor inView:(NSView*)aView;
+
 @end

@@ -25,9 +25,6 @@
                         <customView id="YoM-TZ-9dd">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="600"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="160" id="GEO-sy-jks"/>
-                            </constraints>
                         </customView>
                         <customView id="y4G-hT-gfn">
                             <rect key="frame" x="126" y="0.0" width="474" height="600"/>
