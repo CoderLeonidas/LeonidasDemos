@@ -28,6 +28,6 @@ typedef enum : NSUInteger {
     LYBottomVCTypeQunZu//群组
 } LYBottomVCType;
 
-
-
+#define LeftContainerWidth 160
+#define TopAreaHeight      70
 #endif /* CommonDef_h */

@@ -50,7 +50,6 @@
     _currentVC = self.keysAndVCs[@(key)];
     if (_currentVC.view) {
         _currentVC.view.frame = self.hostingView.bounds;
-        [LYTool changeBGColor:[NSColor blueColor] inView:_currentVC.view];
          [self.hostingView addSubview:_currentVC.view positioned:NSWindowAbove relativeTo:nil];
     }
 }

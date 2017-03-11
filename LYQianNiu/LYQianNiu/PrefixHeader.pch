@@ -16,7 +16,7 @@
 #import "LYTool.h"
 #import "WCUserInfo.h"
 #import "WCXMPPTool.h"
-
+#import "CommonDef.h"
 
 // 自定义Log
 #ifdef DEBUG

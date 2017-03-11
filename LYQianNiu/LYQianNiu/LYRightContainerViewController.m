@@ -25,12 +25,11 @@
     [self setupViews];
 }
 
-#define LeftContainerWidth 160
+
 
 - (void)setupViews {
     self.leftViewContainer.view.frame = NSMakeRect(0, 0, LeftContainerWidth, self.view.frame.size.height);
     [self.leftContainer addSubview:self.leftViewContainer.view];
-    
     
     self.rightViewContainer.view.frame = NSMakeRect(0, 0, self.view.frame.size.width - LeftContainerWidth, self.view.frame.size.height);
     [self.rightContainer addSubview:self.rightViewContainer.view];
@@ -46,6 +45,7 @@
 - (LYRightViewContainer *)rightViewContainer {
     if (!_rightViewContainer) {
         _rightViewContainer = [[LYRightViewContainer alloc] init];
+        _rightViewContainer.view.autoresizingMask = 1|2|4|8|16|32;
     }
     return _rightViewContainer;
 }
