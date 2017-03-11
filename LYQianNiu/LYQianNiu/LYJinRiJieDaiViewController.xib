@@ -21,11 +21,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="asb-zO-j68">
-                        <rect key="frame" x="1" y="0.0" width="298" height="599"/>
+                        <rect key="frame" x="1" y="1" width="298" height="598"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="45" headerView="paB-xc-gfX" viewBased="YES" id="zmd-vr-J34">
-                                <rect key="frame" x="0.0" y="0.0" width="298" height="576"/>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="45" viewBased="YES" id="zmd-vr-J34">
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="598"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -66,6 +66,10 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="yGC-i9-7Mp"/>
+                                    <outlet property="delegate" destination="-2" id="ihZ-Dz-azQ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                     </clipView>
@@ -73,14 +77,10 @@
                         <rect key="frame" x="1" y="119" width="223" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lEJ-4n-PA9">
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="lEJ-4n-PA9">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <tableHeaderView key="headerView" id="paB-xc-gfX">
-                        <rect key="frame" x="0.0" y="0.0" width="298" height="23"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </tableHeaderView>
                 </scrollView>
             </subviews>
         </customView>

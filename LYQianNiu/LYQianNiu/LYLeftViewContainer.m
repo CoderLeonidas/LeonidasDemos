@@ -13,19 +13,11 @@
 #import "LYLianXiRenViewController.h"
 #import "LYZuiJinHuiHuaViewController.h"
 #import "LYJinRiJieDaiViewController.h"
-
-/**
- 底部视图类型
- */
-typedef enum : NSUInteger {
-    LYBottomVCTypeJinRiJieDai,//今日接待
-    LYBottomVCTypeZuiJinHuiHua,//最近会话
-    LYBottomVCTypeLianXiRen,//联系人
-    LYBottomVCTypeQunZu//群组
-} LYBottomVCType;
+#import "CommonDef.h"
 
 @interface LYLeftViewContainer ()  {
     NSViewController *_currentBottomVC;//当前显示的底部控制器
+    NSMutableDictionary *_VCAndNotiMap;//保存导航按钮按下通知和对应显示的控制器的映射字典
 }
 @property (weak) IBOutlet NSView *topView;//顶部视图容器
 @property (weak) IBOutlet NSView *bottomView;//底部视图容器
@@ -37,7 +29,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) LYLianXiRenViewController *lianXiRenViewController;//联系人
 @property (nonatomic, strong) LYZuiJinHuiHuaViewController *zuiJinHuiHuaViewController;//最近会话
 @property (nonatomic, strong) LYJinRiJieDaiViewController *jinRiJieDaiViewController;//今日接待
-@property (nonatomic, copy) NSDictionary *keysAndVCs;
 
 @end
 
@@ -46,29 +37,30 @@ typedef enum : NSUInteger {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initObjects];
-    
+    [self addNotifications];
+}
 
-    [self.bottomView addSubview:self.jinRiJieDaiViewController.view positioned:NSWindowAbove relativeTo:nil];
-    self.jinRiJieDaiViewController.view.frame = self.bottomView.bounds;
-//    //del
-//    [LYTool changeBGColor:[NSColor redColor] inView:self.bottomView];
-//    [LYTool changeBGColor:[NSColor brownColor] inView:self.jinRiJieDaiViewController.view];
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Notification
+
+- (void)addNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYQunZuBtnClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYLianXiRenBtnClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYZuiJinHuiHuaBtnClickNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYJinRiJieDaiBtnClickNotification object:nil];
 }
 
 - (void)initObjects {
+    _currentBottomVC = nil;
+    _VCAndNotiMap = [NSMutableDictionary dictionary];
     [self setupSearchBar];
-    [self setupViewManager];
 }
 
-- (void)setupViewManager {
-    [self.viewManager setHostingView:self.bottomView];
-    self.keysAndVCs = @{
-                                   @(LYBottomVCTypeQunZu):self.qunZuViewController,
-                                   @(LYBottomVCTypeLianXiRen):self.lianXiRenViewController,
-                                   @(LYBottomVCTypeZuiJinHuiHua):self.zuiJinHuiHuaViewController,
-                                   @(LYBottomVCTypeJinRiJieDai):self.jinRiJieDaiViewController};
-//    [self.viewManager setKeysAndVCs:keysAndVCs];
-//    [self.viewManager showViewWithKey:LYBottomVCTypeZuiJinHuiHua];
+- (void)clearObjects {
+    _VCAndNotiMap = nil;
 }
 
 #define PaddingLR 10
@@ -77,36 +69,72 @@ typedef enum : NSUInteger {
 - (void)setupSearchBar {
     [self.topView addSubview:self.searchBar.view];
     self.searchBar.image = [NSImage imageNamed:@"WWMainWindowSearchIcon_16x16"];
-    
+    //TODO 位置调整
     CGFloat w = self.topView.frame.size.width - 2 * PaddingLR;
     CGFloat h = SearchBarH;
     CGFloat x = PaddingLR;
     CGFloat y = (self.topView.frame.size.height - h ) * 0.5;
     self.searchBar.view.frame = NSMakeRect(x, y, w, h);
-
 }
 
-- (void)switchBottomViewWithKey:(long)key {
-    NSViewController *vc = self.keysAndVCs[@(key)];
-    if (!vc || [vc isEqualTo:_currentBottomVC]) return;
+- (void)switchBottomViewWith:(NSNotification *)noti {
+    if (!noti) return;
+    NSString *notiName = noti.name;
+    NSViewController *bottomVCToShow = _VCAndNotiMap[notiName];
+    if ( bottomVCToShow && [bottomVCToShow isEqualTo:_currentBottomVC]) return;
+    
     //先从父视图移除
-    if (_currentBottomVC.view.superview) {
-        [_currentBottomVC.view removeFromSuperview];
+    [self hideViewFromSuperView:_currentBottomVC.view];
+
+    
+    if (bottomVCToShow) {
+    } else {//若字典里还没有就加入字典
+        if ([notiName isEqualToString:LYJinRiJieDaiBtnClickNotification]) {
+            bottomVCToShow = self.jinRiJieDaiViewController;
+        } else if ([notiName isEqualToString:LYZuiJinHuiHuaBtnClickNotification]) {
+            bottomVCToShow = self.zuiJinHuiHuaViewController;
+        } else if ([notiName isEqualToString:LYLianXiRenBtnClickNotification]) {
+            bottomVCToShow = self.lianXiRenViewController;
+        } else if ([notiName isEqualToString:LYQunZuBtnClickNotification]) {
+            bottomVCToShow = self.qunZuViewController;
+            
+        }
+        _VCAndNotiMap[notiName] = bottomVCToShow;
     }
     
     //添加到子视图
-    _currentBottomVC.view.frame = self.bottomView.bounds;
-    [self.bottomView addSubview:_currentBottomVC.view];
+    [self showNewView:bottomVCToShow.view ToHostingView:self.bottomView];
+    _currentBottomVC = bottomVCToShow;
+}
+
+
+/**
+ 从父视图移除
+
+ @param aView 将要移除的视图
+ */
+- (void)hideViewFromSuperView:(NSView *)aView {
+    if (!aView) return;
+    if (!aView.superview) return;
+    
+    [aView removeFromSuperview];
+}
+
+/**
+ 将一个视图作为子视图显示在另一个宿主视图上
+
+ @param aView 将要显示的视图
+ @param aHostView 宿主视图
+ */
+- (void)showNewView:(NSView *)aView ToHostingView:(NSView *)aHostView {
+    if (!aView || !aHostView) return;
+    
+    aView.frame = aHostView.bounds;
+    [aHostView addSubview:aView];
 }
 
 #pragma mark - Lazy loading
 
-- (NSDictionary*) keysAndVCs{
-    if (!_keysAndVCs) {
-        _keysAndVCs = [[NSDictionary alloc] init];
-    }
-    return _keysAndVCs;
-}
 - (LYImageTextField *)searchBar {
     if (!_searchBar) {
         _searchBar = [[LYImageTextField alloc] initWithNibName:@"LYImageTextField" bundle:nil];
@@ -146,7 +174,5 @@ typedef enum : NSUInteger {
     }
     return _jinRiJieDaiViewController;
 }
-
-
 
 @end

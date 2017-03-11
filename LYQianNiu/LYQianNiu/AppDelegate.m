@@ -8,6 +8,12 @@
 
 #import "AppDelegate.h"
 #import "LYLoginViewController.h"
+
+#import "DDLog.h"
+#import "DDTTYLogger.h"
+#import "XMPPFramework.h"
+#define systemVersionIsHigherThan(aVersion) [[NSDevice currentDevice].systemVersion doubleValue] > aVersion
+#define systemVersionIsLowerThan(aVersion) [[NSDevice currentDevice].systemVersion doubleValue] < aVersion
 @interface AppDelegate ()
 @property (weak) IBOutlet NSWindow *window;
 @property (nonatomic, strong) LYLoginViewController *loginVC;
@@ -22,6 +28,22 @@
     self.window.contentViewController = self.loginVC;
     [self setupTitleBar];
     [self.window.windowController showWindow:nil];
+    
+    // 沙盒的路径
+    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"%@", path);
+    
+    
+    
+    // 从沙里加载用户的数据到单例
+    [[WCUserInfo sharedWCUserInfo] loadUserInfoFromSanbox];
+
+    //注册应用接收本地通知
+//    if (systemVersionIsHigherThan(8) ) {
+//        CFUserNotificationGetTypeID* settings = [CFUserNotificationGetTypeID settingsForTypes:NSRemoteNotificationTypeAlert | NSRemoteNotificationTypeBadge | NSRemoteNotificationTypeSound categories:nil];
+//        [NSApplication registerUserNotificationSettings:settings];
+//    }
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

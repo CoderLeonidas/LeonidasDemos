@@ -8,7 +8,14 @@
 
 #import "LYJinRiJieDaiViewController.h"
 
-@interface LYJinRiJieDaiViewController ()
+@interface LYLianXiRenEntity: NSObject
+
+@end
+
+@interface LYJinRiJieDaiViewController () <NSTableViewDelegate, NSTableViewDataSource> {
+
+    NSMutableArray *_dataSource;
+}
 
 @end
 
@@ -17,6 +24,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+}
+
+- (void)initObjects {
+    _dataSource = [NSMutableArray array];
+}
+
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return _dataSource.count;
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    return 20.0;
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+
+}
+
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row {
+    return nil;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    return nil;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LYNavigationViewController.h"
+#import "CommonDef.h"
 
 @interface LYNavigationViewController ()
 @property (weak) IBOutlet NSButton *avataBtn;
@@ -30,18 +31,19 @@
 }
 
 - (IBAction)jinRiJieDaiBtnClicked:(id)sender {
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYJinRiJieDaiBtnClickNotification object:self];
 }
 
 - (IBAction)lianXiRenBtnClicked:(id)sender {
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYLianXiRenBtnClickNotification object:self];
 }
 
-- (IBAction)zuiJinHuiHuaBtnClicked:(id)sender {
-
+- (IBAction)zuiJinHuiHuaBtnClicked:(id)sender  {
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYZuiJinHuiHuaBtnClickNotification object:self];
 }
+
 - (IBAction)qunZuBtnClicked:(id)sender {
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYQunZuBtnClickNotification object:self];
 }
 
 

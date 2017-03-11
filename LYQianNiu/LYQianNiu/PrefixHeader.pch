@@ -14,5 +14,18 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 #import "LYTool.h"
+#import "WCUserInfo.h"
+#import "WCXMPPTool.h"
+
+
+// 自定义Log
+#ifdef DEBUG
+
+#define WCLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+#else
+#define WCLog(...)
+
+#endif
 
 #endif /* PrefixHeader_pch */

@@ -106,7 +106,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="LoginLeft" width="207" height="306"/>
+        <image name="LoginLeft" width="207" height="320"/>
         <image name="login_Arrow_Down" width="1024" height="1024"/>
         <image name="login_ico_entry_pre" width="36" height="36"/>
         <image name="login_ico_key_nor2" width="36" height="36"/>
