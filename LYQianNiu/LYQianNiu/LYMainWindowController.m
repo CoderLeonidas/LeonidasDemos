@@ -30,8 +30,7 @@
 //设置窗口外观状态
 - (void)setupMainWindowState {
     self.window.titlebarAppearsTransparent = YES;
-    self.window.titleVisibility = NSWindowTitleHidden;
-    self.window.styleMask |= NSWindowStyleMaskTitled |NSWindowStyleMaskUnifiedTitleAndToolbar |NSWindowStyleMaskFullSizeContentView;
+    self.window.styleMask |=  NSWindowStyleMaskFullSizeContentView;
 }
 
 #pragma mark - Lazy Loading 

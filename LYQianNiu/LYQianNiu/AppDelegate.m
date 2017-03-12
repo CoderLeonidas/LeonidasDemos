@@ -66,6 +66,7 @@
     self.window.titlebarAppearsTransparent = YES;
     [self.window standardWindowButton:NSWindowZoomButton].hidden = YES;
     [self.window standardWindowButton:NSWindowMiniaturizeButton].hidden = YES;
+    self.window.styleMask |= NSWindowStyleMaskFullSizeContentView;
 }
 
 #pragma mark - Core Data stack

@@ -9,19 +9,36 @@
 #import "LYLoginViewController.h"
 #import "LYMainWindowController.h"
 #import "XMPPFramework.h"
+#import "LYAssistantLoginViewController.h"
 @interface LYLoginViewController ()
-
+@property (weak) IBOutlet NSImageView *imageView;
 @property (nonatomic, strong) LYMainWindowController *mainWC;
+@property (nonatomic, strong) LYAssistantLoginViewController *assistantLoginVC;
 @end
 
 @implementation LYLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.view addSubview:self.assistantLoginVC.view];
 }
 
 #pragma mark - IBAction
+
+//箭头按钮控制辅助VC的显隐
+- (IBAction)arrowBtnClicked:(id)sender {
+    NSButton *btn = sender;
+    if (btn.state) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.assistantLoginVC.view.hidden = NO;
+        });
+    } else {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.assistantLoginVC.view.hidden = YES;
+        });
+    }
+    
+}
 
 - (IBAction)loginBtnClicked:(id)sender {
     //登录成功，关闭登录窗口
@@ -50,6 +67,19 @@
     }
     
     return _mainWC;
+}
+
+- (LYAssistantLoginViewController*) assistantLoginVC{
+    if (!_assistantLoginVC) {
+        _assistantLoginVC = [[LYAssistantLoginViewController alloc] init];
+        
+        CGFloat W = 240.0;
+        CGFloat H = 70.0;
+        CGFloat X = (self.view.frame.size.width - self.imageView.frame.size.width- W) * 0.5 + self.imageView.frame.size.width;
+        CGFloat Y = 30.0;
+        _assistantLoginVC.view.frame = NSMakeRect(X, Y, W, H);
+    }
+    return _assistantLoginVC;
 }
 
 

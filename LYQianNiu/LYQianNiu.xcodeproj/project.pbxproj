@@ -57,6 +57,8 @@
 		269988E31E7463050037FF7A /* LYTopAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988E11E7463050037FF7A /* LYTopAreaViewController.xib */; };
 		269988E71E7468520037FF7A /* LYChattingAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988E51E7468520037FF7A /* LYChattingAreaViewController.m */; };
 		269988E81E7468520037FF7A /* LYChattingAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988E61E7468520037FF7A /* LYChattingAreaViewController.xib */; };
+		269988EF1E7527650037FF7A /* LYAssistantLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */; };
+		269988F01E7527650037FF7A /* LYAssistantLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */; };
 		26B56B6E1E7179230085AAED /* LoginLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B6D1E7179230085AAED /* LoginLeft.png */; };
 		26B56B721E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B711E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png */; };
 		26B56B7A1E718D470085AAED /* LYJinRiJieDaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B56B781E718D470085AAED /* LYJinRiJieDaiViewController.m */; };
@@ -296,6 +298,9 @@
 		269988E41E7468520037FF7A /* LYChattingAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingAreaViewController.h; sourceTree = "<group>"; };
 		269988E51E7468520037FF7A /* LYChattingAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingAreaViewController.m; sourceTree = "<group>"; };
 		269988E61E7468520037FF7A /* LYChattingAreaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYChattingAreaViewController.xib; sourceTree = "<group>"; };
+		269988EC1E7527650037FF7A /* LYAssistantLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAssistantLoginViewController.h; sourceTree = "<group>"; };
+		269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAssistantLoginViewController.m; sourceTree = "<group>"; };
+		269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYAssistantLoginViewController.xib; sourceTree = "<group>"; };
 		26B56B6D1E7179230085AAED /* LoginLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginLeft.png; sourceTree = "<group>"; };
 		26B56B711E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWMainWindowSearchIcon_16x16.png; sourceTree = "<group>"; };
 		26B56B771E718D470085AAED /* LYJinRiJieDaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYJinRiJieDaiViewController.h; sourceTree = "<group>"; };
@@ -721,6 +726,7 @@
 		2632C75E1E6D5F4D001278CA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				269988EB1E7526F10037FF7A /* 小面板 */,
 				2632C7641E6D5FA2001278CA /* LYLoginViewController.h */,
 				2632C7651E6D5FA2001278CA /* LYLoginViewController.m */,
 				2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */,
@@ -916,6 +922,16 @@
 				2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */,
 			);
 			name = "大容器";
+			sourceTree = "<group>";
+		};
+		269988EB1E7526F10037FF7A /* 小面板 */ = {
+			isa = PBXGroup;
+			children = (
+				269988EC1E7527650037FF7A /* LYAssistantLoginViewController.h */,
+				269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */,
+				269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */,
+			);
+			name = "小面板";
 			sourceTree = "<group>";
 		};
 		26B56B731E718CE80085AAED /* 今日接待 */ = {
@@ -1943,6 +1959,7 @@
 				26D044DD1E729FB80018AF36 /* README.txt in Resources */,
 				2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */,
 				269988D91E742AEC0037FF7A /* LYWelcomeView.xib in Resources */,
+				269988F01E7527650037FF7A /* LYAssistantLoginViewController.xib in Resources */,
 				2632C7F41E6EB8B8001278CA /* Statusbar_Messages_Hover.png in Resources */,
 				2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */,
 				26D044E21E729FB80018AF36 /* build-libidn.sh in Resources */,
@@ -2251,6 +2268,7 @@
 				2632C71C1E6D56FB001278CA /* AppDelegate.m in Sources */,
 				26D044D91E729FB80018AF36 /* DDLog.m in Sources */,
 				26D0448E1E729FB80018AF36 /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
+				269988EF1E7527650037FF7A /* LYAssistantLoginViewController.m in Sources */,
 				26D0447B1E729FB80018AF36 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				26D044C91E729FB80018AF36 /* XMPPAttentionModule.m in Sources */,
 				26D044D51E729FB80018AF36 /* GCDAsyncSocket.m in Sources */,
