@@ -1,12 +1,12 @@
 //
-//  WCUserInfo.m
-//  WeChat
+//  LYUserInfo.m
+//   
 //
 //  Created by Leon on 17/3/4.
 //  Copyright (c) 2017年 Leon. All rights reserved.
 //
 
-#import "WCUserInfo.h"
+#import "LYUserInfo.h"
 
 #define UserKey @"user"
 #define LoginStatusKey @"LoginStatus"
@@ -14,9 +14,9 @@
 
 
 
-@implementation WCUserInfo
+@implementation LYUserInfo
 
-singleton_implementation(WCUserInfo)
+singleton_implementation(LYUserInfo)
 
 -(void)saveUserInfoToSanbox{
 

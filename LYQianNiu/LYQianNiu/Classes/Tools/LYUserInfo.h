@@ -1,6 +1,6 @@
 //
-//  WCUserInfo.h
-//  WeChat
+//  LYUserInfo.h
+//   
 //
 //  Created by Leon on 17/3/4.
 //  Copyright (c) 2017年 Leon. All rights reserved.
@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 static NSString *domain = @"luoyang.local";
-@interface WCUserInfo : NSObject
+@interface LYUserInfo : NSObject
 
-singleton_interface(WCUserInfo);
+singleton_interface(LYUserInfo);
 
 @property (nonatomic, copy) NSString *user;//用户名
 @property (nonatomic, copy) NSString *pwd;//密码

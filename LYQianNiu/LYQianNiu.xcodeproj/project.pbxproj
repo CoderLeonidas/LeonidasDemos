@@ -46,8 +46,6 @@
 		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
 		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
 		2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2971E6FE310009CED7B /* LYLeftViewContainer.xib */; };
-		2698E29E1E6FE353009CED7B /* LYImageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E29C1E6FE353009CED7B /* LYImageTextField.m */; };
-		2698E29F1E6FE353009CED7B /* LYImageTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E29D1E6FE353009CED7B /* LYImageTextField.xib */; };
 		2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */; };
 		2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */; };
 		269988D71E742A500037FF7A /* LYWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988D61E742A500037FF7A /* LYWelcomeView.m */; };
@@ -202,8 +200,8 @@
 		26D044E81E72A31E0018AF36 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D044E61E72A2F40018AF36 /* libxml2.2.dylib */; };
 		26D044EA1E72A34F0018AF36 /* libresolv.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D044E91E72A34F0018AF36 /* libresolv.9.dylib */; };
 		26D044EE1E72AF610018AF36 /* LYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D044ED1E72AF610018AF36 /* LYTool.m */; };
-		26D044F41E72AFB00018AF36 /* WCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D044F11E72AFB00018AF36 /* WCUserInfo.m */; };
-		26D044F51E72AFB00018AF36 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D044F31E72AFB00018AF36 /* WCXMPPTool.m */; };
+		26D044F41E72AFB00018AF36 /* LYUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D044F11E72AFB00018AF36 /* LYUserInfo.m */; };
+		26D044F51E72AFB00018AF36 /* LYXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D044F31E72AFB00018AF36 /* LYXMPPTool.m */; };
 		61914314DA1468E6E44F96D2 /* libPods-LYQianNiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */; };
 		8A902B1B8939B41933E7AEC6 /* libPods-LYQianNiuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */; };
 		91978F3E08593D3EA15E40D4 /* libPods-LYQianNiuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */; };
@@ -281,9 +279,6 @@
 		2698E2951E6FE310009CED7B /* LYLeftViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLeftViewContainer.h; sourceTree = "<group>"; };
 		2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLeftViewContainer.m; sourceTree = "<group>"; };
 		2698E2971E6FE310009CED7B /* LYLeftViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLeftViewContainer.xib; sourceTree = "<group>"; };
-		2698E29B1E6FE353009CED7B /* LYImageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageTextField.h; sourceTree = "<group>"; };
-		2698E29C1E6FE353009CED7B /* LYImageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYImageTextField.m; sourceTree = "<group>"; };
-		2698E29D1E6FE353009CED7B /* LYImageTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYImageTextField.xib; sourceTree = "<group>"; };
 		2698E2A11E6FE562009CED7B /* LYRightViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightViewContainer.h; sourceTree = "<group>"; };
 		2698E2A21E6FE562009CED7B /* LYRightViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightViewContainer.m; sourceTree = "<group>"; };
 		2698E2A31E6FE562009CED7B /* LYRightViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightViewContainer.xib; sourceTree = "<group>"; };
@@ -591,10 +586,10 @@
 		26D044EC1E72AF610018AF36 /* LYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTool.h; sourceTree = "<group>"; };
 		26D044ED1E72AF610018AF36 /* LYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTool.m; sourceTree = "<group>"; };
 		26D044EF1E72AFB00018AF36 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		26D044F01E72AFB00018AF36 /* WCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCUserInfo.h; sourceTree = "<group>"; };
-		26D044F11E72AFB00018AF36 /* WCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCUserInfo.m; sourceTree = "<group>"; };
-		26D044F21E72AFB00018AF36 /* WCXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCXMPPTool.h; sourceTree = "<group>"; };
-		26D044F31E72AFB00018AF36 /* WCXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCXMPPTool.m; sourceTree = "<group>"; };
+		26D044F01E72AFB00018AF36 /* LYUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUserInfo.h; sourceTree = "<group>"; };
+		26D044F11E72AFB00018AF36 /* LYUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUserInfo.m; sourceTree = "<group>"; };
+		26D044F21E72AFB00018AF36 /* LYXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMPPTool.h; sourceTree = "<group>"; };
+		26D044F31E72AFB00018AF36 /* LYXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMPPTool.m; sourceTree = "<group>"; };
 		4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests.release.xcconfig"; sourceTree = "<group>"; };
 		51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu.release.xcconfig"; sourceTree = "<group>"; };
@@ -726,7 +721,7 @@
 		2632C75E1E6D5F4D001278CA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				269988EB1E7526F10037FF7A /* 小面板 */,
+				269988EB1E7526F10037FF7A /* 辅助登录面板 */,
 				2632C7641E6D5FA2001278CA /* LYLoginViewController.h */,
 				2632C7651E6D5FA2001278CA /* LYLoginViewController.m */,
 				2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */,
@@ -817,16 +812,6 @@
 			name = "会话列表容器";
 			sourceTree = "<group>";
 		};
-		2698E29A1E6FE336009CED7B /* 搜索框 */ = {
-			isa = PBXGroup;
-			children = (
-				2698E29B1E6FE353009CED7B /* LYImageTextField.h */,
-				2698E29C1E6FE353009CED7B /* LYImageTextField.m */,
-				2698E29D1E6FE353009CED7B /* LYImageTextField.xib */,
-			);
-			name = "搜索框";
-			sourceTree = "<group>";
-		};
 		2698E2A01E6FE542009CED7B /* 聊天列表容器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,7 +845,6 @@
 		2698E2B41E702F4F009CED7B /* 控件  */ = {
 			isa = PBXGroup;
 			children = (
-				2698E29A1E6FE336009CED7B /* 搜索框 */,
 			);
 			name = "控件 ";
 			sourceTree = "<group>";
@@ -924,14 +908,14 @@
 			name = "大容器";
 			sourceTree = "<group>";
 		};
-		269988EB1E7526F10037FF7A /* 小面板 */ = {
+		269988EB1E7526F10037FF7A /* 辅助登录面板 */ = {
 			isa = PBXGroup;
 			children = (
 				269988EC1E7527650037FF7A /* LYAssistantLoginViewController.h */,
 				269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */,
 				269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */,
 			);
-			name = "小面板";
+			name = "辅助登录面板";
 			sourceTree = "<group>";
 		};
 		26B56B731E718CE80085AAED /* 今日接待 */ = {
@@ -1789,10 +1773,10 @@
 			isa = PBXGroup;
 			children = (
 				26D044EF1E72AFB00018AF36 /* Singleton.h */,
-				26D044F01E72AFB00018AF36 /* WCUserInfo.h */,
-				26D044F11E72AFB00018AF36 /* WCUserInfo.m */,
-				26D044F21E72AFB00018AF36 /* WCXMPPTool.h */,
-				26D044F31E72AFB00018AF36 /* WCXMPPTool.m */,
+				26D044F01E72AFB00018AF36 /* LYUserInfo.h */,
+				26D044F11E72AFB00018AF36 /* LYUserInfo.m */,
+				26D044F21E72AFB00018AF36 /* LYXMPPTool.h */,
+				26D044F31E72AFB00018AF36 /* LYXMPPTool.m */,
 				26D044EC1E72AF610018AF36 /* LYTool.h */,
 				26D044ED1E72AF610018AF36 /* LYTool.m */,
 			);
@@ -1946,7 +1930,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
-				2698E29F1E6FE353009CED7B /* LYImageTextField.xib in Resources */,
 				2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */,
 				2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */,
 				26B56B721E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png in Resources */,
@@ -2228,7 +2211,6 @@
 				26D044B11E729FB80018AF36 /* XMPPTransports.m in Sources */,
 				26D044B41E729FB80018AF36 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				26D0449D1E729FB80018AF36 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
-				2698E29E1E6FE353009CED7B /* LYImageTextField.m in Sources */,
 				26D044B51E729FB80018AF36 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				26D044AC1E729FB80018AF36 /* XMPPMessage+XEP_0066.m in Sources */,
 				26D044661E729FB80018AF36 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
@@ -2246,7 +2228,7 @@
 				26D044731E729FB80018AF36 /* XMPPParser.m in Sources */,
 				2632C71F1E6D56FB001278CA /* main.m in Sources */,
 				26D0447F1E729FB80018AF36 /* XMPPUserCoreDataStorageObject.m in Sources */,
-				26D044F51E72AFB00018AF36 /* WCXMPPTool.m in Sources */,
+				26D044F51E72AFB00018AF36 /* LYXMPPTool.m in Sources */,
 				26D044C31E729FB80018AF36 /* XMPPAutoPing.m in Sources */,
 				2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */,
 				26D044AE1E729FB80018AF36 /* XMPPDateTimeProfiles.m in Sources */,
@@ -2261,7 +2243,7 @@
 				26D044AA1E729FB80018AF36 /* TURNSocket.m in Sources */,
 				26D044A21E729FB80018AF36 /* XMPPvCardTempEmail.m in Sources */,
 				26D044B01E729FB80018AF36 /* XMPPSoftwareVersion.m in Sources */,
-				26D044F41E72AFB00018AF36 /* WCUserInfo.m in Sources */,
+				26D044F41E72AFB00018AF36 /* LYUserInfo.m in Sources */,
 				26D044C01E729FB80018AF36 /* XMPPMessage+XEP_0184.m in Sources */,
 				26D044741E729FB80018AF36 /* XMPPPresence.m in Sources */,
 				26D044BF1E729FB80018AF36 /* XMPPPresence+XEP_0172.m in Sources */,

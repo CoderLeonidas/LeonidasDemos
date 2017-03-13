@@ -36,7 +36,7 @@
     
     
     // 从沙里加载用户的数据到单例
-    [[WCUserInfo sharedWCUserInfo] loadUserInfoFromSanbox];
+    [[LYUserInfo sharedLYUserInfo] loadUserInfoFromSanbox];
 
     //注册应用接收本地通知
 //    if (systemVersionIsHigherThan(8) ) {

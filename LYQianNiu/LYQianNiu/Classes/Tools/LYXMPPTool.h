@@ -1,6 +1,6 @@
 //
-//  WCXMPPTool.h
-//  WeChat
+//  LYXMPPTool.h
+//   
 //
 //  Created by Leon on 17/3/4.
 //  Copyright (c) 2017年 Leon. All rights reserved.
@@ -10,7 +10,7 @@
 #import "Singleton.h"
 #import "XMPPFramework.h"
 
-extern NSString *const WCLoginStatusChangeNotification;
+extern NSString *const LYCLoginStatusChangeNotification;
 
 typedef enum {
     XMPPResultTypeConnecting,//连接中...
@@ -23,9 +23,9 @@ typedef enum {
 
 typedef void (^XMPPResultBlock)(XMPPResultType type);// XMPP请求结果的block
 
-@interface WCXMPPTool : NSObject
+@interface LYXMPPTool : NSObject
 
-singleton_interface(WCXMPPTool);
+singleton_interface(LYXMPPTool);
 
 @property (nonatomic, strong,readonly)XMPPStream *xmppStream;
 @property (nonatomic, strong,readonly)XMPPvCardTempModule *vCard;//电子名片

@@ -1,18 +1,18 @@
 //
-//  WCXMPPTool.m
-//  WeChat
+//  LYXMPPTool.m
+//   
 //
 //  Created by Leon on 17/3/4.
 //  Copyright (c) 2017年 Leon. All rights reserved.
 //
 
-#import "WCXMPPTool.h"
+#import "LYXMPPTool.h"
 
 //服务器地址
 #define HostName  @"luoyang.local"
 #define HostPort  5222
 
-NSString *const WCLoginStatusChangeNotification = @"WCLoginStatusNotification";
+NSString *const LYCLoginStatusChangeNotification = @"LYCLoginStatusNotification";
 /*
  * 在AppDelegate实现登录
  
@@ -24,7 +24,7 @@ NSString *const WCLoginStatusChangeNotification = @"WCLoginStatusNotification";
 
 #import "DDXMLElement.h"
 
-@interface WCXMPPTool ()<XMPPStreamDelegate>{
+@interface LYXMPPTool ()<XMPPStreamDelegate>{
     
     XMPPResultBlock _resultBlock;
     
@@ -39,10 +39,10 @@ NSString *const WCLoginStatusChangeNotification = @"WCLoginStatusNotification";
 @end
 
 
-@implementation WCXMPPTool
+@implementation LYXMPPTool
 
 
-singleton_implementation(WCXMPPTool)
+singleton_implementation(LYXMPPTool)
 
 #pragma mark  -私有方法
 #pragma mark 初始化XMPPStream
@@ -112,7 +112,7 @@ singleton_implementation(WCXMPPTool)
 }
 #pragma mark 连接到服务器
 -(void)connectToHost{
-    WCLog(@"开始连接到服务器");
+    LYCLog(@"开始连接到服务器");
     if (!_xmppStream) {
         [self setupXMPPStream];
     }
@@ -126,9 +126,9 @@ singleton_implementation(WCXMPPTool)
     // 从单例获取用户名
     NSString *user = nil;
     if (self.isRegisterOperation) {
-        user = [WCUserInfo sharedWCUserInfo].registerUser;
+        user = [LYUserInfo sharedLYUserInfo].registerUser;
     }else{
-        user = [WCUserInfo sharedWCUserInfo].user;
+        user = [LYUserInfo sharedLYUserInfo].user;
     }
     XMPPJID *myJID = [XMPPJID jidWithUser:user domain:HostName resource:@"iphone" ];
     _xmppStream.myJID = myJID;
@@ -142,31 +142,31 @@ singleton_implementation(WCXMPPTool)
     // 连接
     NSError *err = nil;
     if(![_xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&err]){
-        WCLog(@"%@",err);
+        LYCLog(@"%@",err);
     }
 }
 
 
 #pragma mark 连接到服务成功后，再发送密码授权
 -(void)sendPwdToHost{
-    WCLog(@"再发送密码授权");
+    LYCLog(@"再发送密码授权");
     NSError *err = nil;
     
     // 从单例里获取密码
-    NSString *pwd = [WCUserInfo sharedWCUserInfo].pwd;
+    NSString *pwd = [LYUserInfo sharedLYUserInfo].pwd;
     
     [_xmppStream authenticateWithPassword:pwd error:&err];
     
     if (err) {
-        WCLog(@"%@",err);
+        LYCLog(@"%@",err);
     }
 }
 
 #pragma mark  授权成功后，发送"在线" 消息
 -(void)sendOnlineToHost{
-    WCLog(@"发送 在线 消息");
+    LYCLog(@"发送 在线 消息");
     XMPPPresence *presence = [XMPPPresence presence];
-    WCLog(@"%@",presence);
+    LYCLog(@"%@",presence);
     //上线或者下线成功后，向服务器发送Presence数据，以更新用户在服务器的状态
     [_xmppStream sendElement:presence];
 }
@@ -181,16 +181,16 @@ singleton_implementation(WCXMPPTool)
     // 将登录状态放入字典，然后通过通知传递
     NSDictionary *userInfo = @{@"loginStatus":@(resultType)};
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:WCLoginStatusChangeNotification object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYCLoginStatusChangeNotification object:nil userInfo:userInfo];
 }
 
 #pragma mark -XMPPStream的代理
 #pragma mark 与主机连接成功
 -(void)xmppStreamDidConnect:(XMPPStream *)sender{
-    WCLog(@"与主机连接成功");
+    LYCLog(@"与主机连接成功");
     
     if (self.isRegisterOperation) {//注册操作，发送注册的密码
-        NSString *pwd = [WCUserInfo sharedWCUserInfo].registerPwd;
+        NSString *pwd = [LYUserInfo sharedLYUserInfo].registerPwd;
         [_xmppStream registerWithPassword:pwd error:nil];
     }else{//登录操作
         // 主机连接成功后，发送密码进行授权
@@ -213,14 +213,14 @@ singleton_implementation(WCXMPPTool)
         //通知 【网络不稳定】
         [self postNotification:XMPPResultTypeNetErr];
     }
-    WCLog(@"与主机断开连接 %@",error);
+    LYCLog(@"与主机断开连接 %@",error);
     
 }
 
 
 #pragma mark 授权成功
 -(void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
-    WCLog(@"授权成功");
+    LYCLog(@"授权成功");
     
     [self sendOnlineToHost];
     
@@ -237,7 +237,7 @@ singleton_implementation(WCXMPPTool)
 
 #pragma mark 授权失败
 -(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error{
-    WCLog(@"授权失败 %@",error);
+    LYCLog(@"授权失败 %@",error);
     
     // 判断block有无值，再回调给登录控制器
     if (_resultBlock) {
@@ -249,7 +249,7 @@ singleton_implementation(WCXMPPTool)
 
 #pragma mark 注册成功
 -(void)xmppStreamDidRegister:(XMPPStream *)sender{
-    WCLog(@"注册成功");
+    LYCLog(@"注册成功");
     if(_resultBlock){
         _resultBlock(XMPPResultTypeRegisterSuccess);
     }
@@ -259,7 +259,7 @@ singleton_implementation(WCXMPPTool)
 #pragma mark 注册失败
 -(void)xmppStream:(XMPPStream *)sender didNotRegister:(DDXMLElement *)error{
     
-    WCLog(@"注册失败 %@",error);
+    LYCLog(@"注册失败 %@",error);
     if(_resultBlock){
         _resultBlock(XMPPResultTypeRegisterFailure);
     }
@@ -268,11 +268,11 @@ singleton_implementation(WCXMPPTool)
 
 #pragma mark 接收到好友消息
 -(void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
-    WCLog(@"%@",message);
+    LYCLog(@"%@",message);
     
 //    //如果当前程序不在前台，发出一个本地通知
 //    if([UIApplication sharedApplication].applicationState != UIApplicationStateActive){
-//        WCLog(@"在后台");
+//        LYCLog(@"在后台");
 //        
 //        //本地通知
 //        UILocalNotification *localNoti = [[UILocalNotification alloc] init];
@@ -296,7 +296,7 @@ singleton_implementation(WCXMPPTool)
     //XMPPPresence 在线 离线
     
     //presence.from 消息是谁发送过来
-    WCLog(@"presence.from=%@", presence.from);
+    LYCLog(@"presence.from=%@", presence.from);
 }
 
 #pragma mark -公共方法
@@ -312,8 +312,8 @@ singleton_implementation(WCXMPPTool)
 //    [UIStoryboard showInitialVCWithName:@"Login"];
     
     //4.更新用户的登录状态
-    [WCUserInfo sharedWCUserInfo].loginStatus = NO;
-    [[WCUserInfo sharedWCUserInfo] saveUserInfoToSanbox];
+    [LYUserInfo sharedLYUserInfo].loginStatus = NO;
+    [[LYUserInfo sharedLYUserInfo] saveUserInfoToSanbox];
 }
 
 -(void)xmppUserLogin:(XMPPResultBlock)resultBlock{

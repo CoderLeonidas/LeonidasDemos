@@ -29,13 +29,15 @@
 - (IBAction)arrowBtnClicked:(id)sender {
     NSButton *btn = sender;
     if (btn.state) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.assistantLoginVC.view.hidden = NO;
-        });
+        [self testAnimationWithHidded:btn.state Effect:NSViewAnimationFadeOutEffect];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            self.assistantLoginVC.view.hidden = NO;
+//        });NSViewAnimationFadeOutEffect
     } else {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.assistantLoginVC.view.hidden = YES;
-        });
+        [self testAnimationWithHidded:btn.state Effect:NSViewAnimationFadeInEffect];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            self.assistantLoginVC.view.hidden = YES;
+//        });
     }
     
 }
@@ -46,7 +48,7 @@
     [self.view.window close];
     
     // 判断用户的登录状态，YES 直接来到主界面
-//    if ([WCUserInfo sharedWCUserInfo].loginStatus) {
+//    if ([LYUserInfo sharedLYUserInfo].loginStatus) {
 //        // 自动登录服务
 //        // 1秒后再自动登录
 //#warning 一般情况下，都不会马上连接，会稍微等等
@@ -82,6 +84,25 @@
     return _assistantLoginVC;
 }
 
+
+//使用NSViewAnimation
+- (void)testAnimationWithHidded:(BOOL)hidden Effect:(NSString*)effectStr {
+    //属性字典
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    
+    //设置目标对象
+    [dict setObject:self.assistantLoginVC.view forKey:NSViewAnimationTargetKey];
+    self.assistantLoginVC.view.hidden = hidden;
+
+    //设置动画效果
+    [dict setObject:effectStr forKey:NSViewAnimationEffectKey];
+    
+    //设置动画
+    NSViewAnimation *animation = [[NSViewAnimation alloc] initWithViewAnimations:[NSArray arrayWithObject:dict]];
+    
+    //启动动画
+    [animation startAnimation];
+}
 
 
 

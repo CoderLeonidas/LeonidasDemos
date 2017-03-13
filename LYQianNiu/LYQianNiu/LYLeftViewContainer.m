@@ -7,7 +7,6 @@
 //
 
 #import "LYLeftViewContainer.h"
-#import "LYImageTextField.h"
 #import "LYViewManager.h"
 #import "LYQunZuViewController.h"
 #import "LYLianXiRenViewController.h"
@@ -22,7 +21,7 @@
 @property (weak) IBOutlet NSView *topView;//顶部视图容器
 @property (weak) IBOutlet NSView *bottomView;//底部视图容器
 
-@property (nonatomic, strong) LYImageTextField *searchBar;//搜索条
+@property (nonatomic, strong) NSSearchField *searchBar;//搜索条
 @property (nonatomic, strong) LYViewManager *viewManager;//视图管理器
 
 @property (nonatomic, strong) LYQunZuViewController *qunZuViewController;//群组
@@ -47,6 +46,7 @@
 #pragma mark - Notification
 
 - (void)addNotifications {
+    //TODO 切换控制器通知优化
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYQunZuBtnClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYLianXiRenBtnClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchBottomViewWith:) name:LYZuiJinHuiHuaBtnClickNotification object:nil];
@@ -67,14 +67,15 @@
 #define SearchBarH 22
 
 - (void)setupSearchBar {
-    [self.topView addSubview:self.searchBar.view];
-    self.searchBar.image = [NSImage imageNamed:@"WWMainWindowSearchIcon_16x16"];
-    //TODO 位置调整
+    //TODO 位置调整，
     CGFloat w = self.topView.frame.size.width - 2 * PaddingLR;
     CGFloat h = SearchBarH;
     CGFloat x = PaddingLR;
     CGFloat y = (self.topView.frame.size.height - h ) * 0.5;
-    self.searchBar.view.frame = NSMakeRect(x, y, w, h);
+    self.searchBar.frame = NSMakeRect(x, y, w, h);
+    self.searchBar.placeholderString = @"搜索联系人、群组";
+    self.searchBar.autoresizingMask = 1|2|4|8|16|32;
+    [self.topView addSubview:self.searchBar];
 }
 
 - (void)switchBottomViewWith:(NSNotification *)noti {
@@ -135,9 +136,9 @@
 
 #pragma mark - Lazy loading
 
-- (LYImageTextField *)searchBar {
+- (NSSearchField *)searchBar {
     if (!_searchBar) {
-        _searchBar = [[LYImageTextField alloc] initWithNibName:@"LYImageTextField" bundle:nil];
+        _searchBar = [[NSSearchField alloc] init];
     }
     return _searchBar;
 }
