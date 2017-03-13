@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
+
 static NSString *domain = @"luoyang.local";
+
 @interface LYUserInfo : NSObject
 
 singleton_interface(LYUserInfo);
 
+#pragma mark - 用户注册登录相关信息
 @property (nonatomic, copy) NSString *user;//用户名
 @property (nonatomic, copy) NSString *pwd;//密码
 
@@ -21,10 +24,16 @@ singleton_interface(LYUserInfo);
  */
 @property (nonatomic, assign) BOOL  loginStatus;
 
-
 @property (nonatomic, copy) NSString *registerUser;//注册的用户名
 @property (nonatomic, copy) NSString *registerPwd;//注册的密码
 @property (nonatomic, copy) NSString *jid;
+
+
+
+#pragma mark - 用户配置信息
+
+@property (nonatomic, assign) BOOL autoLogin;//自动登录
+@property (nonatomic, assign) BOOL rememberPwd;//记住密码
 
 /**
  *  从沙盒里获取用户数据
@@ -33,7 +42,6 @@ singleton_interface(LYUserInfo);
 
 /**
  *  保存用户数据到沙盒
- 
  */
 -(void)saveUserInfoToSanbox;
 @end
