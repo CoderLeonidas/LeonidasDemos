@@ -14,7 +14,7 @@
 #import "LYJinRiJieDaiViewController.h"
 #import "CommonDef.h"
 
-@interface LYLeftViewContainer ()  {
+@interface LYLeftViewContainer () <NSSearchFieldDelegate>  {
     NSViewController *_currentBottomVC;//当前显示的底部控制器
     NSMutableDictionary *_VCAndNotiMap;//保存导航按钮按下通知和对应显示的控制器的映射字典
 }
@@ -64,7 +64,7 @@
 }
 
 #define PaddingLR 10
-#define SearchBarH 22
+#define SearchBarH 40
 
 - (void)setupSearchBar {
     //TODO 位置调整，
@@ -75,6 +75,7 @@
     self.searchBar.frame = NSMakeRect(x, y, w, h);
     self.searchBar.placeholderString = @"搜索联系人、群组";
     self.searchBar.autoresizingMask = 1|2|4|8|16|32;
+    self.searchBar.focusRingType = NSFocusRingTypeNone;
     [self.topView addSubview:self.searchBar];
 }
 
@@ -174,6 +175,16 @@
         _jinRiJieDaiViewController = [[LYJinRiJieDaiViewController alloc] initWithNibName:@"LYJinRiJieDaiViewController" bundle:nil];
     }
     return _jinRiJieDaiViewController;
+}
+
+#pragma mark - NSSearchFieldDelegate 搜索框代理 
+
+- (void)searchFieldDidStartSearching:(NSSearchField *)sende{
+
+}
+
+- (void)searchFieldDidEndSearching:(NSSearchField *)sender{
+
 }
 
 @end

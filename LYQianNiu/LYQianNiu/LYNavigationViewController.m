@@ -8,14 +8,14 @@
 
 #import "LYNavigationViewController.h"
 #import "CommonDef.h"
-
+#import "LYAvatarImageView.h"
 @interface LYNavigationViewController ()
-@property (weak) IBOutlet NSButton *avataBtn;
+@property (weak) IBOutlet NSView *avatarArea;
 @property (weak) IBOutlet NSButton *jinRiJieDaiBtn;
 @property (weak) IBOutlet NSButton *zuiJinHuiHuaBtn;
 @property (weak) IBOutlet NSButton *lianXiRenBtn;
 @property (weak) IBOutlet NSButton *qunZuBtn;
-
+@property (nonatomic, strong) LYAvatarImageView *avatarView;
 @end
 
 @implementation LYNavigationViewController
@@ -23,11 +23,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: 调整背景色
-    
 }
 
-- (IBAction)avataBtnClicked:(id)sender {
-    NSLog(@"avataBtnClicked");
+- (void)viewWillAppear {
+
+    [self addAvatarView];
+}
+
+- (void)addAvatarView {
+    self.avatarView.frame = NSMakeRect(0, 0, 70 , 70);
+//    self.avatarView.avatar = [NSImage imageNamed:@"Statusbar_Messages_Hover"];
+    self.avatarView.styleMask = LYAvatarImageViewStyleMaskOnlineStatus | LYAvatarImageViewStyleMaskClose;
+    self.avatarView.autoresizingMask = 1|2|4|8|16|32;
+    [self.avatarArea addSubview:self.avatarView];
 }
 
 - (IBAction)jinRiJieDaiBtnClicked:(id)sender {
@@ -46,5 +54,12 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:LYQunZuBtnClickNotification object:self];
 }
 
+
+- (LYAvatarImageView*) avatarView{
+    if (!_avatarView) {
+        _avatarView = [[LYAvatarImageView alloc] init];
+    }
+    return _avatarView;
+}
 
 @end

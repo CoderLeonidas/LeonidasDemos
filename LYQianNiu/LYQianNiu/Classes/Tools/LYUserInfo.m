@@ -40,6 +40,6 @@ singleton_implementation(LYUserInfo)
 
 
 -(NSString *)jid{
-    return [NSString stringWithFormat:@"%@@%@",self.user,domain];
+    return [NSString stringWithFormat:@"%@@%@",self.user,HostName];
 }
 @end

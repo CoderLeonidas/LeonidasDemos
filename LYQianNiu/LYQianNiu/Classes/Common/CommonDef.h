@@ -28,6 +28,12 @@ typedef enum : NSUInteger {
     LYBottomVCTypeQunZu//群组
 } LYBottomVCType;
 
-#define LeftContainerWidth 160
-#define TopAreaHeight      70
+
+#define LeftContainerWidth 160//主界面左边列表容器宽度
+#define TopAreaHeight      70//主界面顶部区域高度
+
+//服务器地址
+#define HostName  @"luoyang.local"
+#define HostPort  5222
+
 #endif /* CommonDef_h */

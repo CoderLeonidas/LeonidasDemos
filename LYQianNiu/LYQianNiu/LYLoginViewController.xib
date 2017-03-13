@@ -9,9 +9,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LYLoginViewController">
             <connections>
-                <outlet property="avatarImageView" destination="L8n-Sq-4Pz" id="0cx-SH-yYz"/>
-                <outlet property="imageView" destination="OeR-ol-zZm" id="par-sx-hlu"/>
+                <outlet property="accountTextField" destination="r6i-mi-JJi" id="msN-1o-bXT"/>
+                <outlet property="avatarImageView" destination="L8n-Sq-4Pz" id="1Qx-D0-l4p"/>
+                <outlet property="leftImageView" destination="OeR-ol-zZm" id="y7z-Z3-Ck8"/>
                 <outlet property="loginBtn" destination="quw-t5-7Hl" id="3W8-lA-BNj"/>
+                <outlet property="pwdTextField" destination="JNk-sc-uOr" id="jKm-GK-WR9"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -101,6 +103,14 @@
                                 <connections>
                                     <action selector="arrowBtnClicked:" target="-2" id="6dV-ha-2DQ"/>
                                 </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" misplaced="YES" allowsExpansionToolTips="YES" id="3ig-uX-qDJ" customClass="MKBCloseButton">
+                                <rect key="frame" x="175" y="200" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="eDp-Eq-gTE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
                             </button>
                         </subviews>
                     </view>

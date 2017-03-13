@@ -28,22 +28,9 @@
     self.window.contentViewController = self.loginVC;
     [self setupTitleBar];
     [self.window.windowController showWindow:nil];
-    
-    // 沙盒的路径
-    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSLog(@"%@", path);
-    
-    
-    
+  
     // 从沙里加载用户的数据到单例
     [[LYUserInfo sharedLYUserInfo] loadUserInfoFromSanbox];
-
-    //注册应用接收本地通知
-//    if (systemVersionIsHigherThan(8) ) {
-//        CFUserNotificationGetTypeID* settings = [CFUserNotificationGetTypeID settingsForTypes:NSRemoteNotificationTypeAlert | NSRemoteNotificationTypeBadge | NSRemoteNotificationTypeSound categories:nil];
-//        [NSApplication registerUserNotificationSettings:settings];
-//    }
-    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

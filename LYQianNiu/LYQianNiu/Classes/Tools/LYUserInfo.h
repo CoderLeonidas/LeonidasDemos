@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 
-static NSString *domain = @"luoyang.local";
-
 @interface LYUserInfo : NSObject
 
 singleton_interface(LYUserInfo);

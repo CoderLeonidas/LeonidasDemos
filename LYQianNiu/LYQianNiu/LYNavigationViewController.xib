@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LYNavigationViewController">
             <connections>
-                <outlet property="avataBtn" destination="JGo-jk-gNf" id="0xG-BV-V43"/>
+                <outlet property="avatarArea" destination="hy0-2d-xVu" id="ByW-n8-XXI"/>
                 <outlet property="jinRiJieDaiBtn" destination="trC-e3-1L5" id="2f4-dj-N7V"/>
                 <outlet property="lianXiRenBtn" destination="mrX-hf-jf9" id="hoS-Gv-xgl"/>
                 <outlet property="qunZuBtn" destination="f3W-H8-T56" id="W2Z-Pl-V1w"/>
@@ -22,17 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="80" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button misplaced="YES" id="JGo-jk-gNf">
-                    <rect key="frame" x="20" y="523" width="40" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="login_photo_self" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="jpW-Fo-wgQ">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="avataBtnClicked:" target="-2" id="aoG-bv-HXa"/>
-                    </connections>
-                </button>
                 <button misplaced="YES" id="trC-e3-1L5">
                     <rect key="frame" x="20" y="433" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -77,6 +66,10 @@
                         <action selector="qunZuBtnClicked:" target="-2" id="MXq-aY-T12"/>
                     </connections>
                 </button>
+                <customView misplaced="YES" id="hy0-2d-xVu">
+                    <rect key="frame" x="5" y="494" width="70" height="70"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                </customView>
             </subviews>
         </customView>
     </objects>
@@ -84,7 +77,6 @@
         <image name="Statusbar_History" width="28" height="28"/>
         <image name="WWGroupIconUngrouped" width="36" height="36"/>
         <image name="WWMessageManagerTribeIcon" width="18" height="18"/>
-        <image name="login_photo_self" width="160" height="160"/>
         <image name="qipao" width="29" height="26"/>
     </resources>
 </document>

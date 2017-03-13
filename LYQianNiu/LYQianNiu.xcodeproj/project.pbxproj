@@ -57,6 +57,9 @@
 		269988E81E7468520037FF7A /* LYChattingAreaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988E61E7468520037FF7A /* LYChattingAreaViewController.xib */; };
 		269988EF1E7527650037FF7A /* LYAssistantLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */; };
 		269988F01E7527650037FF7A /* LYAssistantLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */; };
+		269988F31E7689440037FF7A /* MKBCloseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988F21E7689440037FF7A /* MKBCloseButton.m */; };
+		269988F71E768C030037FF7A /* LYAvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 269988F61E768C030037FF7A /* LYAvatarImageView.m */; };
+		269988F91E768C1B0037FF7A /* LYAvatarImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269988F81E768C1B0037FF7A /* LYAvatarImageView.xib */; };
 		26B56B6E1E7179230085AAED /* LoginLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B6D1E7179230085AAED /* LoginLeft.png */; };
 		26B56B721E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B711E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png */; };
 		26B56B7A1E718D470085AAED /* LYJinRiJieDaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B56B781E718D470085AAED /* LYJinRiJieDaiViewController.m */; };
@@ -296,6 +299,11 @@
 		269988EC1E7527650037FF7A /* LYAssistantLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAssistantLoginViewController.h; sourceTree = "<group>"; };
 		269988ED1E7527650037FF7A /* LYAssistantLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAssistantLoginViewController.m; sourceTree = "<group>"; };
 		269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYAssistantLoginViewController.xib; sourceTree = "<group>"; };
+		269988F11E7689440037FF7A /* MKBCloseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBCloseButton.h; sourceTree = "<group>"; };
+		269988F21E7689440037FF7A /* MKBCloseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBCloseButton.m; sourceTree = "<group>"; };
+		269988F51E768C030037FF7A /* LYAvatarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAvatarImageView.h; sourceTree = "<group>"; };
+		269988F61E768C030037FF7A /* LYAvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAvatarImageView.m; sourceTree = "<group>"; };
+		269988F81E768C1B0037FF7A /* LYAvatarImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYAvatarImageView.xib; sourceTree = "<group>"; };
 		26B56B6D1E7179230085AAED /* LoginLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginLeft.png; sourceTree = "<group>"; };
 		26B56B711E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWMainWindowSearchIcon_16x16.png; sourceTree = "<group>"; };
 		26B56B771E718D470085AAED /* LYJinRiJieDaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYJinRiJieDaiViewController.h; sourceTree = "<group>"; };
@@ -845,6 +853,9 @@
 		2698E2B41E702F4F009CED7B /* 控件  */ = {
 			isa = PBXGroup;
 			children = (
+				269988F11E7689440037FF7A /* MKBCloseButton.h */,
+				269988F21E7689440037FF7A /* MKBCloseButton.m */,
+				269988F41E768BC70037FF7A /* AvatarImageView */,
 			);
 			name = "控件 ";
 			sourceTree = "<group>";
@@ -916,6 +927,16 @@
 				269988EE1E7527650037FF7A /* LYAssistantLoginViewController.xib */,
 			);
 			name = "辅助登录面板";
+			sourceTree = "<group>";
+		};
+		269988F41E768BC70037FF7A /* AvatarImageView */ = {
+			isa = PBXGroup;
+			children = (
+				269988F51E768C030037FF7A /* LYAvatarImageView.h */,
+				269988F61E768C030037FF7A /* LYAvatarImageView.m */,
+				269988F81E768C1B0037FF7A /* LYAvatarImageView.xib */,
+			);
+			name = AvatarImageView;
 			sourceTree = "<group>";
 		};
 		26B56B731E718CE80085AAED /* 今日接待 */ = {
@@ -1953,6 +1974,7 @@
 				2632C7F01E6EB178001278CA /* LYNavigationViewController.xib in Resources */,
 				2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */,
 				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
+				269988F91E768C1B0037FF7A /* LYAvatarImageView.xib in Resources */,
 				2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */,
 				2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */,
 				26B56B7B1E718D470085AAED /* LYJinRiJieDaiViewController.xib in Resources */,
@@ -2178,6 +2200,7 @@
 				26B56B841E718D770085AAED /* LYLianXiRenViewController.m in Sources */,
 				26D044AD1E729FB80018AF36 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
 				26D044CD1E729FB80018AF36 /* XMPPMessage+XEP_0333.m in Sources */,
+				269988F71E768C030037FF7A /* LYAvatarImageView.m in Sources */,
 				26D044641E729FB80018AF36 /* XMPPAnonymousAuthentication.m in Sources */,
 				26D044901E729FB80018AF36 /* XMPPRoomHybridStorage.m in Sources */,
 				2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */,
@@ -2275,6 +2298,7 @@
 				2632C7BC1E6DA42B001278CA /* LYMainWindowController.m in Sources */,
 				26D0449A1E729FB80018AF36 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				26D044D21E729FB80018AF36 /* XMPPIDTracker.m in Sources */,
+				269988F31E7689440037FF7A /* MKBCloseButton.m in Sources */,
 				26D0449F1E729FB80018AF36 /* XMPPvCardTempAdr.m in Sources */,
 				26D044861E729FB80018AF36 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				26D044911E729FB80018AF36 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,

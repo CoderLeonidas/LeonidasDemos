@@ -8,10 +8,6 @@
 
 #import "LYXMPPTool.h"
 
-//服务器地址
-#define HostName  @"luoyang.local"
-#define HostPort  5222
-
 NSString *const LYCLoginStatusChangeNotification = @"LYCLoginStatusNotification";
 /*
  * 在AppDelegate实现登录
@@ -76,13 +72,16 @@ singleton_implementation(LYXMPPTool)
     _msgArchiving = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:_msgStorage];
     [_msgArchiving activate:_xmppStream];
     
+    //Mac设备没有这个_xmppStream.enableBackgroundingOnSocket属性
 //    _xmppStream.enableBackgroundingOnSocket = YES;
+
     
     // 设置代理
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
 }
 
 #pragma mark 释放xmppStream相关的资源
+
 -(void)teardownXmpp{
     
     // 移除代理
@@ -122,7 +121,6 @@ singleton_implementation(LYXMPPTool)
     
     // 设置登录用户JID
     //resource 标识用户登录的客户端 iphone android
-    
     // 从单例获取用户名
     NSString *user = nil;
     if (self.isRegisterOperation) {
@@ -130,7 +128,7 @@ singleton_implementation(LYXMPPTool)
     }else{
         user = [LYUserInfo sharedLYUserInfo].user;
     }
-    XMPPJID *myJID = [XMPPJID jidWithUser:user domain:HostName resource:@"iphone" ];
+    XMPPJID *myJID = [XMPPJID jidWithUser:user domain:HostName resource:@"mac" ];
     _xmppStream.myJID = myJID;
     
     // 设置服务器域名

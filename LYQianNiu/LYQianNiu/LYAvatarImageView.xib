@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LYAvatarImageView">
+            <connections>
+                <outlet property="avatarView" destination="1I0-xm-6RP" id="e5o-R9-lo8"/>
+                <outlet property="closeBtn" destination="dQW-8M-rwD" id="iIp-Vd-NFQ"/>
+                <outlet property="onlineStatusBtn" destination="pOy-nf-0zs" id="Aon-Xj-Kpv"/>
+                <outlet property="view" destination="c22-O7-iKe" id="fU2-Hg-x1H"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="LYAvatarImageView">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="1I0-xm-6RP">
+                    <rect key="frame" x="11" y="16" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_photo_self" id="7DT-1h-BVc"/>
+                </imageView>
+                <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" id="pOy-nf-0zs" customClass="MKBCloseButton">
+                    <rect key="frame" x="29" y="12" width="12" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="rNp-oL-xw0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button hidden="YES" verticalHuggingPriority="750" misplaced="YES" id="dQW-8M-rwD" customClass="MKBCloseButton">
+                    <rect key="frame" x="46" y="52" width="12" height="12"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" title="Button" bezelStyle="shadowlessSquare" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="abh-cr-Y8M">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="login_photo_self" width="160" height="160"/>
+    </resources>
+</document>
