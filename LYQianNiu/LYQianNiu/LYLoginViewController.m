@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initObjects];
-    [self showLoginMessage];
+    [self dealWithLoginMessage];
 }
 
 - (void)initObjects {
@@ -56,14 +56,18 @@
     [self login];
 }
 
-
-//显示登录界面的信息(如果有的话)
-- (void)showLoginMessage {
+//处理登录信息
+- (void)dealWithLoginMessage {
     LYUserInfo *userInfo = [LYUserInfo sharedLYUserInfo];
     self.accountTextField.stringValue = userInfo.user ? userInfo.user :@"";
-    self.pwdTextField.stringValue     = userInfo.pwd ? userInfo.pwd :@"";
     self.assistantLoginVC.rememberPwdCheckBoxBtn.state = userInfo.rememberPwd;
+    if (userInfo.rememberPwd) {
+        self.pwdTextField.stringValue     = userInfo.pwd ? userInfo.pwd :@"";
+    }
     self.assistantLoginVC.autoLoginCheckBoxBtn.state = userInfo.autoLogin;
+    if (userInfo.autoLogin) {
+        [self login];
+    }
 }
 
 #pragma mark - Login
