@@ -8,7 +8,7 @@
 
 #import "LYXMPPTool.h"
 
-NSString *const LYCLoginStatusChangeNotification = @"LYCLoginStatusNotification";
+NSString *const LYLoginStatusChangeNotification = @"LYLoginStatusNotification";
 /*
  * 在AppDelegate实现登录
  
@@ -111,7 +111,7 @@ singleton_implementation(LYXMPPTool)
 }
 #pragma mark 连接到服务器
 -(void)connectToHost{
-    LYCLog(@"开始连接到服务器");
+    LYLog(@"开始连接到服务器");
     if (!_xmppStream) {
         [self setupXMPPStream];
     }
@@ -140,14 +140,14 @@ singleton_implementation(LYXMPPTool)
     // 连接
     NSError *err = nil;
     if(![_xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&err]){
-        LYCLog(@"%@",err);
+        LYLog(@"%@",err);
     }
 }
 
 
 #pragma mark 连接到服务成功后，再发送密码授权
 -(void)sendPwdToHost{
-    LYCLog(@"再发送密码授权");
+    LYLog(@"再发送密码授权");
     NSError *err = nil;
     
     // 从单例里获取密码
@@ -156,15 +156,15 @@ singleton_implementation(LYXMPPTool)
     [_xmppStream authenticateWithPassword:pwd error:&err];
     
     if (err) {
-        LYCLog(@"%@",err);
+        LYLog(@"%@",err);
     }
 }
 
 #pragma mark  授权成功后，发送"在线" 消息
 -(void)sendOnlineToHost{
-    LYCLog(@"发送 在线 消息");
+    LYLog(@"发送 在线 消息");
     XMPPPresence *presence = [XMPPPresence presence];
-    LYCLog(@"%@",presence);
+    LYLog(@"%@",presence);
     //上线或者下线成功后，向服务器发送Presence数据，以更新用户在服务器的状态
     [_xmppStream sendElement:presence];
 }
@@ -179,13 +179,13 @@ singleton_implementation(LYXMPPTool)
     // 将登录状态放入字典，然后通过通知传递
     NSDictionary *userInfo = @{@"loginStatus":@(resultType)};
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:LYCLoginStatusChangeNotification object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYLoginStatusChangeNotification object:nil userInfo:userInfo];
 }
 
 #pragma mark -XMPPStream的代理
 #pragma mark 与主机连接成功
 -(void)xmppStreamDidConnect:(XMPPStream *)sender{
-    LYCLog(@"与主机连接成功");
+    LYLog(@"与主机连接成功");
     
     if (self.isRegisterOperation) {//注册操作，发送注册的密码
         NSString *pwd = [LYUserInfo sharedLYUserInfo].registerPwd;
@@ -211,14 +211,14 @@ singleton_implementation(LYXMPPTool)
         //通知 【网络不稳定】
         [self postNotification:XMPPResultTypeNetErr];
     }
-    LYCLog(@"与主机断开连接 %@",error);
+    LYLog(@"与主机断开连接 %@",error);
     
 }
 
 
 #pragma mark 授权成功
 -(void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
-    LYCLog(@"授权成功");
+    LYLog(@"授权成功");
     
     [self sendOnlineToHost];
     
@@ -235,7 +235,7 @@ singleton_implementation(LYXMPPTool)
 
 #pragma mark 授权失败
 -(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error{
-    LYCLog(@"授权失败 %@",error);
+    LYLog(@"授权失败 %@",error);
     
     // 判断block有无值，再回调给登录控制器
     if (_resultBlock) {
@@ -247,7 +247,7 @@ singleton_implementation(LYXMPPTool)
 
 #pragma mark 注册成功
 -(void)xmppStreamDidRegister:(XMPPStream *)sender{
-    LYCLog(@"注册成功");
+    LYLog(@"注册成功");
     if(_resultBlock){
         _resultBlock(XMPPResultTypeRegisterSuccess);
     }
@@ -257,7 +257,7 @@ singleton_implementation(LYXMPPTool)
 #pragma mark 注册失败
 -(void)xmppStream:(XMPPStream *)sender didNotRegister:(DDXMLElement *)error{
     
-    LYCLog(@"注册失败 %@",error);
+    LYLog(@"注册失败 %@",error);
     if(_resultBlock){
         _resultBlock(XMPPResultTypeRegisterFailure);
     }
@@ -266,11 +266,11 @@ singleton_implementation(LYXMPPTool)
 
 #pragma mark 接收到好友消息
 -(void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
-    LYCLog(@"%@",message);
+    LYLog(@"%@",message);
     
 //    //如果当前程序不在前台，发出一个本地通知
 //    if([UIApplication sharedApplication].applicationState != UIApplicationStateActive){
-//        LYCLog(@"在后台");
+//        LYLog(@"在后台");
 //        
 //        //本地通知
 //        UILocalNotification *localNoti = [[UILocalNotification alloc] init];
@@ -294,7 +294,7 @@ singleton_implementation(LYXMPPTool)
     //XMPPPresence 在线 离线
     
     //presence.from 消息是谁发送过来
-    LYCLog(@"presence.from=%@", presence.from);
+    LYLog(@"presence.from=%@", presence.from);
 }
 
 #pragma mark -公共方法

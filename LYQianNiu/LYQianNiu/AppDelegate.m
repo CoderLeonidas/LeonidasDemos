@@ -25,12 +25,11 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // 一定要先读取到用户数据
+    [[LYUserInfo sharedLYUserInfo] loadUserInfoFromSanbox];
     self.window.contentViewController = self.loginVC;
     [self setupTitleBar];
     [self.window.windowController showWindow:nil];
-  
-    // 从沙里加载用户的数据到单例
-    [[LYUserInfo sharedLYUserInfo] loadUserInfoFromSanbox];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

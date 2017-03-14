@@ -10,7 +10,7 @@
 #import "Singleton.h"
 #import "XMPPFramework.h"
 
-extern NSString *const LYCLoginStatusChangeNotification;
+extern NSString *const LYLoginStatusChangeNotification;
 
 typedef enum {
     XMPPResultTypeConnecting,//连接中...

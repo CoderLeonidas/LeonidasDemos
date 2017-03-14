@@ -8,10 +8,10 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LYAssistantLoginViewController">
             <connections>
-                <outlet property="autoLoginClickBtn" destination="93t-Vv-5lR" id="uak-tF-4l2"/>
+                <outlet property="autoLoginCheckBoxBtn" destination="93t-Vv-5lR" id="RDD-n0-Npa"/>
                 <outlet property="findPasswordBtn" destination="NUQ-jX-h0S" id="LOf-D1-a4C"/>
                 <outlet property="registerAccountBtn" destination="ntT-L8-Pza" id="eql-se-f31"/>
-                <outlet property="rememberPassworkClickBtn" destination="uzY-dc-Bss" id="QGQ-zA-SRS"/>
+                <outlet property="rememberPwdCheckBoxBtn" destination="uzY-dc-Bss" id="XX3-39-ceI"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -26,10 +26,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="记住密码" bezelStyle="regularSquare" imagePosition="left" inset="2" id="gbA-c0-EZP">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                     <connections>
-                        <action selector="rememberPassworkClickBtnClicked:" target="-2" id="3ke-hb-vtC"/>
+                        <action selector="rememberPwdCheckBoxBtnClicked:" target="-2" id="hsY-Vi-iUe"/>
                     </connections>
                 </button>
                 <button misplaced="YES" id="93t-Vv-5lR">
@@ -37,10 +37,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="自动登录" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Ohz-1U-ySZ">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                     <connections>
-                        <action selector="autoLoginClickBtnClicked:" target="-2" id="asn-mx-fRn"/>
+                        <action selector="autoLoginCheckBoxBtnClicked:" target="-2" id="zcG-wZ-dVB"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" misplaced="YES" id="NUQ-jX-h0S">
@@ -48,7 +48,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" title="找回密码" bezelStyle="shadowlessSquare" alignment="left" imageScaling="proportionallyDown" inset="2" id="Bwz-20-JDl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                     <connections>
                         <action selector="findPasswordBtnClicked:" target="-2" id="bWX-he-Z61"/>
@@ -59,7 +59,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" title="注册账号" bezelStyle="shadowlessSquare" alignment="left" imageScaling="proportionallyDown" inset="2" id="TvL-Rl-Z04">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="11"/>
+                        <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                     <connections>
                         <action selector="registerAccountBtnClicked:" target="-2" id="You-rp-8ZP"/>

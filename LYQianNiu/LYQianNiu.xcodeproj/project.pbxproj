@@ -669,8 +669,6 @@
 				26D043131E729F090018AF36 /* Classes */,
 				2632C7521E6D5892001278CA /* 登录窗口 */,
 				2632C7B81E6DA414001278CA /* 主界面 */,
-				2698E2B41E702F4F009CED7B /* 控件  */,
-				2632C79A1E6D8FB0001278CA /* 子类 */,
 				2632C7501E6D584D001278CA /* Other */,
 				2632C71D1E6D56FB001278CA /* Supporting Files */,
 			);
@@ -721,20 +719,12 @@
 		2632C7521E6D5892001278CA /* 登录窗口 */ = {
 			isa = PBXGroup;
 			children = (
-				2632C75E1E6D5F4D001278CA /* ViewController */,
-			);
-			name = "登录窗口";
-			sourceTree = "<group>";
-		};
-		2632C75E1E6D5F4D001278CA /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
 				269988EB1E7526F10037FF7A /* 辅助登录面板 */,
 				2632C7641E6D5FA2001278CA /* LYLoginViewController.h */,
 				2632C7651E6D5FA2001278CA /* LYLoginViewController.m */,
 				2632C7661E6D5FA2001278CA /* LYLoginViewController.xib */,
 			);
-			name = ViewController;
+			name = "登录窗口";
 			sourceTree = "<group>";
 		};
 		2632C79A1E6D8FB0001278CA /* 子类 */ = {
@@ -744,6 +734,7 @@
 				2632C79C1E6D8FC4001278CA /* LYView.m */,
 			);
 			name = "子类";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2632C79E1E6D97B3001278CA /* Resouces */ = {
@@ -853,11 +844,11 @@
 		2698E2B41E702F4F009CED7B /* 控件  */ = {
 			isa = PBXGroup;
 			children = (
-				269988F11E7689440037FF7A /* MKBCloseButton.h */,
-				269988F21E7689440037FF7A /* MKBCloseButton.m */,
+				26DDEFB91E77E85A00B5104A /* Button */,
 				269988F41E768BC70037FF7A /* AvatarImageView */,
 			);
 			name = "控件 ";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		269988D41E742A210037FF7A /* 欢迎界面 */ = {
@@ -991,6 +982,9 @@
 		26D043131E729F090018AF36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				26DDEFC31E783ED200B5104A /* 分类 */,
+				2698E2B41E702F4F009CED7B /* 控件  */,
+				2632C79A1E6D8FB0001278CA /* 子类 */,
 				26D044EB1E72AF000018AF36 /* Tools */,
 				26B56B8B1E718EE80085AAED /* Common */,
 				26D043151E729FB80018AF36 /* Lib */,
@@ -1802,6 +1796,22 @@
 				26D044ED1E72AF610018AF36 /* LYTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		26DDEFB91E77E85A00B5104A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				269988F11E7689440037FF7A /* MKBCloseButton.h */,
+				269988F21E7689440037FF7A /* MKBCloseButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
+		26DDEFC31E783ED200B5104A /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "分类";
 			sourceTree = "<group>";
 		};
 		3E70971CEA7D4D9D233D173E /* Frameworks */ = {

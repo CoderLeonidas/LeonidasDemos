@@ -10,12 +10,10 @@
 
 #import "LYAssistantLoginViewController.h"
 
-#define ShouldRememberPasswordKey  @"ShouldRememberPasswordKey"
-#define ShouldAutoLoginKey         @"ShouldAutoLoginKey"
+NSString *const registerURLStr = @"https://reg.taobao.com/member/reg/fill_mobile.htm";
+NSString *const findPwdURLStr = @"https://passport.taobao.com/ac/password_find.htm?spm=a2107.1.0.0.k0rNbq&from_site=0";
 
 @interface LYAssistantLoginViewController ()
-@property (weak) IBOutlet NSButton *autoLoginClickBtn;//自动登录
-@property (weak) IBOutlet NSButton *rememberPassworkClickBtn;//记住秘密
 @property (weak) IBOutlet NSButton *findPasswordBtn;//找回密码
 @property (weak) IBOutlet NSButton *registerAccountBtn;//注册账号
 
@@ -30,17 +28,28 @@
 
 
 #pragma mark - IBAction
-- (IBAction)rememberPassworkClickBtnClicked:(id)sender {
+//勾选后保存设置到沙盒
+- (IBAction)rememberPwdCheckBoxBtnClicked:(id)sender {
+    NSButton *btn = sender;
+    LYUserInfo *userInfo = [LYUserInfo sharedLYUserInfo];
+    userInfo.rememberPwd = btn.state;
+    [userInfo saveUserInfoToSanbox];
 }
 
-- (IBAction)autoLoginClickBtnClicked:(id)sender {
+- (IBAction)autoLoginCheckBoxBtnClicked:(id)sender {
+    NSButton *btn = sender;
+    LYUserInfo *userInfo = [LYUserInfo sharedLYUserInfo];
+    userInfo.autoLogin = btn.state;
+    [userInfo saveUserInfoToSanbox];
 }
 
-//TODO：跳转链接
+//点击后跳转链接
 - (IBAction)findPasswordBtnClicked:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:findPwdURLStr]];
 }
 
 - (IBAction)registerAccountBtnClicked:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:registerURLStr]];
 }
 
 

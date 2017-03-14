@@ -21,10 +21,10 @@
 // 自定义Log
 #ifdef DEBUG
 
-#define LYCLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define LYLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 
 #else
-#define LYCLog(...)
+#define LYLog(...)
 
 #endif
 
