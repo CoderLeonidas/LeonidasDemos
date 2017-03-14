@@ -102,17 +102,17 @@
                             <rect key="frame" x="0.0" y="133" width="480" height="139"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <box misplaced="YES" boxType="custom" borderType="bezel" title="Box" id="e3O-sf-Jke">
+                                <box misplaced="YES" boxType="custom" borderType="none" title="Box" id="e3O-sf-Jke">
                                     <rect key="frame" x="0.0" y="104" width="480" height="35"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <view key="contentView" id="8y8-dh-D18">
-                                        <rect key="frame" x="1" y="1" width="478" height="33"/>
+                                    <view key="contentView" id="8y8-dh-D18" customClass="LYView">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="35"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button misplaced="YES" id="jMa-iM-5pj">
-                                                <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="8" y="7" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gWk-sa-9VQ">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="biaoqing_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gWk-sa-9VQ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -121,9 +121,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="9h8-Sa-mRH">
-                                                <rect key="frame" x="40" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="40" y="7" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="f6A-qa-zW0">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="jietu_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="f6A-qa-zW0">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -132,9 +132,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="gXa-vQ-w2a">
-                                                <rect key="frame" x="72" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="72" y="7" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="vmT-9x-nY5">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="tupian_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="vmT-9x-nY5">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -143,9 +143,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="1ba-oZ-quh">
-                                                <rect key="frame" x="102" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="102" y="7" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwR-Ay-GK4">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zhenpin_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="CwR-Ay-GK4">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -154,9 +154,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="boJ-Je-xzk">
-                                                <rect key="frame" x="134" y="8" width="16" height="16"/>
+                                                <rect key="frame" x="134" y="7" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ItU-4V-hJb">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="juzheng_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ItU-4V-hJb">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -165,9 +165,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="qtN-m8-2vu">
-                                                <rect key="frame" x="418" y="9" width="16" height="16"/>
+                                                <rect key="frame" x="420" y="8" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="67b-Nz-253">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="kuaijiehuifu_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="67b-Nz-253">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -176,9 +176,9 @@
                                                 </connections>
                                             </button>
                                             <button misplaced="YES" id="cVg-jl-4Lk">
-                                                <rect key="frame" x="450" y="9" width="16" height="16"/>
+                                                <rect key="frame" x="452" y="8" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6h7-nw-CFm">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="liaotianjilu_btn" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6h7-nw-CFm">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -188,6 +188,8 @@
                                             </button>
                                         </subviews>
                                     </view>
+                                    <color key="borderColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <font key="titleFont" size="10" name=".AppleSystemUIFont"/>
                                 </box>
                                 <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="5MA-nf-9LA">
@@ -202,7 +204,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <size key="minSize" width="463" height="102"/>
-                                                <size key="maxSize" width="463" height="10000000"/>
+                                                <size key="maxSize" width="480" height="10000000"/>
                                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             </textView>
                                         </subviews>
@@ -212,7 +214,7 @@
                                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
-                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tVq-rE-QJp">
+                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tVq-rE-QJp">
                                         <rect key="frame" x="464" y="1" width="15" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
@@ -229,6 +231,12 @@
         </customView>
     </objects>
     <resources>
-        <image name="NSBonjour" width="32" height="32"/>
+        <image name="biaoqing_btn" width="36" height="35"/>
+        <image name="jietu_btn" width="34" height="33"/>
+        <image name="juzheng_btn" width="32" height="35"/>
+        <image name="kuaijiehuifu_btn" width="44" height="41"/>
+        <image name="liaotianjilu_btn" width="37" height="38"/>
+        <image name="tupian_btn" width="39" height="37"/>
+        <image name="zhenpin_btn" width="38" height="36"/>
     </resources>
 </document>
