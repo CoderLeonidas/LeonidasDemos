@@ -42,6 +42,7 @@
 		2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */; };
 		2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */; };
 		2632C8001E6EBAB3001278CA /* qipao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FF1E6EBAB3001278CA /* qipao.png */; };
+		26426C3C1E79BF3200E13735 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26426C3B1E79BF3200E13735 /* HttpTool.m */; };
 		2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */; };
 		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
 		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
@@ -290,6 +291,8 @@
 		2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWGroupIconUngrouped.png; sourceTree = "<group>"; };
 		2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WWMessageManagerTribeIcon.tiff; sourceTree = "<group>"; };
 		2632C7FF1E6EBAB3001278CA /* qipao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qipao.png; sourceTree = "<group>"; };
+		26426C3A1E79BF3200E13735 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		26426C3B1E79BF3200E13735 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightContainerViewController.h; sourceTree = "<group>"; };
 		2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightContainerViewController.m; sourceTree = "<group>"; };
 		2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightContainerViewController.xib; sourceTree = "<group>"; };
@@ -1841,6 +1844,8 @@
 				26DDEFE81E794C8D00B5104A /* LYChattingTool.m */,
 				26D044EC1E72AF610018AF36 /* LYTool.h */,
 				26D044ED1E72AF610018AF36 /* LYTool.m */,
+				26426C3A1E79BF3200E13735 /* HttpTool.h */,
+				26426C3B1E79BF3200E13735 /* HttpTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2324,6 +2329,7 @@
 				26DDEFDE1E785AEB00B5104A /* LYContactModel.m in Sources */,
 				26D044711E729FB80018AF36 /* XMPPMessage.m in Sources */,
 				26D044B11E729FB80018AF36 /* XMPPTransports.m in Sources */,
+				26426C3C1E79BF3200E13735 /* HttpTool.m in Sources */,
 				26D044B41E729FB80018AF36 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				26D0449D1E729FB80018AF36 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				26D044B51E729FB80018AF36 /* XMPPCapsCoreDataStorageObject.m in Sources */,

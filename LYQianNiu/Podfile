@@ -7,7 +7,7 @@ target 'LYQianNiu' do
 
   pod 'AFNetworking', '~> 3.0’
   pod 'Masonry'
-  
+  pod 'SDWebImage'
 
 # Pods for LYQianNiu
 
