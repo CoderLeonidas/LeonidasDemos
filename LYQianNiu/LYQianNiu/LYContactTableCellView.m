@@ -10,8 +10,8 @@
 
 @interface LYContactTableCellView ()
 @property (weak) IBOutlet NSView *view;
-@property (weak) IBOutlet NSImageView *avatarImageView;
-@property (weak) IBOutlet NSTextField *shopMessageLabel;
+@property (weak) IBOutlet NSImageView *avatarImageView;//店铺logo头像
+@property (weak) IBOutlet NSTextField *shopMessageLabel;//店铺信息
 
 @end
 
@@ -37,13 +37,6 @@
 
 + (LYContactTableCellView *)contactTableCellView {
     return [[LYContactTableCellView alloc] init];
-//    NSArray  *topLevelObjects = [[NSArray alloc] init];
-//    if ([[NSBundle mainBundle] loadNibNamed:@"LYContactTableCellView" owner:self topLevelObjects:&topLevelObjects]) {
-//    
-//        return [topLevelObjects lastObject];
-//    } else {
-//        return nil;
-//    }
 }
 
 - (void)setModel:(LYContactModel *)model {

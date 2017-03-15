@@ -31,8 +31,7 @@
 }
 
 - (void)addAvatarView {
-    self.avatarView.frame = NSMakeRect(0, 0, 70 , 70);
-//    self.avatarView.avatar = [NSImage imageNamed:@"Statusbar_Messages_Hover"];
+    self.avatarView.frame = NSMakeRect(0, 0, 44 , 44);
     self.avatarView.styleMask = LYAvatarImageViewStyleMaskOnlineStatus | LYAvatarImageViewStyleMaskClose;
     self.avatarView.autoresizingMask = 1|2|4|8|16|32;
     [self.avatarArea addSubview:self.avatarView];
