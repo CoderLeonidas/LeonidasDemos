@@ -192,19 +192,27 @@
                                     <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <font key="titleFont" size="10" name=".AppleSystemUIFont"/>
                                 </box>
-                                <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="5MA-nf-9LA">
+                                <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="5MA-nf-9LA">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="104"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <clipView key="contentView" id="MfV-F4-JbT">
-                                        <rect key="frame" x="1" y="1" width="463" height="102"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="104"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hK5-yg-Ea1">
-                                                <rect key="frame" x="0.0" y="0.0" width="463" height="102"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="480" height="104"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <size key="minSize" width="463" height="102"/>
+                                                <size key="minSize" width="480" height="104"/>
                                                 <size key="maxSize" width="480" height="10000000"/>
+                                                <attributedString key="textStorage">
+                                                    <fragment content="店家，在吗？">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="PingFangSC-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             </textView>
                                         </subviews>
@@ -214,8 +222,8 @@
                                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
-                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tVq-rE-QJp">
-                                        <rect key="frame" x="464" y="1" width="15" height="102"/>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tVq-rE-QJp">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>

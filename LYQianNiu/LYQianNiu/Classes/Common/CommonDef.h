@@ -35,5 +35,7 @@ typedef enum : NSUInteger {
 //服务器地址
 #define HostName  @"luoyang.local"
 #define HostPort  5222
+#define Resource  @"mac"
+
 
 #endif /* CommonDef_h */

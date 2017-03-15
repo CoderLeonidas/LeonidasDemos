@@ -128,7 +128,7 @@ singleton_implementation(LYXMPPTool)
     }else{
         user = [LYUserInfo sharedLYUserInfo].user;
     }
-    XMPPJID *myJID = [XMPPJID jidWithUser:user domain:HostName resource:@"mac" ];
+    XMPPJID *myJID = [XMPPJID jidWithUser:user domain:HostName resource:Resource ];
     _xmppStream.myJID = myJID;
     
     // 设置服务器域名

@@ -10,7 +10,7 @@
 #import "LYContactModel.h"
 
 @interface LYContactTableCellView : NSTableCellView
-@property (nonatomic, strong) LYContactModel *model;
+@property (nonatomic, strong) XMPPUserCoreDataStorageObject *model;
 
 + (instancetype)contactTableCellView;
 @end

@@ -26,7 +26,7 @@
         if ([[NSBundle mainBundle] loadNibNamed:nibName
                                           owner:self
                                 topLevelObjects:nil]) {
-           
+           //TODO 布局有问题，之后所有布局都使用Masonry
             [self.avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.left.equalTo(@5);
                 make.right.bottom.equalTo(@(-5));

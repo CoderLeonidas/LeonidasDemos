@@ -39,12 +39,12 @@
     return [[LYContactTableCellView alloc] init];
 }
 
-- (void)setModel:(LYContactModel *)model {
+- (void)setModel:(XMPPUserCoreDataStorageObject *)model {
     if (!model || [model isEqualTo:_model]) return;
     
     _model = model;
-    self.avatarImageView.image = [NSImage imageNamed:model.shopAvatarName];
-    self.shopMessageLabel.stringValue = [NSString stringWithFormat:@"%@:%@", model.shopName, model.shopAssistantName];
+    self.avatarImageView.image = model.photo;
+    self.shopMessageLabel.stringValue = [NSString stringWithFormat:@"%@:%@", model.nickname, model.displayName];
 }
 
 
