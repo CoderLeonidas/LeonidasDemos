@@ -77,5 +77,45 @@
 }
 
 #pragma mark - NSTableViewDataSource & NSTableViewDelegate
+#pragma mark - NSTableViewDelegate & NSTableViewDataSource
 
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+//    return _dataSource.count;
+    return 100;
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+    return 40.0;
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+//    NSUInteger selectRowIndex =  self.tableView.selectedRow;
+//    XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
+//    [LYChattingTool sharedLYChattingTool].currentChattingContactModel = model;
+//    [[NSNotificationCenter defaultCenter] postNotificationName:LYContactRowSelectionDidChangeNotification object:self];
+}
+
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row {
+//    LYTableRowView *rowView = [[LYTableRowView alloc] init];
+//    return rowView;
+    return nil;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSString *identifier = tableColumn.identifier;
+//    if (!identifier)
+    
+        return nil;
+    
+//    LYContactTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
+//    if (!cellView) {
+//        cellView = [LYContactTableCellView contactTableCellView];
+//    }
+//    XMPPUserCoreDataStorageObject *model = _dataSource[row];
+//    if (![model isKindOfClass:[XMPPUserCoreDataStorageObject class]]) {
+//        return nil;
+//    }
+//    cellView.model = model;
+//    return cellView;
+}
 @end

@@ -21,6 +21,7 @@
     NSMutableArray  *_dataSource;
     NSFetchedResultsController *_resultsContrl;
 }
+@property (weak) IBOutlet NSTableView *tableView;
 
 @end
 
@@ -93,6 +94,19 @@
 }
 
 
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    LYLog(@"CoreData数据发生变化");
+    NSArray *arr = _resultsContrl.fetchedObjects;
+    _dataSource = [NSMutableArray arrayWithArray:arr];
+    
+    NSUInteger selectRowIndex =  self.tableView.selectedRow;
+    XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
+    [LYChattingTool sharedLYChattingTool].currentChattingContactModel = model;//更新当前的联系人model
+    [self.tableView reloadData];
+}
+
 #pragma mark - NSTableViewDelegate & NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -104,7 +118,10 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
-
+    NSUInteger selectRowIndex =  self.tableView.selectedRow;
+    XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
+    [LYChattingTool sharedLYChattingTool].currentChattingContactModel = model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:LYContactRowSelectionDidChangeNotification object:self];
 }
 
 - (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row {

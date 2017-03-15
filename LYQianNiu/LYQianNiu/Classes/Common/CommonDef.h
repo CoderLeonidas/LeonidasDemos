@@ -13,10 +13,18 @@
 /**
  通知类型
  */
+//群组按钮被点击
 #define LYQunZuBtnClickNotification         @"kLYQunZuBtnClickNotification"
+
+//联系人按钮被点击
 #define LYLianXiRenBtnClickNotification     @"kLYLianXiRenBtnClickNotification"
+//最近会话按钮被点击
 #define LYZuiJinHuiHuaBtnClickNotification  @"kLYZuiJinHuiHuaBtnClickNotification"
+//今日接待按钮被点击
 #define LYJinRiJieDaiBtnClickNotification   @"kLYJinRiJieDaiBtnClickNotification"
+
+//联系人单元格选中变化
+#define LYContactRowSelectionDidChangeNotification   @"kLYContactRowSelectionDidChangeNotification"
 
 /**
  左侧底部视图类型

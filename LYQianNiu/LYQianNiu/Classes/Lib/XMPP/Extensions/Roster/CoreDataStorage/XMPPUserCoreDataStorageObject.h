@@ -35,7 +35,11 @@
 
 @property (nonatomic, assign) NSInteger section;
 @property (nonatomic, strong) NSString * sectionName;
-@property (nonatomic, strong) NSNumber * sectionNum;
+//    sectionNum
+//    “0”- 在线
+//    “1”- 离开
+//    “2”- 离线
+@property (nonatomic, strong) NSNumber * sectionNum;//好友在线状态
 
 @property (nonatomic, strong) NSSet * groups;
 @property (nonatomic, strong) XMPPResourceCoreDataStorageObject * primaryResource;

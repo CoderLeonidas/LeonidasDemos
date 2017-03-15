@@ -16,6 +16,8 @@
 #import "LYTool.h"
 #import "LYUserInfo.h"
 #import "LYXMPPTool.h"
+#import "LYChattingTool.h"
+
 #import "CommonDef.h"
 
 // 自定义Log

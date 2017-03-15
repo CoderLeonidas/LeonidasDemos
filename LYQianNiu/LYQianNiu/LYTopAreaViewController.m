@@ -21,8 +21,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+
+    [self addNotification];
 }
+
+- (void)addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshContent) name:LYContactRowSelectionDidChangeNotification object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self ];
+}
+
+- (void)refreshContent {
+    XMPPUserCoreDataStorageObject *model = [LYChattingTool sharedLYChattingTool].currentChattingContactModel;
+    NSString *status = @"";
+    switch ([model.sectionNum intValue]) {//好友状态
+        case 0:
+            status = @"在线";
+            break;
+        case 1:
+            status = @"离开";
+            break;
+        case 2:
+            status = @"离线";
+            break;
+        default:
+            break;
+    }
+    NSString *nameAndStatusStr = [NSString stringWithFormat:@"%@:%@ [%@]",model.displayName, model.nickname, status];
+    self.nameAndStatusTextField.stringValue = nameAndStatusStr;
+    
+    NSString *mottoStr = @"";
+    self.mottoTextField.stringValue = mottoStr;
+}
+
+
+#pragma mark - IBAction
 
 - (IBAction)fileTransferBtnClicked:(id)sender {
 }

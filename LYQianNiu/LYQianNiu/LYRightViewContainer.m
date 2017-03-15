@@ -50,7 +50,6 @@
 - (LYWelcomeView*) welcomeView{
     if (!_welcomeView) {
         _welcomeView = [[LYWelcomeView alloc] init];
-//        _welcomeView.autoresizingMask = 1|2|4|8|16|32;
     }
     return _welcomeView;
 }

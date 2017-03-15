@@ -34,9 +34,7 @@ NSString *const LYLoginStatusChangeNotification = @"LYLoginStatusNotification";
 }
 @end
 
-
 @implementation LYXMPPTool
-
 
 singleton_implementation(LYXMPPTool)
 

@@ -43,7 +43,9 @@
     if (!model || [model isEqualTo:_model]) return;
     
     _model = model;
-    self.avatarImageView.image = model.photo;
+    if (model.photo) {
+        self.avatarImageView.image = model.photo;
+    }
     self.shopMessageLabel.stringValue = [NSString stringWithFormat:@"%@:%@", model.nickname, model.displayName];
 }
 

@@ -218,6 +218,7 @@
 		26DDEFE01E785CEE00B5104A /* LeonCafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 26DDEFDF1E785CEE00B5104A /* LeonCafe.png */; };
 		26DDEFE31E786B0300B5104A /* LYTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DDEFE21E786B0300B5104A /* LYTableRowView.m */; };
 		26DDEFE61E786FC900B5104A /* NSColor+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DDEFE51E786FC900B5104A /* NSColor+LY.m */; };
+		26DDEFE91E794C8D00B5104A /* LYChattingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DDEFE81E794C8D00B5104A /* LYChattingTool.m */; };
 		61914314DA1468E6E44F96D2 /* libPods-LYQianNiu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B163A9C9BF83B72F50CD322D /* libPods-LYQianNiu.a */; };
 		8A902B1B8939B41933E7AEC6 /* libPods-LYQianNiuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97572F51A3582D5E2DE52B98 /* libPods-LYQianNiuUITests.a */; };
 		91978F3E08593D3EA15E40D4 /* libPods-LYQianNiuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */; };
@@ -628,6 +629,8 @@
 		26DDEFE21E786B0300B5104A /* LYTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableRowView.m; sourceTree = "<group>"; };
 		26DDEFE41E786FC900B5104A /* NSColor+LY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+LY.h"; sourceTree = "<group>"; };
 		26DDEFE51E786FC900B5104A /* NSColor+LY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+LY.m"; sourceTree = "<group>"; };
+		26DDEFE71E794C8D00B5104A /* LYChattingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingTool.h; sourceTree = "<group>"; };
+		26DDEFE81E794C8D00B5104A /* LYChattingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingTool.m; sourceTree = "<group>"; };
 		4EAB8BD670FE255F58F116AD /* Pods-LYQianNiuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiuTests/Pods-LYQianNiuTests.release.xcconfig"; sourceTree = "<group>"; };
 		51C96A5E60217F0880AB18A7 /* libPods-LYQianNiuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYQianNiuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A4DB0EC98CC77D9833FC62 /* Pods-LYQianNiu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYQianNiu.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYQianNiu/Pods-LYQianNiu.release.xcconfig"; sourceTree = "<group>"; };
@@ -1834,6 +1837,8 @@
 				26D044F11E72AFB00018AF36 /* LYUserInfo.m */,
 				26D044F21E72AFB00018AF36 /* LYXMPPTool.h */,
 				26D044F31E72AFB00018AF36 /* LYXMPPTool.m */,
+				26DDEFE71E794C8D00B5104A /* LYChattingTool.h */,
+				26DDEFE81E794C8D00B5104A /* LYChattingTool.m */,
 				26D044EC1E72AF610018AF36 /* LYTool.h */,
 				26D044ED1E72AF610018AF36 /* LYTool.m */,
 			);
@@ -2246,6 +2251,7 @@
 				26D044971E729FB80018AF36 /* XMPPMUC.m in Sources */,
 				26D044991E729FB80018AF36 /* XMPPvCard.xcdatamodeld in Sources */,
 				26D044A11E729FB80018AF36 /* XMPPvCardTempBase.m in Sources */,
+				26DDEFE91E794C8D00B5104A /* LYChattingTool.m in Sources */,
 				26DDEFD81E7851C700B5104A /* LYContactTableCellView.m in Sources */,
 				26D044CB1E729FB80018AF36 /* NSXMLElement+XEP_0297.m in Sources */,
 				26D044931E729FB80018AF36 /* XMPPRoomMemoryStorage.m in Sources */,

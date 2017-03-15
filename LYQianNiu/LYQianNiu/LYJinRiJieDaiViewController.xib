@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LYJinRiJieDaiViewController">
             <connections>
+                <outlet property="tableView" destination="zmd-vr-J34" id="uha-e3-pFp"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
