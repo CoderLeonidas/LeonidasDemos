@@ -7,7 +7,6 @@
 //
 
 #import "LYLeftViewContainer.h"
-#import "LYViewManager.h"
 #import "LYQunZuViewController.h"
 #import "LYLianXiRenViewController.h"
 #import "LYZuiJinHuiHuaViewController.h"
@@ -22,7 +21,6 @@
 @property (weak) IBOutlet NSView *bottomView;//底部视图容器
 
 @property (nonatomic, strong) NSSearchField *searchBar;//搜索条
-@property (nonatomic, strong) LYViewManager *viewManager;//视图管理器
 
 @property (nonatomic, strong) LYQunZuViewController *qunZuViewController;//群组
 @property (nonatomic, strong) LYLianXiRenViewController *lianXiRenViewController;//联系人
@@ -144,12 +142,6 @@
     return _searchBar;
 }
 
-- (LYViewManager *)viewManager {
-    if (!_viewManager) {
-        _viewManager  = [[LYViewManager alloc] init];
-    }
-    return _viewManager;
-}
 - (LYQunZuViewController*) qunZuViewController{
     if (!_qunZuViewController) {
         _qunZuViewController = [[LYQunZuViewController alloc] initWithNibName:@"LYQunZuViewController" bundle:nil];

@@ -19,6 +19,7 @@
                 <outlet property="screenshotBtn" destination="9h8-Sa-mRH" id="xHD-zG-iXj"/>
                 <outlet property="sharkScreenBtn" destination="1ba-oZ-quh" id="UPW-7a-nx3"/>
                 <outlet property="splitView" destination="sUh-U7-ERk" id="Bls-FZ-nHF"/>
+                <outlet property="textView" destination="hK5-yg-Ea1" id="iRZ-UK-rNR"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>

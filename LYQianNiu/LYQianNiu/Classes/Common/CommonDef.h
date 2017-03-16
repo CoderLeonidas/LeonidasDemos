@@ -45,5 +45,7 @@ typedef enum : NSUInteger {
 #define HostPort  5222
 #define Resource  @"mac"
 
+//图片上传路径
+#define  GetImageUploadURLWith(fileName) [@"http://localhost:8080/imfileserver/Upload/Image/" stringByAppendingString:fileName];
 
 #endif /* CommonDef_h */

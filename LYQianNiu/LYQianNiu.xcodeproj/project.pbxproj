@@ -71,7 +71,6 @@
 		26B56B851E718D770085AAED /* LYLianXiRenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B831E718D770085AAED /* LYLianXiRenViewController.xib */; };
 		26B56B891E718D870085AAED /* LYQunZuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B56B871E718D870085AAED /* LYQunZuViewController.m */; };
 		26B56B8A1E718D870085AAED /* LYQunZuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B56B881E718D870085AAED /* LYQunZuViewController.xib */; };
-		26B56B8E1E718F470085AAED /* LYViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B56B8D1E718F470085AAED /* LYViewManager.m */; };
 		26D043101E729E0B0018AF36 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D0430F1E729E0B0018AF36 /* CFNetwork.framework */; };
 		26D044641E729FB80018AF36 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D0431A1E729FB80018AF36 /* XMPPAnonymousAuthentication.m */; };
 		26D044651E729FB80018AF36 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D0431D1E729FB80018AF36 /* XMPPDeprecatedDigestAuthentication.m */; };
@@ -335,8 +334,6 @@
 		26B56B861E718D870085AAED /* LYQunZuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYQunZuViewController.h; sourceTree = "<group>"; };
 		26B56B871E718D870085AAED /* LYQunZuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYQunZuViewController.m; sourceTree = "<group>"; };
 		26B56B881E718D870085AAED /* LYQunZuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYQunZuViewController.xib; sourceTree = "<group>"; };
-		26B56B8C1E718F470085AAED /* LYViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYViewManager.h; sourceTree = "<group>"; };
-		26B56B8D1E718F470085AAED /* LYViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYViewManager.m; sourceTree = "<group>"; };
 		26D0413B1E727DE80018AF36 /* CommonDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonDef.h; path = Classes/Common/CommonDef.h; sourceTree = "<group>"; };
 		26D0430F1E729E0B0018AF36 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		26D043111E729E160018AF36 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -1021,8 +1018,6 @@
 		26B56B8B1E718EE80085AAED /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				26B56B8C1E718F470085AAED /* LYViewManager.h */,
-				26B56B8D1E718F470085AAED /* LYViewManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2340,7 +2335,6 @@
 				26D044BB1E729FB80018AF36 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				26D044671E729FB80018AF36 /* XMPPDigestMD5Authentication.m in Sources */,
 				26D0448B1E729FB80018AF36 /* XMPPRoom.xcdatamodeld in Sources */,
-				26B56B8E1E718F470085AAED /* LYViewManager.m in Sources */,
 				26D044A81E729FB80018AF36 /* XMPPIQ+XEP_0060.m in Sources */,
 				2632C7EF1E6EB178001278CA /* LYNavigationViewController.m in Sources */,
 				26D044AB1E729FB80018AF36 /* XMPPIQ+XEP_0066.m in Sources */,
