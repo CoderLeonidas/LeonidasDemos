@@ -42,7 +42,12 @@
 		2632C7FD1E6EB96C001278CA /* WWGroupIconUngrouped.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */; };
 		2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */; };
 		2632C8001E6EBAB3001278CA /* qipao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632C7FF1E6EBAB3001278CA /* qipao.png */; };
-		26426C3C1E79BF3200E13735 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26426C3B1E79BF3200E13735 /* HttpTool.m */; };
+		26426C3C1E79BF3200E13735 /* LYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26426C3B1E79BF3200E13735 /* LYHttpTool.m */; };
+		268F94FC1E7BCBE800317196 /* LYChattingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F94FB1E7BCBE800317196 /* LYChattingCell.m */; };
+		268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268F94FD1E7BCC0100317196 /* LYChattingCell.xib */; };
+		268F95021E7BCF1800317196 /* LYChattingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95011E7BCF1800317196 /* LYChattingModel.m */; };
+		268F95051E7BD02A00317196 /* LYChattingCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95041E7BD02A00317196 /* LYChattingCellController.m */; };
+		268F950F1E7C1CB200317196 /* LYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F950E1E7C1CB200317196 /* LYScrollView.m */; };
 		2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */; };
 		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
 		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
@@ -290,8 +295,17 @@
 		2632C7FB1E6EB96C001278CA /* WWGroupIconUngrouped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WWGroupIconUngrouped.png; sourceTree = "<group>"; };
 		2632C7FC1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = WWMessageManagerTribeIcon.tiff; sourceTree = "<group>"; };
 		2632C7FF1E6EBAB3001278CA /* qipao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qipao.png; sourceTree = "<group>"; };
-		26426C3A1E79BF3200E13735 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
-		26426C3B1E79BF3200E13735 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		26426C3A1E79BF3200E13735 /* LYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHttpTool.h; sourceTree = "<group>"; };
+		26426C3B1E79BF3200E13735 /* LYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHttpTool.m; sourceTree = "<group>"; };
+		268F94FA1E7BCBE800317196 /* LYChattingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCell.h; sourceTree = "<group>"; };
+		268F94FB1E7BCBE800317196 /* LYChattingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCell.m; sourceTree = "<group>"; };
+		268F94FD1E7BCC0100317196 /* LYChattingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYChattingCell.xib; sourceTree = "<group>"; };
+		268F95001E7BCF1800317196 /* LYChattingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingModel.h; sourceTree = "<group>"; };
+		268F95011E7BCF1800317196 /* LYChattingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingModel.m; sourceTree = "<group>"; };
+		268F95031E7BD02A00317196 /* LYChattingCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCellController.h; sourceTree = "<group>"; };
+		268F95041E7BD02A00317196 /* LYChattingCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellController.m; sourceTree = "<group>"; };
+		268F950D1E7C1CB200317196 /* LYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYScrollView.h; sourceTree = "<group>"; };
+		268F950E1E7C1CB200317196 /* LYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYScrollView.m; sourceTree = "<group>"; };
 		2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightContainerViewController.h; sourceTree = "<group>"; };
 		2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightContainerViewController.m; sourceTree = "<group>"; };
 		2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightContainerViewController.xib; sourceTree = "<group>"; };
@@ -767,6 +781,8 @@
 				2632C79C1E6D8FC4001278CA /* LYView.m */,
 				26DDEFE11E786B0300B5104A /* LYTableRowView.h */,
 				26DDEFE21E786B0300B5104A /* LYTableRowView.m */,
+				268F950D1E7C1CB200317196 /* LYScrollView.h */,
+				268F950E1E7C1CB200317196 /* LYScrollView.m */,
 			);
 			name = "子类";
 			path = ..;
@@ -828,6 +844,34 @@
 				2632C7EE1E6EB178001278CA /* LYNavigationViewController.xib */,
 			);
 			name = "左侧导航条";
+			sourceTree = "<group>";
+		};
+		268F94F91E7BCB9800317196 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				268F94FA1E7BCBE800317196 /* LYChattingCell.h */,
+				268F94FB1E7BCBE800317196 /* LYChattingCell.m */,
+				268F94FD1E7BCC0100317196 /* LYChattingCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		268F94FF1E7BCEFE00317196 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				268F95001E7BCF1800317196 /* LYChattingModel.h */,
+				268F95011E7BCF1800317196 /* LYChattingModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		268F95061E7BD03000317196 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				268F95031E7BD02A00317196 /* LYChattingCellController.h */,
+				268F95041E7BD02A00317196 /* LYChattingCellController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		2698E28D1E6FDE3B009CED7B /* 右侧大容器 */ = {
@@ -928,6 +972,9 @@
 		269988DE1E74629E0037FF7A /* 聊天区 */ = {
 			isa = PBXGroup;
 			children = (
+				268F95061E7BD03000317196 /* Controller */,
+				268F94FF1E7BCEFE00317196 /* Model */,
+				268F94F91E7BCB9800317196 /* Cell */,
 				269988E41E7468520037FF7A /* LYChattingAreaViewController.h */,
 				269988E51E7468520037FF7A /* LYChattingAreaViewController.m */,
 				269988E61E7468520037FF7A /* LYChattingAreaViewController.xib */,
@@ -1839,8 +1886,8 @@
 				26DDEFE81E794C8D00B5104A /* LYChattingTool.m */,
 				26D044EC1E72AF610018AF36 /* LYTool.h */,
 				26D044ED1E72AF610018AF36 /* LYTool.m */,
-				26426C3A1E79BF3200E13735 /* HttpTool.h */,
-				26426C3B1E79BF3200E13735 /* HttpTool.m */,
+				26426C3A1E79BF3200E13735 /* LYHttpTool.h */,
+				26426C3B1E79BF3200E13735 /* LYHttpTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2074,6 +2121,7 @@
 				26DDEFCE1E784DE000B5104A /* zhenpin_btn.png in Resources */,
 				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
 				2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */,
+				268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */,
 				26B56B851E718D770085AAED /* LYLianXiRenViewController.xib in Resources */,
 				2632C7F61E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png in Resources */,
 				2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */,
@@ -2241,6 +2289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268F95051E7BD02A00317196 /* LYChattingCellController.m in Sources */,
 				26D044D11E729FB80018AF36 /* RFImageToDataTransformer.m in Sources */,
 				26DDEFE61E786FC900B5104A /* NSColor+LY.m in Sources */,
 				26DDEFE31E786B0300B5104A /* LYTableRowView.m in Sources */,
@@ -2256,6 +2305,7 @@
 				26D044CB1E729FB80018AF36 /* NSXMLElement+XEP_0297.m in Sources */,
 				26D044931E729FB80018AF36 /* XMPPRoomMemoryStorage.m in Sources */,
 				26D044B81E729FB80018AF36 /* XMPPMessageArchiving.xcdatamodeld in Sources */,
+				268F94FC1E7BCBE800317196 /* LYChattingCell.m in Sources */,
 				26D044771E729FB80018AF36 /* XMPPCoreDataStorage.m in Sources */,
 				26D044E01E729FB80018AF36 /* DDXMLElement.m in Sources */,
 				26D044C71E729FB80018AF36 /* NSXMLElement+XEP_0203.m in Sources */,
@@ -2298,6 +2348,7 @@
 				26D044C51E729FB80018AF36 /* XMPPAutoTime.m in Sources */,
 				26D0449B1E729FB80018AF36 /* XMPPvCardCoreDataStorage.m in Sources */,
 				26D044D61E729FB80018AF36 /* DDAbstractDatabaseLogger.m in Sources */,
+				268F950F1E7C1CB200317196 /* LYScrollView.m in Sources */,
 				269988E71E7468520037FF7A /* LYChattingAreaViewController.m in Sources */,
 				26D0447A1E729FB80018AF36 /* XMPPReconnect.m in Sources */,
 				2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */,
@@ -2324,7 +2375,7 @@
 				26DDEFDE1E785AEB00B5104A /* LYContactModel.m in Sources */,
 				26D044711E729FB80018AF36 /* XMPPMessage.m in Sources */,
 				26D044B11E729FB80018AF36 /* XMPPTransports.m in Sources */,
-				26426C3C1E79BF3200E13735 /* HttpTool.m in Sources */,
+				26426C3C1E79BF3200E13735 /* LYHttpTool.m in Sources */,
 				26D044B41E729FB80018AF36 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				26D0449D1E729FB80018AF36 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				26D044B51E729FB80018AF36 /* XMPPCapsCoreDataStorageObject.m in Sources */,
@@ -2369,6 +2420,7 @@
 				26D0447B1E729FB80018AF36 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				26D044C91E729FB80018AF36 /* XMPPAttentionModule.m in Sources */,
 				26D044D51E729FB80018AF36 /* GCDAsyncSocket.m in Sources */,
+				268F95021E7BCF1800317196 /* LYChattingModel.m in Sources */,
 				26D044C81E729FB80018AF36 /* XEP_0223.m in Sources */,
 				26D044B71E729FB80018AF36 /* XMPPCapabilities.m in Sources */,
 				26D044801E729FB80018AF36 /* XMPPResourceMemoryStorageObject.m in Sources */,

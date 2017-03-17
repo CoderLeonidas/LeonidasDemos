@@ -51,6 +51,10 @@
     }
     return self;
 }
+- (IBAction)avatarViewClicked:(id)sender {
+    
+    
+}
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];

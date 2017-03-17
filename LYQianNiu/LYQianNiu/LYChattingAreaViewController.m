@@ -7,9 +7,9 @@
 //
 
 #import "LYChattingAreaViewController.h"
-#import "HttpTool.h"
+#import "LYHttpTool.h"
 #import "NSImage+WebCache.h"
-
+#import "LYChattingCell.h"
 @interface LYChattingAreaViewController () <NSSplitViewDelegate, NSTableViewDelegate, NSTableViewDataSource,NSFetchedResultsControllerDelegate, NSTextViewDelegate> {
     
     NSFetchedResultsController *_resultsContrller;
@@ -29,7 +29,7 @@
 @property (weak) IBOutlet NSButton *chattingRecordBtn;//聊天记录
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
-@property (nonatomic, strong) HttpTool *httpTool;
+@property (nonatomic, strong) LYHttpTool *httpTool;
 
 @end
 
@@ -103,9 +103,9 @@
     }
 }
 
-- (HttpTool*) httpTool{
+- (LYHttpTool*) httpTool{
     if (!_httpTool) {
-        _httpTool = [[HttpTool alloc] init];
+        _httpTool = [[LYHttpTool alloc] init];
     }
     return _httpTool;
 }
@@ -189,38 +189,30 @@
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 40.0;
-}
-
-- (void)tableViewSelectionDidChange:(NSNotification *)notification {
-//    NSUInteger selectRowIndex =  self.tableView.selectedRow;
-//    XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
-//    [LYChattingTool sharedLYChattingTool].currentChattingContactModel = model;
-//    [[NSNotificationCenter defaultCenter] postNotificationName:LYContactRowSelectionDidChangeNotification object:self];
-}
-
-- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row {
-//    LYTableRowView *rowView = [[LYTableRowView alloc] init];
-//    return rowView;
-    return nil;
+    return 165.0;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSString *identifier = tableColumn.identifier;
-    NSTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
+    LYChattingCell *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
     if (!cellView) {
-        cellView = [[NSTableCellView alloc]init];
+        cellView = [[LYChattingCell alloc]init];
         cellView.identifier = identifier;
     }
-    cellView.textField.stringValue = @"";
+    cellView.avatarBtn.image = nil;
+    cellView.contentTextView.string = @"";
+    cellView.timeLbl.stringValue = @"";
+    
     XMPPMessageArchiving_Message_CoreDataObject *msg = _resultsContrller.fetchedObjects[row];
     
-    //text
+    //TODO 使用XMPPvCardAvatarModule  来获取好友头像
     if ([msg.outgoing boolValue]){//是往外发的，就是自己的
-        cellView.textField.stringValue = [NSString stringWithFormat:@"Me:%@", msg.body];
+        cellView.contentTextView.string = [NSString stringWithFormat:@"Me:%@", msg.body];
     } else {//别人发的
-        cellView.textField.stringValue = [NSString stringWithFormat:@"Other:%@", msg.body];
+        cellView.contentTextView.string = [NSString stringWithFormat:@"Other:%@", msg.body];
+        cellView.avatarBtn.image = [LYChattingTool sharedLYChattingTool].currentChattingContactModel.photo;
     }
+//   cellView.avatarBtn.image =  [NSImage imageNamed:@"LeonCafe"];
     //TODO 聊天内容处理有问题，iMessage发送的消息没有bodyType标签，无法判断是文字还是图片，所以发送的内容需要自己定义通信协议!
     //判断是图片还是纯文本
 //    NSString *chatType = [msg.message attributeStringValueForName:@"bodyType"];
@@ -268,13 +260,11 @@
 
 //开始编辑时调用，输入第一个字符时响应，notification的object中可以获取到NSText对象，从中获取文字内容
 - (void)textDidBeginEditing:(NSNotification *)notification {
-//    LYLog(@"textDidBeginEditing");
 }
 
 
 // 鼠标移开textview失去焦点时调用，返回YES就结束编辑
 - (void)textDidEndEditing:(NSNotification *)notification {
-//    LYLog(@"textDidEndEditing");
 }
 
 - (void)textDidChange:(NSNotification *)notification {
@@ -287,6 +277,38 @@
         //发送后清空输入内容
         self.textView.string = @"" ;
     }
+}
+
+//发送图片
+//基本思路：先将图片上传到服务器地址，获取服务器图片的URL，然后将此图片url作为文本发送，对方接受后，根据url获得图片
+- (void)sendImageWith:(NSImage *)image {
+    //1 取文件名：用户名+时间(20170317)年月日时分秒
+    NSString *user = [LYUserInfo sharedLYUserInfo].user;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyyMMddHHmmss";
+    NSString *timeStr = [dateFormatter stringFromDate:[NSDate date]];
+    
+    //
+    NSString *fileName = [user stringByAppendingString:timeStr];
+    NSString *uploadUrl = GetImageUploadURLWith(fileName);
+    NSData *imageData = [image TIFFRepresentation];
+    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+    
+    NSDictionary *imageProps = nil;
+    NSNumber *quality = [NSNumber numberWithFloat:.85];
+    
+    imageProps = [NSDictionary dictionaryWithObject:quality forKey:NSImageCompressionFactor];
+    NSData *imageDataToSend = [imageRep representationUsingType:NSJPEGFileType properties:imageProps];
+    
+    [self.httpTool uploadData:imageDataToSend
+                          url:[NSURL URLWithString:uploadUrl]
+                progressBlock:^(CGFloat progress) {
+    }
+                   completion:^(NSError *error) {
+                       if (!error) {
+                           [self sendMsgWithText:uploadUrl bodyType:@"image"];
+                       }
+    }];
 }
 
 #pragma mark - Scroll

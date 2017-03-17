@@ -1,37 +1,37 @@
     //
-//  HttpTool.m
+//  LYHttpTool.m
 //  LYQianNiu
 //
 //  Created by Leonidas on 2017/3/16.
 //  Copyright © 2017年 Leon. All rights reserved.
 //
 
-#import "HttpTool.h"
+#import "LYHttpTool.h"
 
 #define kTimeOut 5.0
 
-@interface HttpTool() <NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate> {
+@interface LYHttpTool() <NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate> {
     //下载
-    HttpToolProgressBlock _downloadProgressBlock;
-    HttpToolCompletionBlock _downloadCompletionBlock;
+    LYHttpToolProgressBlock _downloadProgressBlock;
+    LYHttpToolCompletionBlock _downloadCompletionBlock;
     NSURL *_downloadURL;
     
     //上传
-    HttpToolProgressBlock _uploadProgressBlock;
-    HttpToolCompletionBlock _uploadCompletionBlock;
+    LYHttpToolProgressBlock _uploadProgressBlock;
+    LYHttpToolCompletionBlock _uploadCompletionBlock;
     
 }
 
 @end
 
-@implementation HttpTool
+@implementation LYHttpTool
 
 #pragma mark - 上传
 
 - (void)uploadData:(NSData *)data
                url:(NSURL *)url
-     progressBlock:(HttpToolProgressBlock)progressBlock
-        completion:(HttpToolCompletionBlock)completionBlock {
+     progressBlock:(LYHttpToolProgressBlock)progressBlock
+        completion:(LYHttpToolCompletionBlock)completionBlock {
     
     NSAssert(data != nil, @"上传数据不能为空");
     NSAssert(url != nil, @"上传文件路径不能为空");
@@ -74,8 +74,8 @@
 #pragma mark - 下载
 
 - (void)downloadFromURL:(NSURL *)url
-          progressBlock:(HttpToolProgressBlock)progressBlock
-             completion:(HttpToolCompletionBlock)completionBlock {
+          progressBlock:(LYHttpToolProgressBlock)progressBlock
+             completion:(LYHttpToolCompletionBlock)completionBlock {
     NSAssert(url != nil, @"下载URL不能为空");
     
     _downloadURL = url;
