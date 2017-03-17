@@ -10,9 +10,13 @@
 #import "LYHttpTool.h"
 #import "NSImage+WebCache.h"
 #import "LYChattingCell.h"
+#import "SnipManager.h"
+
 @interface LYChattingAreaViewController () <NSSplitViewDelegate, NSTableViewDelegate, NSTableViewDataSource,NSFetchedResultsControllerDelegate, NSTextViewDelegate> {
     
     NSFetchedResultsController *_resultsContrller;
+    
+    NSImageView *_backImageView;
     
 }
 @property (weak) IBOutlet NSSplitView *splitView;//分割视图
@@ -53,6 +57,33 @@
 
 - (void)addNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshChattingMessage) name:LYContactRowSelectionDidChangeNotification object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEndCapture:) name:kNotifyCaptureEnd object:nil];
+}
+
+- (void)onEndCapture:(NSNotification *)notification {
+    if (notification.userInfo[@"image"]) {
+        NSImage *image = notification.userInfo[@"image"];
+        [image setName:[NSString stringWithFormat:@"snip_%lf.png", [NSDate date].timeIntervalSinceReferenceDate]];
+        _backImageView.image = image;
+        
+        [self showImage:image toTextView:self.textView];
+        
+        return;
+    }
+    //    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    //    NSArray *classArray = [NSArray arrayWithObject:[NSImage class]];
+    //    NSDictionary *options = [NSDictionary dictionary];
+    //    BOOL ok = [pasteboard canReadObjectForClasses:classArray options:options];
+    //    if(ok) {
+    //        NSArray *objectsToPaste = [pasteboard readObjectsForClasses:classArray options:options];
+    //        NSImage *image = [objectsToPaste objectAtIndex:0];
+    //        self.backImageView.image = image;
+    //        //[self.view.window setBackgroundColor:[NSColor colorWithPatternImage:image]];
+    //    } else {
+    //        NSLog(@"Error: Clipboard doesn't seem to contain an image.");
+    //    }
 }
 
 - (void)refreshChattingMessage {
@@ -116,6 +147,7 @@
 }
 
 - (IBAction)screenshotBtnClicked:(id)sender {
+    [[SnipManager sharedInstance] startCapture];
 }
 
 - (IBAction)picTransferBtnClicked:(id)sender {
@@ -129,19 +161,20 @@
         if (result == NSFileHandlingPanelOKButton ) {
             NSArray *fileURLs = [openPanel URLs];
             for (NSURL *url in fileURLs) {//不能多选，所以只有一次循环
-                NSString *imageName = url.path.lastPathComponent;
-                [self showImage:imageName toTextView:self.textView];
+//                NSString *imageName = url.path.lastPathComponent;
+                NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
+                [self showImage:image toTextView:self.textView];
             }
         }
     }];
 }
 
 //将图片以属性文字的形式显示在textview上(支持图文混排)
-- (void)showImage:(NSString *)imageName toTextView:(NSTextView *)textView {
+- (void)showImage:(NSImage *)image toTextView:(NSTextView *)textView {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@""];
-    NSFileWrapper *imageFileWrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[[NSImage imageNamed:imageName] TIFFRepresentation]];
-    imageFileWrapper.filename = imageName;
-    imageFileWrapper.preferredFilename = imageName;
+    NSFileWrapper *imageFileWrapper = [[NSFileWrapper alloc] initRegularFileWithContents:[image TIFFRepresentation]];
+    imageFileWrapper.filename = image.name;
+    imageFileWrapper.preferredFilename = image.name;
     NSTextAttachment *imageAttachment = [[NSTextAttachment alloc] initWithFileWrapper:imageFileWrapper] ;
     NSAttributedString *imageAttributedString = [NSAttributedString attributedStringWithAttachment:imageAttachment];
     [attributedString insertAttributedString:imageAttributedString atIndex:0];

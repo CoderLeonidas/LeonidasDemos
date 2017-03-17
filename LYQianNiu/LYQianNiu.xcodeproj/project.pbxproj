@@ -48,6 +48,26 @@
 		268F95021E7BCF1800317196 /* LYChattingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95011E7BCF1800317196 /* LYChattingModel.m */; };
 		268F95051E7BD02A00317196 /* LYChattingCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95041E7BD02A00317196 /* LYChattingCellController.m */; };
 		268F950F1E7C1CB200317196 /* LYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F950E1E7C1CB200317196 /* LYScrollView.m */; };
+		268F95291E7C500100317196 /* DrawPathInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95121E7C500100317196 /* DrawPathInfo.m */; };
+		268F952A1E7C500100317196 /* DrawPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95141E7C500100317196 /* DrawPathView.m */; };
+		268F952B1E7C500100317196 /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95161E7C500100317196 /* ImageButton.m */; };
+		268F952C1E7C500100317196 /* NSColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95191E7C500100317196 /* NSColor+Helper.m */; };
+		268F952D1E7C500100317196 /* SimpleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F951B1E7C500100317196 /* SimpleLabelView.m */; };
+		268F952E1E7C500100317196 /* SnipManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F951D1E7C500100317196 /* SnipManager.m */; };
+		268F952F1E7C500100317196 /* SnipUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F951F1E7C500100317196 /* SnipUtil.m */; };
+		268F95301E7C500100317196 /* SnipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95211E7C500100317196 /* SnipView.m */; };
+		268F95311E7C500100317196 /* SnipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95231E7C500100317196 /* SnipWindow.m */; };
+		268F95321E7C500100317196 /* SnipWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95251E7C500100317196 /* SnipWindowController.m */; };
+		268F95331E7C500100317196 /* SnipWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268F95261E7C500100317196 /* SnipWindowController.xib */; };
+		268F95341E7C500100317196 /* ToolContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95281E7C500100317196 /* ToolContainer.m */; };
+		268F953E1E7C540700317196 /* ScreenCapture_toolbar_arrow_effect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F95361E7C540700317196 /* ScreenCapture_toolbar_arrow_effect.tiff */; };
+		268F953F1E7C540700317196 /* ScreenCapture_toolbar_arrow_ineffect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F95371E7C540700317196 /* ScreenCapture_toolbar_arrow_ineffect.tiff */; };
+		268F95401E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F95381E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff */; };
+		268F95411E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F95391E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff */; };
+		268F95421E7C540700317196 /* ScreenCapture_toolbar_ellipse_ineffect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F953A1E7C540700317196 /* ScreenCapture_toolbar_ellipse_ineffect.tiff */; };
+		268F95431E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F953B1E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff */; };
+		268F95441E7C540700317196 /* ScreenCapture_toolbar_rect_ineffect.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F953C1E7C540700317196 /* ScreenCapture_toolbar_rect_ineffect.tiff */; };
+		268F95451E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 268F953D1E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff */; };
 		2698E2911E6FDE6A009CED7B /* LYRightContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */; };
 		2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */; };
 		2698E2981E6FE310009CED7B /* LYLeftViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2698E2961E6FE310009CED7B /* LYLeftViewContainer.m */; };
@@ -306,6 +326,38 @@
 		268F95041E7BD02A00317196 /* LYChattingCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellController.m; sourceTree = "<group>"; };
 		268F950D1E7C1CB200317196 /* LYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYScrollView.h; sourceTree = "<group>"; };
 		268F950E1E7C1CB200317196 /* LYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYScrollView.m; sourceTree = "<group>"; };
+		268F95111E7C500100317196 /* DrawPathInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPathInfo.h; sourceTree = "<group>"; };
+		268F95121E7C500100317196 /* DrawPathInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPathInfo.m; sourceTree = "<group>"; };
+		268F95131E7C500100317196 /* DrawPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPathView.h; sourceTree = "<group>"; };
+		268F95141E7C500100317196 /* DrawPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPathView.m; sourceTree = "<group>"; };
+		268F95151E7C500100317196 /* ImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageButton.h; sourceTree = "<group>"; };
+		268F95161E7C500100317196 /* ImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButton.m; sourceTree = "<group>"; };
+		268F95171E7C500100317196 /* MouseEventProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseEventProtocol.h; sourceTree = "<group>"; };
+		268F95181E7C500100317196 /* NSColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Helper.h"; sourceTree = "<group>"; };
+		268F95191E7C500100317196 /* NSColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Helper.m"; sourceTree = "<group>"; };
+		268F951A1E7C500100317196 /* SimpleLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleLabelView.h; sourceTree = "<group>"; };
+		268F951B1E7C500100317196 /* SimpleLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleLabelView.m; sourceTree = "<group>"; };
+		268F951C1E7C500100317196 /* SnipManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnipManager.h; sourceTree = "<group>"; };
+		268F951D1E7C500100317196 /* SnipManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnipManager.m; sourceTree = "<group>"; };
+		268F951E1E7C500100317196 /* SnipUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnipUtil.h; sourceTree = "<group>"; };
+		268F951F1E7C500100317196 /* SnipUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnipUtil.m; sourceTree = "<group>"; };
+		268F95201E7C500100317196 /* SnipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnipView.h; sourceTree = "<group>"; };
+		268F95211E7C500100317196 /* SnipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnipView.m; sourceTree = "<group>"; };
+		268F95221E7C500100317196 /* SnipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnipWindow.h; sourceTree = "<group>"; };
+		268F95231E7C500100317196 /* SnipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnipWindow.m; sourceTree = "<group>"; };
+		268F95241E7C500100317196 /* SnipWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnipWindowController.h; sourceTree = "<group>"; };
+		268F95251E7C500100317196 /* SnipWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnipWindowController.m; sourceTree = "<group>"; };
+		268F95261E7C500100317196 /* SnipWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnipWindowController.xib; sourceTree = "<group>"; };
+		268F95271E7C500100317196 /* ToolContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolContainer.h; sourceTree = "<group>"; };
+		268F95281E7C500100317196 /* ToolContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolContainer.m; sourceTree = "<group>"; };
+		268F95361E7C540700317196 /* ScreenCapture_toolbar_arrow_effect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_arrow_effect.tiff; sourceTree = "<group>"; };
+		268F95371E7C540700317196 /* ScreenCapture_toolbar_arrow_ineffect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_arrow_ineffect.tiff; sourceTree = "<group>"; };
+		268F95381E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_cross_normal.tiff; sourceTree = "<group>"; };
+		268F95391E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_ellipse_effect.tiff; sourceTree = "<group>"; };
+		268F953A1E7C540700317196 /* ScreenCapture_toolbar_ellipse_ineffect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_ellipse_ineffect.tiff; sourceTree = "<group>"; };
+		268F953B1E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_rect_effect.tiff; sourceTree = "<group>"; };
+		268F953C1E7C540700317196 /* ScreenCapture_toolbar_rect_ineffect.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_rect_ineffect.tiff; sourceTree = "<group>"; };
+		268F953D1E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ScreenCapture_toolbar_tick_normal.tiff; sourceTree = "<group>"; };
 		2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRightContainerViewController.h; sourceTree = "<group>"; };
 		2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRightContainerViewController.m; sourceTree = "<group>"; };
 		2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYRightContainerViewController.xib; sourceTree = "<group>"; };
@@ -874,6 +926,53 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		268F95101E7C500100317196 /* SnipTool */ = {
+			isa = PBXGroup;
+			children = (
+				268F95351E7C540700317196 /* Resource */,
+				268F95111E7C500100317196 /* DrawPathInfo.h */,
+				268F95121E7C500100317196 /* DrawPathInfo.m */,
+				268F95131E7C500100317196 /* DrawPathView.h */,
+				268F95141E7C500100317196 /* DrawPathView.m */,
+				268F95151E7C500100317196 /* ImageButton.h */,
+				268F95161E7C500100317196 /* ImageButton.m */,
+				268F95171E7C500100317196 /* MouseEventProtocol.h */,
+				268F95181E7C500100317196 /* NSColor+Helper.h */,
+				268F95191E7C500100317196 /* NSColor+Helper.m */,
+				268F951A1E7C500100317196 /* SimpleLabelView.h */,
+				268F951B1E7C500100317196 /* SimpleLabelView.m */,
+				268F951C1E7C500100317196 /* SnipManager.h */,
+				268F951D1E7C500100317196 /* SnipManager.m */,
+				268F951E1E7C500100317196 /* SnipUtil.h */,
+				268F951F1E7C500100317196 /* SnipUtil.m */,
+				268F95201E7C500100317196 /* SnipView.h */,
+				268F95211E7C500100317196 /* SnipView.m */,
+				268F95221E7C500100317196 /* SnipWindow.h */,
+				268F95231E7C500100317196 /* SnipWindow.m */,
+				268F95241E7C500100317196 /* SnipWindowController.h */,
+				268F95251E7C500100317196 /* SnipWindowController.m */,
+				268F95261E7C500100317196 /* SnipWindowController.xib */,
+				268F95271E7C500100317196 /* ToolContainer.h */,
+				268F95281E7C500100317196 /* ToolContainer.m */,
+			);
+			path = SnipTool;
+			sourceTree = "<group>";
+		};
+		268F95351E7C540700317196 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				268F95361E7C540700317196 /* ScreenCapture_toolbar_arrow_effect.tiff */,
+				268F95371E7C540700317196 /* ScreenCapture_toolbar_arrow_ineffect.tiff */,
+				268F95381E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff */,
+				268F95391E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff */,
+				268F953A1E7C540700317196 /* ScreenCapture_toolbar_ellipse_ineffect.tiff */,
+				268F953B1E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff */,
+				268F953C1E7C540700317196 /* ScreenCapture_toolbar_rect_ineffect.tiff */,
+				268F953D1E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		2698E28D1E6FDE3B009CED7B /* 右侧大容器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,6 +1184,7 @@
 		26D043151E729FB80018AF36 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				268F95101E7C500100317196 /* SnipTool */,
 				26D043161E729FB80018AF36 /* XMPP */,
 			);
 			path = Lib;
@@ -2076,6 +2176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2632C7A31E6D97E7001278CA /* appIcon_32x32@2x.png in Resources */,
+				268F953F1E7C540700317196 /* ScreenCapture_toolbar_arrow_ineffect.tiff in Resources */,
 				2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */,
 				2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */,
 				26B56B721E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png in Resources */,
@@ -2095,6 +2196,7 @@
 				26D044E21E729FB80018AF36 /* build-libidn.sh in Resources */,
 				2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */,
 				2632C7B61E6DA218001278CA /* login_photo_self.png in Resources */,
+				268F95401E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff in Resources */,
 				26DDEFCC1E784DE000B5104A /* juzheng_btn.png in Resources */,
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
 				2632C7871E6D669C001278CA /* MainMenu.xib in Resources */,
@@ -2102,7 +2204,9 @@
 				2698E2921E6FDE6A009CED7B /* LYRightContainerViewController.xib in Resources */,
 				26DDEFDA1E7851D700B5104A /* LYContactTableCellView.xib in Resources */,
 				2632C7B21E6DA167001278CA /* login_ico_ali_nor.png in Resources */,
+				268F95441E7C540700317196 /* ScreenCapture_toolbar_rect_ineffect.tiff in Resources */,
 				26DDEFD01E784DE000B5104A /* biaoqing_btn.png in Resources */,
+				268F953E1E7C540700317196 /* ScreenCapture_toolbar_arrow_effect.tiff in Resources */,
 				269988F91E768C1B0037FF7A /* LYAvatarImageView.xib in Resources */,
 				2632C7C21E6DC58F001278CA /* LYMainViewContainer.xib in Resources */,
 				26DDEFD31E784EC300B5104A /* kuaijiehuifu_btn.png in Resources */,
@@ -2114,19 +2218,24 @@
 				269988E31E7463050037FF7A /* LYTopAreaViewController.xib in Resources */,
 				2632C7681E6D5FA2001278CA /* LYLoginViewController.xib in Resources */,
 				26DDEFCD1E784DE000B5104A /* tupian_btn.png in Resources */,
+				268F95331E7C500100317196 /* SnipWindowController.xib in Resources */,
 				2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */,
 				26B56B801E718D650085AAED /* LYZuiJinHuiHuaViewController.xib in Resources */,
 				2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */,
 				2632C8001E6EBAB3001278CA /* qipao.png in Resources */,
 				26DDEFCE1E784DE000B5104A /* zhenpin_btn.png in Resources */,
+				268F95421E7C540700317196 /* ScreenCapture_toolbar_ellipse_ineffect.tiff in Resources */,
+				268F95451E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff in Resources */,
 				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
 				2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */,
 				268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */,
 				26B56B851E718D770085AAED /* LYLianXiRenViewController.xib in Resources */,
 				2632C7F61E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png in Resources */,
+				268F95411E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff in Resources */,
 				2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */,
 				2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */,
 				26DDEFE01E785CEE00B5104A /* LeonCafe.png in Resources */,
+				268F95431E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2294,6 +2403,7 @@
 				26DDEFE61E786FC900B5104A /* NSColor+LY.m in Sources */,
 				26DDEFE31E786B0300B5104A /* LYTableRowView.m in Sources */,
 				26D044DF1E729FB80018AF36 /* DDXMLDocument.m in Sources */,
+				268F952E1E7C500100317196 /* SnipManager.m in Sources */,
 				26D044CC1E729FB80018AF36 /* XMPPMessage+XEP_0308.m in Sources */,
 				26D044701E729FB80018AF36 /* XMPPJID.m in Sources */,
 				26D044791E729FB80018AF36 /* XMPPProcessOne.m in Sources */,
@@ -2346,6 +2456,7 @@
 				26D044901E729FB80018AF36 /* XMPPRoomHybridStorage.m in Sources */,
 				2698E2A41E6FE562009CED7B /* LYRightViewContainer.m in Sources */,
 				26D044C51E729FB80018AF36 /* XMPPAutoTime.m in Sources */,
+				268F952D1E7C500100317196 /* SimpleLabelView.m in Sources */,
 				26D0449B1E729FB80018AF36 /* XMPPvCardCoreDataStorage.m in Sources */,
 				26D044D61E729FB80018AF36 /* DDAbstractDatabaseLogger.m in Sources */,
 				268F950F1E7C1CB200317196 /* LYScrollView.m in Sources */,
@@ -2360,8 +2471,10 @@
 				26D044851E729FB80018AF36 /* XMPPIQ+JabberRPC.m in Sources */,
 				26D044A61E729FB80018AF36 /* NSXMLElement+XEP_0059.m in Sources */,
 				26B56B7A1E718D470085AAED /* LYJinRiJieDaiViewController.m in Sources */,
+				268F95311E7C500100317196 /* SnipWindow.m in Sources */,
 				26B56B891E718D870085AAED /* LYQunZuViewController.m in Sources */,
 				26D044C41E729FB80018AF36 /* XMPPPing.m in Sources */,
+				268F952F1E7C500100317196 /* SnipUtil.m in Sources */,
 				26D044DA1E729FB80018AF36 /* DDTTYLogger.m in Sources */,
 				26D0449E1E729FB80018AF36 /* XMPPvCardTemp.m in Sources */,
 				26D044BC1E729FB80018AF36 /* XMPPMessageArchiving.m in Sources */,
@@ -2380,6 +2493,7 @@
 				26D0449D1E729FB80018AF36 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				26D044B51E729FB80018AF36 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				26D044AC1E729FB80018AF36 /* XMPPMessage+XEP_0066.m in Sources */,
+				268F95321E7C500100317196 /* SnipWindowController.m in Sources */,
 				26D044661E729FB80018AF36 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
 				269988E21E7463050037FF7A /* LYTopAreaViewController.m in Sources */,
 				26D0447D1E729FB80018AF36 /* XMPPRoster.xcdatamodel in Sources */,
@@ -2387,10 +2501,12 @@
 				26D044671E729FB80018AF36 /* XMPPDigestMD5Authentication.m in Sources */,
 				26D0448B1E729FB80018AF36 /* XMPPRoom.xcdatamodeld in Sources */,
 				26D044A81E729FB80018AF36 /* XMPPIQ+XEP_0060.m in Sources */,
+				268F95341E7C500100317196 /* ToolContainer.m in Sources */,
 				2632C7EF1E6EB178001278CA /* LYNavigationViewController.m in Sources */,
 				26D044AB1E729FB80018AF36 /* XMPPIQ+XEP_0066.m in Sources */,
 				26D044841E729FB80018AF36 /* XMPPSystemInputActivityMonitor.m in Sources */,
 				26D044721E729FB80018AF36 /* XMPPModule.m in Sources */,
+				268F952A1E7C500100317196 /* DrawPathView.m in Sources */,
 				26D044731E729FB80018AF36 /* XMPPParser.m in Sources */,
 				2632C71F1E6D56FB001278CA /* main.m in Sources */,
 				26D0447F1E729FB80018AF36 /* XMPPUserCoreDataStorageObject.m in Sources */,
@@ -2433,6 +2549,8 @@
 				26D044891E729FB80018AF36 /* XMPPLastActivity.m in Sources */,
 				26D044981E729FB80018AF36 /* XMPPRoom.m in Sources */,
 				26D0446A1E729FB80018AF36 /* XMPPXOAuth2Google.m in Sources */,
+				268F95291E7C500100317196 /* DrawPathInfo.m in Sources */,
+				268F952C1E7C500100317196 /* NSColor+Helper.m in Sources */,
 				2632C79D1E6D8FC4001278CA /* LYView.m in Sources */,
 				26D044AF1E729FB80018AF36 /* XMPPMessage+XEP_0085.m in Sources */,
 				26D044A01E729FB80018AF36 /* XMPPvCardTempAdrTypes.m in Sources */,
@@ -2443,9 +2561,11 @@
 				26D0449A1E729FB80018AF36 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				26D044D21E729FB80018AF36 /* XMPPIDTracker.m in Sources */,
 				269988F31E7689440037FF7A /* MKBCloseButton.m in Sources */,
+				268F95301E7C500100317196 /* SnipView.m in Sources */,
 				26D0449F1E729FB80018AF36 /* XMPPvCardTempAdr.m in Sources */,
 				26D044861E729FB80018AF36 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				26D044911E729FB80018AF36 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
+				268F952B1E7C500100317196 /* ImageButton.m in Sources */,
 				26D044C21E729FB80018AF36 /* XMPPBlocking.m in Sources */,
 				26D044DE1E729FB80018AF36 /* NSString+DDXML.m in Sources */,
 			);
