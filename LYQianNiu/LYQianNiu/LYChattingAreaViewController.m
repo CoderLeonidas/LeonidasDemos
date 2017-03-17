@@ -11,6 +11,7 @@
 #import "NSImage+WebCache.h"
 #import "LYChattingCell.h"
 #import "SnipManager.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LYChattingAreaViewController () <NSSplitViewDelegate, NSTableViewDelegate, NSTableViewDataSource,NSFetchedResultsControllerDelegate, NSTextViewDelegate> {
     
@@ -182,6 +183,56 @@
 }
 
 - (IBAction)sharkScreenBtnClicked:(id)sender {
+    [self shakeAnimationForView:self.view.window.contentView];
+}
+
+- (void)shakeAnimationForView:(NSView *)view { // 获取到当前的View
+    
+    CALayer *viewLayer = view.layer;
+    
+    // 获取当前View的位置
+    
+    CGPoint position = viewLayer.position;
+    
+    // 移动的两个终点位置
+    
+    CGPoint x = CGPointMake(position.x -5, position.y +5);
+    
+    CGPoint y = CGPointMake(position.x +5, position.y-5);
+    
+    // 设置动画
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    
+    // 设置运动形式
+    
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+    
+    // 设置开始位置
+
+    [animation setFromValue:[NSValue valueWithPoint:x]];
+    
+    // 设置结束位置
+    
+    [animation setToValue:[NSValue valueWithPoint:y]];
+    
+    // 设置自动反转
+    
+    [animation setAutoreverses:YES];
+    
+    // 设置时间
+    
+    [animation setDuration:.06];
+    
+    // 设置次数
+    
+    [animation setRepeatCount:8];
+    
+    // 添加上动画
+    
+    [viewLayer addAnimation:animation forKey:nil];
+    
+    
 }
 
 - (IBAction)reportBtnClicked:(id)sender {
