@@ -183,7 +183,32 @@
 }
 
 - (IBAction)sharkScreenBtnClicked:(id)sender {
-    [self shakeAnimationForView:self.view.window.contentView];
+//    [self shakeAnimationForView:self.view.window.contentView];
+    [self shakeScreen];
+}
+
+- (void)shakeScreen{
+    static int numberOfShakes = 3;
+    static float durationOfShake = 0.3f;
+    static float vigourOfShake = 0.02f;
+    CGRect frame=[self.view.window frame];
+    CAKeyframeAnimation *shakeAnimation = [CAKeyframeAnimation animation];
+    
+    CGMutablePathRef shakePath = CGPathCreateMutable();
+    CGPathMoveToPoint(shakePath, NULL, NSMinX(frame), NSMinY(frame));
+    int index;
+    for (index = 0; index < numberOfShakes; ++index)
+    {
+        CGPathAddLineToPoint(shakePath, NULL, NSMinX(frame) - frame.size.width * vigourOfShake, NSMinY(frame));
+        CGPathAddLineToPoint(shakePath, NULL, NSMinX(frame) + frame.size.width * vigourOfShake, NSMinY(frame));
+    }
+    CGPathCloseSubpath(shakePath);
+    shakeAnimation.path = shakePath;
+    shakeAnimation.duration = durationOfShake;
+    
+    [self.view.window setAnimations:[NSDictionary dictionaryWithObject: shakeAnimation forKey:@"frameOrigin"]];
+    [[self.view.window animator] setFrameOrigin:[self.view.window frame].origin];
+    
 }
 
 - (void)shakeAnimationForView:(NSView *)view { // 获取到当前的View
