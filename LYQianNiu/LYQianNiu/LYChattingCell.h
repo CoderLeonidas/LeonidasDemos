@@ -8,11 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import "LYChattingCellModel.h"
+#import "LYChattingCellFrame.h"
 @interface LYChattingCell : NSTableCellView
 
-//外部传入参数
-@property (nonatomic, strong) LYChattingCellModel *model;//模型
-@property (nonatomic, assign) CGFloat cellWidth;
-//外部读取参数
-@property (nonatomic, assign, readonly) CGFloat cellHeight;//根据内容计算出的cell高度
++ (instancetype)cellWithTableView:(NSTableView *)tableView;
+
+@property (nonatomic, strong) LYChattingCellFrame *cellFrame;
 @end

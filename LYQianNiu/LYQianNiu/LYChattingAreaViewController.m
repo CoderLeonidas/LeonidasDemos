@@ -13,7 +13,6 @@
 #import "LYChattingCellModel.h"
 
 #import "LYChattingCellFrame.h"
-#import "LYChattingCellView.h"
 #import "NSImage+WebCache.h"
 
 #import "LYHttpTool.h"
@@ -283,7 +282,7 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     
-    LYChattingCellView *cellView = [LYChattingCellView cellWithTableView:tableView];
+    LYChattingCell *cellView = [LYChattingCell cellWithTableView:tableView];
     cellView.cellFrame = _dataSource[row];
 //    NSString *identifier = NSStringFromClass([LYChattingCell class]);
 //    LYChattingCell *cellView = [tableView makeViewWithIdentifier:identifier owner:self];

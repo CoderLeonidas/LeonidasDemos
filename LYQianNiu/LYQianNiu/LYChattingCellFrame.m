@@ -34,30 +34,31 @@
 - (void)calculateFrames {
     CGSize contentSize = CGSizeMake(_cellWidth, MAXFLOAT);
     contentSize = [self.cellModel.message boundingRectWithSize:contentSize font:LYChattingCellContentFont maxWidth:_cellWidth];
+    contentSize.width += 12;
     NSString *dateStr = [self.dateFormatter stringFromDate:self.cellModel.timeStamp];
     CGSize timeSize = CGSizeMake(_cellWidth, MAXFLOAT);
     timeSize = [dateStr boundingRectWithSize:timeSize font:LYChattingCellTimeFont maxWidth:_cellWidth];
-    
+    timeSize.width += 12;
     //时间
     self.timeViewF = (CGRect){{(self.cellWidth - timeSize.width)*0.5, Padding}, timeSize};
     
+    BOOL outgoing = _cellModel.outgoing;
+    
     //头像
+    CGFloat avatarX = outgoing?Padding:_cellWidth - Padding - AvatarHW;
     CGFloat avatarY = CGRectGetMaxY(self.timeViewF) + Padding;
-    self.avatarViewF = NSMakeRect(Padding, avatarY, AvatarHW, AvatarHW);
+    self.avatarViewF = NSMakeRect(avatarX, avatarY, AvatarHW, AvatarHW);
     
     //气泡
-    CGFloat bubbleX = Padding + self.avatarViewF.size.width + Padding;
-    CGFloat bubbleY = self.avatarViewF.origin.y;
     CGFloat bubbleW = Padding + contentSize.width + Padding;
     CGFloat bubbleH = Padding + contentSize.height + Padding;
+    CGFloat bubbleX = outgoing?Padding + self.avatarViewF.size.width + Padding:_cellWidth-Padding-AvatarHW-Padding-bubbleW;
+    CGFloat bubbleY = self.avatarViewF.origin.y;
     self.bubbleViewF = NSMakeRect(bubbleX, bubbleY, bubbleW, bubbleH);
     
-    
-    //    self.cellModel. = [bubbleImage stretchableImageWithSize:NSMakeSize(_textWidth + 2*Padding, _textHeight+2*Padding) edgeInsets:NSEdgeInsetsMake(5,5,5,5)];
-    
     //消息正文
-    CGFloat contentX = bubbleX + Padding;
-    CGFloat contentY = bubbleY + Padding;
+    CGFloat contentX =  Padding;
+    CGFloat contentY =   Padding;
     self.contentViewF = (CGRect){{contentX, contentY}, contentSize};
     //消息整体
     CGFloat originalX = 0;

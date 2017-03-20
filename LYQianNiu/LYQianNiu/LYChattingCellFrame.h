@@ -10,9 +10,9 @@
 #import "LYChattingCellModel.h"
 
 // 时间字体
-#define LYChattingCellTimeFont [NSFont systemFontOfSize:12]
+#define LYChattingCellTimeFont [NSFont systemFontOfSize:13]
 // 正文字体
-#define LYChattingCellContentFont [NSFont systemFontOfSize:14]
+#define LYChattingCellContentFont [NSFont systemFontOfSize:13]
 
 @interface LYChattingCellFrame : NSObject
 

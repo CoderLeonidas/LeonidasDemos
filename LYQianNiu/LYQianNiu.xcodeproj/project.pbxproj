@@ -60,7 +60,6 @@
 		264E76D91E7E20FA00A02C6B /* NSString+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76D81E7E20FA00A02C6B /* NSString+LY.m */; };
 		264E76DC1E7E73F100A02C6B /* NSImage+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DB1E7E73F100A02C6B /* NSImage+LY.m */; };
 		264E76DF1E7FC88000A02C6B /* LYChattingCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */; };
-		264E76E21E7FCD6D00A02C6B /* LYChattingCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76E11E7FCD6D00A02C6B /* LYChattingCellView.m */; };
 		264E76E61E8047A700A02C6B /* LYFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76E51E8047A700A02C6B /* LYFlippedView.m */; };
 		268F94FC1E7BCBE800317196 /* LYChattingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F94FB1E7BCBE800317196 /* LYChattingCell.m */; };
 		268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268F94FD1E7BCC0100317196 /* LYChattingCell.xib */; };
@@ -355,8 +354,6 @@
 		264E76DB1E7E73F100A02C6B /* NSImage+LY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+LY.m"; sourceTree = "<group>"; };
 		264E76DD1E7FC88000A02C6B /* LYChattingCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCellFrame.h; sourceTree = "<group>"; };
 		264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellFrame.m; sourceTree = "<group>"; };
-		264E76E01E7FCD6D00A02C6B /* LYChattingCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCellView.h; sourceTree = "<group>"; };
-		264E76E11E7FCD6D00A02C6B /* LYChattingCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellView.m; sourceTree = "<group>"; };
 		264E76E41E8047A700A02C6B /* LYFlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFlippedView.h; sourceTree = "<group>"; };
 		264E76E51E8047A700A02C6B /* LYFlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFlippedView.m; sourceTree = "<group>"; };
 		268F94FA1E7BCBE800317196 /* LYChattingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCell.h; sourceTree = "<group>"; };
@@ -957,18 +954,18 @@
 		264E76E31E7FCEBF00A02C6B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				264E76E01E7FCD6D00A02C6B /* LYChattingCellView.h */,
-				264E76E11E7FCD6D00A02C6B /* LYChattingCellView.m */,
+				268F94FA1E7BCBE800317196 /* LYChattingCell.h */,
+				268F94FB1E7BCBE800317196 /* LYChattingCell.m */,
+				268F94FD1E7BCC0100317196 /* LYChattingCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		268F94F91E7BCB9800317196 /* Cell */ = {
+		264E76E81E805AFF00A02C6B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				268F94FA1E7BCBE800317196 /* LYChattingCell.h */,
-				268F94FB1E7BCBE800317196 /* LYChattingCell.m */,
-				268F94FD1E7BCC0100317196 /* LYChattingCell.xib */,
+				264E76E31E7FCEBF00A02C6B /* View */,
+				268F94FF1E7BCEFE00317196 /* Model */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1129,9 +1126,7 @@
 		269988DE1E74629E0037FF7A /* 聊天区 */ = {
 			isa = PBXGroup;
 			children = (
-				264E76E31E7FCEBF00A02C6B /* View */,
-				268F94FF1E7BCEFE00317196 /* Model */,
-				268F94F91E7BCB9800317196 /* Cell */,
+				264E76E81E805AFF00A02C6B /* Cell */,
 				269988E41E7468520037FF7A /* LYChattingAreaViewController.h */,
 				269988E51E7468520037FF7A /* LYChattingAreaViewController.m */,
 				269988E61E7468520037FF7A /* LYChattingAreaViewController.xib */,
@@ -2557,7 +2552,6 @@
 				26D044BC1E729FB80018AF36 /* XMPPMessageArchiving.m in Sources */,
 				26D0446F1E729FB80018AF36 /* XMPPIQ.m in Sources */,
 				26D044681E729FB80018AF36 /* XMPPPlainAuthentication.m in Sources */,
-				264E76E21E7FCD6D00A02C6B /* LYChattingCellView.m in Sources */,
 				26D044691E729FB80018AF36 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				264E76DC1E7E73F100A02C6B /* NSImage+LY.m in Sources */,
 				26D0446B1E729FB80018AF36 /* NSData+XMPP.m in Sources */,
