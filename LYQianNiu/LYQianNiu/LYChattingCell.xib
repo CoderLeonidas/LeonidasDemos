@@ -52,7 +52,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Vas-Tg-5dZ">
                 <rect key="frame" x="0.0" y="0.0" width="242" height="40"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView editable="NO" drawsBackground="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="7rI-U7-83N">
                         <rect key="frame" x="0.0" y="0.0" width="242" height="40"/>

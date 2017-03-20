@@ -34,13 +34,15 @@
 - (void)calculateFrames {
     CGSize contentSize = CGSizeMake(_cellWidth, MAXFLOAT);
     contentSize = [self.cellModel.message boundingRectWithSize:contentSize font:LYChattingCellContentFont maxWidth:_cellWidth];
-    contentSize.width += 12;
+    contentSize.width += 12;//+12 是因为textview在文字左右还有月6像素的padding
     NSString *dateStr = [self.dateFormatter stringFromDate:self.cellModel.timeStamp];
     CGSize timeSize = CGSizeMake(_cellWidth, MAXFLOAT);
     timeSize = [dateStr boundingRectWithSize:timeSize font:LYChattingCellTimeFont maxWidth:_cellWidth];
     timeSize.width += 12;
+   
     //时间
-    self.timeViewF = (CGRect){{(self.cellWidth - timeSize.width)*0.5, Padding}, timeSize};
+    NSRect  timeLabelFrame = (CGRect){{(self.cellWidth - timeSize.width)*0.5, Padding}, timeSize};
+    self.timeViewF = timeLabelFrame;
     
     BOOL outgoing = _cellModel.outgoing;
     

@@ -85,7 +85,9 @@
     
     //内容
     self.contentTextViewArea.frame = cellFrame.contentViewF;
-    self.contentTextView.string = cellModel.message;
+    if ( cellModel.message) {
+        self.contentTextView.string = cellModel.message;
+    }
     
 }
 
