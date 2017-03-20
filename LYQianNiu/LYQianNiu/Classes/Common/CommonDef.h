@@ -48,4 +48,7 @@ typedef enum : NSUInteger {
 //图片上传路径
 #define  GetImageUploadURLWith(fileName) [@"http://localhost:8080/imfileserver/Upload/Image/" stringByAppendingString:fileName];
 
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 #endif /* CommonDef_h */

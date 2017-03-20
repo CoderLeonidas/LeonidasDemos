@@ -18,6 +18,10 @@
 
 @implementation LYContactTableCellView
 
++ (LYContactTableCellView *)contactTableCellView {
+    return [[LYContactTableCellView alloc] init];
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         NSString* nibName = NSStringFromClass([self class]);
@@ -35,20 +39,17 @@
     [super drawRect:dirtyRect];
 }
 
-+ (LYContactTableCellView *)contactTableCellView {
-    return [[LYContactTableCellView alloc] init];
-}
-
 - (void)setModel:(XMPPUserCoreDataStorageObject *)model {
-    if (!model || [model isEqualTo:_model]) return;
-    
+    if (!model) return;
     _model = model;
+
     if (model.photo) {
         self.avatarImageView.image = model.photo;
     }
     self.shopMessageLabel.stringValue = [NSString stringWithFormat:@"%@:%@", model.nickname, model.displayName];
+  
+    
 }
-
 
 
 @end

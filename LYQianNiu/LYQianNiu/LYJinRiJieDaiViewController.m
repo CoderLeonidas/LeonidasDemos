@@ -130,18 +130,21 @@
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSString *identifier = tableColumn.identifier;
+    NSString *identifier = NSStringFromClass([LYContactTableCellView class]);
     if (!identifier) return nil;
     
     LYContactTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
     if (!cellView) {
         cellView = [LYContactTableCellView contactTableCellView];
+        cellView.identifier = identifier;
     }
+    cellView.model = nil;
     XMPPUserCoreDataStorageObject *model = _dataSource[row];
     if (![model isKindOfClass:[XMPPUserCoreDataStorageObject class]]) {
         return nil;
     }
     cellView.model = model;
+        
     return cellView;
 }
 

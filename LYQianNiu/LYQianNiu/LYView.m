@@ -7,9 +7,10 @@
 //
 
 #import "LYView.h"
+@interface LYView ()
+@end
 
 @implementation LYView
-
 //绘制白色view背景
 - (void)drawRect:(NSRect)dirtyRect {
     [[NSColor whiteColor] setFill];

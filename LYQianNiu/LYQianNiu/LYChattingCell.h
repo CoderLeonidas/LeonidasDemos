@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "LYChattingCellModel.h"
 @interface LYChattingCell : NSTableCellView
-@property (weak) IBOutlet NSButton *avatarBtn;//头像
-@property (weak) IBOutlet NSTextField *timeLbl;//时间
-@property (unsafe_unretained) IBOutlet NSTextView *contentTextView;//内容
+
+//外部传入参数
+@property (nonatomic, strong) LYChattingCellModel *model;//模型
+@property (nonatomic, assign) CGFloat cellWidth;
+//外部读取参数
+@property (nonatomic, assign, readonly) CGFloat cellHeight;//根据内容计算出的cell高度
 @end

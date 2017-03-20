@@ -6,18 +6,26 @@
 //  Copyright © 2017年 Leon. All rights reserved.
 //
 
-#import "LYChattingAreaViewController.h"
-#import "LYHttpTool.h"
-#import "NSImage+WebCache.h"
-#import "LYChattingCell.h"
-#import "SnipManager.h"
+
 #import <QuartzCore/QuartzCore.h>
+#import "LYChattingAreaViewController.h"
+#import "LYChattingCell.h"
+#import "LYChattingCellModel.h"
+
+#import "LYChattingCellFrame.h"
+#import "LYChattingCellView.h"
+#import "NSImage+WebCache.h"
+
+#import "LYHttpTool.h"
+#import "SnipManager.h"
 
 @interface LYChattingAreaViewController () <NSSplitViewDelegate, NSTableViewDelegate, NSTableViewDataSource,NSFetchedResultsControllerDelegate, NSTextViewDelegate> {
     
-    NSFetchedResultsController *_resultsContrller;
+    NSFetchedResultsController *_resultsContrller;//操作CoreData获取消息
     
     NSImageView *_backImageView;
+    
+    NSArray <LYChattingCellFrame*> *_dataSource;//数据源
     
 }
 @property (weak) IBOutlet NSSplitView *splitView;//分割视图
@@ -48,10 +56,18 @@
     [self refreshChattingMessage];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self ];
+}
+
+#pragma mark - Init
+
 - (void) initObjects {
     self.chattingTableView.delegate = self;
     self.chattingTableView.dataSource = self;
     self.textView.delegate = self;
+    
+    _dataSource = @[];
 }
 
 #pragma mark - Notification
@@ -63,28 +79,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEndCapture:) name:kNotifyCaptureEnd object:nil];
 }
 
+#pragma mark - Snap
+
 - (void)onEndCapture:(NSNotification *)notification {
     if (notification.userInfo[@"image"]) {
         NSImage *image = notification.userInfo[@"image"];
         [image setName:[NSString stringWithFormat:@"snip_%lf.png", [NSDate date].timeIntervalSinceReferenceDate]];
-        _backImageView.image = image;
-        
         [self showImage:image toTextView:self.textView];
-        
         return;
     }
-    //    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-    //    NSArray *classArray = [NSArray arrayWithObject:[NSImage class]];
-    //    NSDictionary *options = [NSDictionary dictionary];
-    //    BOOL ok = [pasteboard canReadObjectForClasses:classArray options:options];
-    //    if(ok) {
-    //        NSArray *objectsToPaste = [pasteboard readObjectsForClasses:classArray options:options];
-    //        NSImage *image = [objectsToPaste objectAtIndex:0];
-    //        self.backImageView.image = image;
-    //        //[self.view.window setBackgroundColor:[NSColor colorWithPatternImage:image]];
-    //    } else {
-    //        NSLog(@"Error: Clipboard doesn't seem to contain an image.");
-    //    }
 }
 
 - (void)refreshChattingMessage {
@@ -98,9 +101,6 @@
     [self.chattingTableView reloadData];
 }
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self ];
-}
 
 #pragma mark - 加载XMPPMessageArchiving数据库的数据显示在tableview
 
@@ -130,16 +130,11 @@
     //代理
     _resultsContrller.delegate = self;
     [_resultsContrller performFetch:&err];
+    
+    _dataSource = [self getDataSourceFromFetchedResultsController:_resultsContrller];
     if (err) {
         LYLog(@"%@", err);
     }
-}
-
-- (LYHttpTool*) httpTool{
-    if (!_httpTool) {
-        _httpTool = [[LYHttpTool alloc] init];
-    }
-    return _httpTool;
 }
 
 #pragma mark - IBAction
@@ -162,7 +157,6 @@
         if (result == NSFileHandlingPanelOKButton ) {
             NSArray *fileURLs = [openPanel URLs];
             for (NSURL *url in fileURLs) {//不能多选，所以只有一次循环
-//                NSString *imageName = url.path.lastPathComponent;
                 NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
                 [self showImage:image toTextView:self.textView];
             }
@@ -212,61 +206,47 @@
 }
 
 - (void)shakeAnimationForView:(NSView *)view { // 获取到当前的View
-    
     CALayer *viewLayer = view.layer;
-    
     // 获取当前View的位置
-    
     CGPoint position = viewLayer.position;
-    
     // 移动的两个终点位置
-    
     CGPoint x = CGPointMake(position.x -5, position.y +5);
-    
     CGPoint y = CGPointMake(position.x +5, position.y-5);
-    
     // 设置动画
-    
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-    
     // 设置运动形式
-    
     [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
-    
     // 设置开始位置
-
     [animation setFromValue:[NSValue valueWithPoint:x]];
-    
     // 设置结束位置
-    
     [animation setToValue:[NSValue valueWithPoint:y]];
-    
     // 设置自动反转
-    
     [animation setAutoreverses:YES];
-    
     // 设置时间
-    
     [animation setDuration:.06];
-    
     // 设置次数
-    
     [animation setRepeatCount:8];
-    
     // 添加上动画
-    
     [viewLayer addAnimation:animation forKey:nil];
-    
-    
 }
 
 - (IBAction)reportBtnClicked:(id)sender {
+    
 }
 
 - (IBAction)quickReplyBtnClicked:(id)sender {
 }
 
 - (IBAction)chattingRecordBtnClicked:(id)sender {
+}
+
+#pragma mark - Lazy Loading
+
+- (LYHttpTool*) httpTool{
+    if (!_httpTool) {
+        _httpTool = [[LYHttpTool alloc] init];
+    }
+    return _httpTool;
 }
 
 
@@ -293,34 +273,36 @@
 #pragma mark - NSTableViewDelegate & NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NSUInteger num = _resultsContrller.fetchedObjects.count;
-    return num;
+    return _dataSource.count;
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
-    return 165.0;
+    LYChattingCellFrame *cellFrame = _dataSource[row];
+    return cellFrame.cellHeight;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSString *identifier = tableColumn.identifier;
-    LYChattingCell *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
-    if (!cellView) {
-        cellView = [[LYChattingCell alloc]init];
-        cellView.identifier = identifier;
-    }
-    cellView.avatarBtn.image = nil;
-    cellView.contentTextView.string = @"";
-    cellView.timeLbl.stringValue = @"";
     
-    XMPPMessageArchiving_Message_CoreDataObject *msg = _resultsContrller.fetchedObjects[row];
+    LYChattingCellView *cellView = [LYChattingCellView cellWithTableView:tableView];
+    cellView.cellFrame = _dataSource[row];
+//    NSString *identifier = NSStringFromClass([LYChattingCell class]);
+//    LYChattingCell *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
+//    if (!cellView) {
+//        cellView = [[LYChattingCell alloc]init];
+//        cellView.identifier = identifier;
+//    }
+//    LYChattingCellModel *model = _dataSource[row];
+//    cellView.cellWidth = tableView.tableColumns[0].width;
+//    cellView.model = model;
+    
     
     //TODO 使用XMPPvCardAvatarModule  来获取好友头像
-    if ([msg.outgoing boolValue]){//是往外发的，就是自己的
-        cellView.contentTextView.string = [NSString stringWithFormat:@"Me:%@", msg.body];
-    } else {//别人发的
-        cellView.contentTextView.string = [NSString stringWithFormat:@"Other:%@", msg.body];
-        cellView.avatarBtn.image = [LYChattingTool sharedLYChattingTool].currentChattingContactModel.photo;
-    }
+//    if (model.outgoing){//是往外发的，就是自己的
+//        cellView.contentTextView.string = [NSString stringWithFormat:@"Me:%@", msg.body];
+//    } else {//别人发的
+//        cellView.contentTextView.string = [NSString stringWithFormat:@"Other:%@", msg.body];
+//        cellView.avatarBtn.image = [LYChattingTool sharedLYChattingTool].currentChattingContactModel.photo;
+//    }
 //   cellView.avatarBtn.image =  [NSImage imageNamed:@"LeonCafe"];
     //TODO 聊天内容处理有问题，iMessage发送的消息没有bodyType标签，无法判断是文字还是图片，所以发送的内容需要自己定义通信协议!
     //判断是图片还是纯文本
@@ -344,10 +326,30 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     
     _resultsContrller = controller;//更新数据源
+    
+    _dataSource = [self getDataSourceFromFetchedResultsController:controller];
     //刷新数据
     [self.chattingTableView reloadData];
     
     [self scrollToTableBottom];
+}
+
+- (NSArray *)getDataSourceFromFetchedResultsController:(NSFetchedResultsController *)controller {
+    if (controller.fetchedObjects.count == 0) return nil;
+    if (![controller.fetchedObjects[0] isKindOfClass:[XMPPMessageArchiving_Message_CoreDataObject class]]) return nil;
+    NSMutableArray *result = [NSMutableArray array];
+    for (XMPPMessageArchiving_Message_CoreDataObject *obj in controller.fetchedObjects) {
+        LYChattingCellModel *cellModel = [[LYChattingCellModel alloc] init];
+        cellModel.avatar = [NSImage imageNamed:@"LeonCafe"];
+        cellModel.message = obj.message.body;
+        cellModel.outgoing = [obj.outgoing boolValue];
+        cellModel.timeStamp = obj.timestamp;
+        LYChattingCellFrame *cellFrame = [[LYChattingCellFrame alloc] init];
+        [cellFrame setCellWidth:self.chattingTableView.tableColumns[0].width];
+        cellFrame.cellModel = cellModel;
+        [result addObject:cellFrame];
+    }
+    return [NSArray arrayWithArray:result];
 }
 
 
@@ -428,7 +430,7 @@
         //行数若小于0，则不能滚动
         return;
     }
-    [self.chattingTableView scrollRowToVisible:self.chattingTableView.numberOfRows-1];
+    [self.chattingTableView scrollRowToVisible:lastRow];
 }
 
 #pragma mark - Send Message
