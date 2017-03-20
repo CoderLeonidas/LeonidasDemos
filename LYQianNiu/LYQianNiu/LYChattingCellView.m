@@ -11,10 +11,10 @@
 #import "LYChattingCellView.h"
 #import "LYChattingCellModel.h"
 #import "NSImage+LY.h"
-
+#import "LYFlippedView.h"
 @interface LYChattingCellView ()
 //消息整体
-@property (nonatomic, strong) NSView *originalView;
+@property (nonatomic, strong) LYFlippedView *originalView;
 //时间
 @property (nonatomic, strong) NSTextField *timeLabel;
 //头像
@@ -41,17 +41,13 @@
     return cellView;
 }
 
-- (BOOL)isFlipped {
-    return YES;
-}
-
 
 - (instancetype)init {
     self = [super init];
     if (!self) return nil;
     
     //消息整体
-    NSView *originalView = [[NSView alloc] init];
+    LYFlippedView *originalView = [[LYFlippedView alloc] init];
     [self addSubview:originalView];
     self.originalView = originalView;
     //时间

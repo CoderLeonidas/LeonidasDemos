@@ -61,6 +61,7 @@
 		264E76DC1E7E73F100A02C6B /* NSImage+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DB1E7E73F100A02C6B /* NSImage+LY.m */; };
 		264E76DF1E7FC88000A02C6B /* LYChattingCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */; };
 		264E76E21E7FCD6D00A02C6B /* LYChattingCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76E11E7FCD6D00A02C6B /* LYChattingCellView.m */; };
+		264E76E61E8047A700A02C6B /* LYFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76E51E8047A700A02C6B /* LYFlippedView.m */; };
 		268F94FC1E7BCBE800317196 /* LYChattingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F94FB1E7BCBE800317196 /* LYChattingCell.m */; };
 		268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268F94FD1E7BCC0100317196 /* LYChattingCell.xib */; };
 		268F95021E7BCF1800317196 /* LYChattingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95011E7BCF1800317196 /* LYChattingCellModel.m */; };
@@ -356,6 +357,8 @@
 		264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellFrame.m; sourceTree = "<group>"; };
 		264E76E01E7FCD6D00A02C6B /* LYChattingCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCellView.h; sourceTree = "<group>"; };
 		264E76E11E7FCD6D00A02C6B /* LYChattingCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellView.m; sourceTree = "<group>"; };
+		264E76E41E8047A700A02C6B /* LYFlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFlippedView.h; sourceTree = "<group>"; };
+		264E76E51E8047A700A02C6B /* LYFlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFlippedView.m; sourceTree = "<group>"; };
 		268F94FA1E7BCBE800317196 /* LYChattingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCell.h; sourceTree = "<group>"; };
 		268F94FB1E7BCBE800317196 /* LYChattingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCell.m; sourceTree = "<group>"; };
 		268F94FD1E7BCC0100317196 /* LYChattingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYChattingCell.xib; sourceTree = "<group>"; };
@@ -868,6 +871,8 @@
 			children = (
 				2632C79B1E6D8FC4001278CA /* LYView.h */,
 				2632C79C1E6D8FC4001278CA /* LYView.m */,
+				264E76E41E8047A700A02C6B /* LYFlippedView.h */,
+				264E76E51E8047A700A02C6B /* LYFlippedView.m */,
 				26DDEFE11E786B0300B5104A /* LYTableRowView.h */,
 				26DDEFE21E786B0300B5104A /* LYTableRowView.m */,
 				268F950D1E7C1CB200317196 /* LYScrollView.h */,
@@ -2495,6 +2500,7 @@
 				26D044821E729FB80018AF36 /* XMPPUserMemoryStorageObject.m in Sources */,
 				26D044A41E729FB80018AF36 /* XMPPvCardTempModule.m in Sources */,
 				26D044DC1E729FB80018AF36 /* DispatchQueueLogFormatter.m in Sources */,
+				264E76E61E8047A700A02C6B /* LYFlippedView.m in Sources */,
 				26D0449C1E729FB80018AF36 /* XMPPvCardCoreDataStorageObject.m in Sources */,
 				2632C7C11E6DC58F001278CA /* LYMainViewContainer.m in Sources */,
 				26B56B7F1E718D650085AAED /* LYZuiJinHuiHuaViewController.m in Sources */,
