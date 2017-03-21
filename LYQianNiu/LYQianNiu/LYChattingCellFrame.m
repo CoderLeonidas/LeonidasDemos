@@ -29,6 +29,9 @@
     _cellModel = cellModel;
     
     [self calculateFrames];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+    });
 }
 
 - (void)calculateFrames {
@@ -47,14 +50,14 @@
     BOOL outgoing = _cellModel.outgoing;
     
     //头像
-    CGFloat avatarX = outgoing?Padding:_cellWidth - Padding - AvatarHW;
+    CGFloat avatarX = !outgoing?Padding:_cellWidth - Padding - AvatarHW;
     CGFloat avatarY = CGRectGetMaxY(self.timeViewF) + Padding;
     self.avatarViewF = NSMakeRect(avatarX, avatarY, AvatarHW, AvatarHW);
     
     //气泡
     CGFloat bubbleW = Padding + contentSize.width + Padding;
     CGFloat bubbleH = Padding + contentSize.height + Padding;
-    CGFloat bubbleX = outgoing?Padding + self.avatarViewF.size.width + Padding:_cellWidth-Padding-AvatarHW-Padding-bubbleW;
+    CGFloat bubbleX = !outgoing?Padding + self.avatarViewF.size.width + Padding:_cellWidth-Padding-AvatarHW-Padding-bubbleW;
     CGFloat bubbleY = self.avatarViewF.origin.y;
     self.bubbleViewF = NSMakeRect(bubbleX, bubbleY, bubbleW, bubbleH);
     

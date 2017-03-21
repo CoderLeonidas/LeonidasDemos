@@ -76,7 +76,7 @@
     self.avatarBtn.image = cellModel.avatar;
     //气泡
     self.bubbleImageView.frame = cellFrame.bubbleViewF;
-    NSImage *image = cellModel.outgoing ? [NSImage imageNamed:@"bubble_left@2x"] :[NSImage imageNamed:@"bubble_right@2x"];
+    NSImage *image = !cellModel.outgoing ? [NSImage imageNamed:@"bubble_left@2x"] :[NSImage imageNamed:@"bubble_right@2x"];
     
     image = [image stretchableImageWithSize:cellFrame.bubbleViewF.size edgeInsets:NSEdgeInsetsMake(5,5,5,5)];
     self.bubbleImageView.image = image;

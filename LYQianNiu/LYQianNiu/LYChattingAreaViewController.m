@@ -24,7 +24,9 @@
     
     NSImageView *_backImageView;
     
-    NSArray <LYChattingCellFrame*> *_dataSource;//数据源
+    NSMutableArray <LYChattingCellFrame*> *_dataSource;//数据源
+    
+    NSArray <XMPPMessageArchiving_Message_CoreDataObject *> *_currnetMessages;//保存当前的消息
     
 }
 @property (weak) IBOutlet NSSplitView *splitView;//分割视图
@@ -66,7 +68,8 @@
     self.chattingTableView.dataSource = self;
     self.textView.delegate = self;
     
-    _dataSource = @[];
+    _dataSource = [NSMutableArray array];
+    _currnetMessages = @[];
 }
 
 #pragma mark - Notification
@@ -90,10 +93,15 @@
 }
 
 - (void)refreshChattingMessage {
+    [self clearCurrentMessages];
     //加载数据
     [self loadMessage];
     [self refershChattingTable];
     [self scrollToTableBottom];
+}
+
+- (void)clearCurrentMessages {
+    _currnetMessages = @[];
 }
 
 - (void)refershChattingTable {
@@ -277,6 +285,9 @@
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     LYChattingCellFrame *cellFrame = _dataSource[row];
+    if (cellFrame.cellHeight <=0.0) {
+        return 1.0;
+    }
     return cellFrame.cellHeight;
 }
 
@@ -325,30 +336,57 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     
     _resultsContrller = controller;//更新数据源
-    
-    _dataSource = [self getDataSourceFromFetchedResultsController:controller];
+    NSArray *newMessages = [self getDataSourceFromFetchedResultsController:controller];
+    [_dataSource addObjectsFromArray: newMessages];
     //刷新数据
     [self.chattingTableView reloadData];
     
     [self scrollToTableBottom];
 }
 
-- (NSArray *)getDataSourceFromFetchedResultsController:(NSFetchedResultsController *)controller {
+- (NSMutableArray *)getDataSourceFromFetchedResultsController:(NSFetchedResultsController *)controller {
     if (controller.fetchedObjects.count == 0) return nil;
     if (![controller.fetchedObjects[0] isKindOfClass:[XMPPMessageArchiving_Message_CoreDataObject class]]) return nil;
+    
+     //以时间戳 作为新消息排序的依据
+    NSArray *newMessages = [self getNewMsgObjWithNewArr:controller.fetchedObjects oldArr:_currnetMessages sortKeyPath:@"timestamp"];
+    
     NSMutableArray *result = [NSMutableArray array];
-    for (XMPPMessageArchiving_Message_CoreDataObject *obj in controller.fetchedObjects) {
+    for (XMPPMessageArchiving_Message_CoreDataObject *obj in newMessages) {
         LYChattingCellModel *cellModel = [[LYChattingCellModel alloc] init];
+        //以时间戳 作为判断是否是新消息的依据
+        cellModel.timeStamp = obj.timestamp;
+        
         cellModel.avatar = [NSImage imageNamed:@"LeonCafe"];
         cellModel.message = obj.message.body;
         cellModel.outgoing = [obj.outgoing boolValue];
-        cellModel.timeStamp = obj.timestamp;
         LYChattingCellFrame *cellFrame = [[LYChattingCellFrame alloc] init];
+        //必须先传入列宽，否则无法计算布局
         [cellFrame setCellWidth:self.chattingTableView.tableColumns[0].width];
         cellFrame.cellModel = cellModel;
         [result addObject:cellFrame];
     }
-    return [NSArray arrayWithArray:result];
+    _currnetMessages = controller.fetchedObjects;
+    return result;
+}
+
+
+- (NSArray *)getNewMsgObjWithNewArr:(NSArray *)newArr oldArr:(NSArray *)oldArr sortKeyPath:(NSString *)sortKeyPath{
+    if (newArr.count == 0) return nil;
+    
+    NSMutableSet *newSet = [NSMutableSet setWithArray:newArr];
+    NSSet *oldSet = [NSSet setWithArray:oldArr];
+    //去除多余元素
+    [newSet minusSet:oldSet];
+    //获得排序后的数组
+    NSArray *sortSetArray;
+    if (newSet.count > 1) {//大于1个元素才需要排序
+        NSArray *sortDesc = @[[[NSSortDescriptor alloc] initWithKey:sortKeyPath ascending:YES]];
+        sortSetArray = [newSet sortedArrayUsingDescriptors:sortDesc];
+    } else {
+        sortSetArray = newSet.allObjects;
+    }
+    return sortSetArray;
 }
 
 
