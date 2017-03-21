@@ -69,7 +69,7 @@
     self.timeLabel.frame = cellFrame.timeViewF;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
-    NSString *dateStr = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *dateStr = [dateFormatter stringFromDate:self.cellFrame.cellModel.timeStamp];
     self.timeLabel.stringValue = dateStr;
     //头像
     self.avatarBtn.frame = cellFrame.avatarViewF;
