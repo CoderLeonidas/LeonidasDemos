@@ -35,6 +35,8 @@
 
 - (void)refreshContent {
     XMPPUserCoreDataStorageObject *model = [LYChattingTool sharedLYChattingTool].currentChattingContactModel;
+
+    [[LYXMPPTool sharedLYXMPPTool] loadPhotoForUser:model];
     NSString *status = @"";
     switch ([model.sectionNum intValue]) {//好友状态
         case 0:
@@ -52,7 +54,7 @@
     NSString *nameAndStatusStr = [NSString stringWithFormat:@"%@:%@ [%@]",model.displayName, model.nickname, status];
     self.nameAndStatusTextField.stringValue = nameAndStatusStr;
     
-    NSString *mottoStr = @"";
+    NSString *mottoStr = @"啊啊啊啊";
     self.mottoTextField.stringValue = mottoStr;
 }
 

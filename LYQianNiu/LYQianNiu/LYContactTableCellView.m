@@ -42,13 +42,11 @@
 - (void)setModel:(XMPPUserCoreDataStorageObject *)model {
     if (!model) return;
     _model = model;
-
+    [[LYXMPPTool sharedLYXMPPTool] loadPhotoForUser:model];
     if (model.photo) {
         self.avatarImageView.image = model.photo;
     }
     self.shopMessageLabel.stringValue = [NSString stringWithFormat:@"%@:%@", model.nickname, model.displayName];
-  
-    
 }
 
 

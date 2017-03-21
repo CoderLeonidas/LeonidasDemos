@@ -103,6 +103,7 @@
     
     NSUInteger selectRowIndex =  self.tableView.selectedRow;
     XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
+    [[LYXMPPTool sharedLYXMPPTool] loadPhotoForUser:model];
     [LYChattingTool sharedLYChattingTool].currentChattingContactModel = model;//更新当前的联系人model
     [self.tableView reloadData];
 }
@@ -140,6 +141,7 @@
     }
     cellView.model = nil;
     XMPPUserCoreDataStorageObject *model = _dataSource[row];
+    [[LYXMPPTool sharedLYXMPPTool] loadPhotoForUser:model];
     if (![model isKindOfClass:[XMPPUserCoreDataStorageObject class]]) {
         return nil;
     }

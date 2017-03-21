@@ -22,7 +22,7 @@
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="O8b-Ei-g0o">
                     <rect key="frame" x="16" y="8" width="24" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="WWDefaultEmpty" id="tQu-o0-YyJ"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="tQu-o0-YyJ"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="yjJ-5p-gWA">
                     <rect key="frame" x="50" y="11" width="150" height="17"/>
@@ -44,7 +44,4 @@
             </subviews>
         </customView>
     </objects>
-    <resources>
-        <image name="WWDefaultEmpty" width="120" height="120"/>
-    </resources>
 </document>

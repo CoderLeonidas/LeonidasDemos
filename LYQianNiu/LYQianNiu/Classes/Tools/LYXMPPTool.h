@@ -51,4 +51,10 @@ singleton_interface(LYXMPPTool);
  *  用户注册
  */
 -(void)xmppUserRegister:(XMPPResultBlock)resultBlock;
+
+
+/**
+ 加载用户头像
+ */
+- (NSImage *)loadPhotoForUser:(XMPPUserCoreDataStorageObject *)user;
 @end

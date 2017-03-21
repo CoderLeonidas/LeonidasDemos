@@ -263,9 +263,12 @@ singleton_implementation(LYXMPPTool)
 }
 
 #pragma mark 接收到好友消息
+
+//TODO 本地通知的发送
 -(void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
     LYLog(@"%@",message);
     
+//    [NSApplication sharedApplication].occlusionState != 
 //    //如果当前程序不在前台，发出一个本地通知
 //    if([UIApplication sharedApplication].applicationState != UIApplicationStateActive){
 //        LYLog(@"在后台");
@@ -332,6 +335,23 @@ singleton_implementation(LYXMPPTool)
     
     // 连接主机 成功后发送注册密码
     [self connectToHost];
+}
+
+
+- (NSImage *)loadPhotoForUser:(XMPPUserCoreDataStorageObject *)user {
+    // 判断好友数据表中是否存在用户头像
+    if (user.photo) {
+        // 如果存在直接返回
+        return user.photo;
+    }
+    // 如果不存在，从用户名片中获取
+    NSData *photoData = [_avatar photoDataForJID:user.jid];
+    if (photoData) {
+        NSImage *image = [[NSImage alloc] initWithData:photoData];
+        return image ;
+    }
+    
+    return [NSImage imageNamed:@"login_photo_default"];//默认头像
 }
 
 -(void)dealloc{
