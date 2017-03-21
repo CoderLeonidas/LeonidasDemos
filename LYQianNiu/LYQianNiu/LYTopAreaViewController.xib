@@ -25,7 +25,7 @@
                 <button misplaced="YES" id="h7c-U3-2y1">
                     <rect key="frame" x="330" y="20" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="LoginLeft" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Oig-AL-MN9">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="filetransfer" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Oig-AL-MN9">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -36,7 +36,7 @@
                 <button misplaced="YES" id="ypZ-KT-sfa">
                     <rect key="frame" x="430" y="20" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="K4B-j9-CMz">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="fold" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="K4B-j9-CMz">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -48,7 +48,7 @@
                     <rect key="frame" x="18" y="20" width="267" height="15"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="蚊子蚊子" usesSingleLineMode="YES" id="NqT-W7-PlY">
-                        <font key="font" metaFont="system" size="9"/>
+                        <font key="font" metaFont="miniSystem"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -57,7 +57,7 @@
                     <rect key="frame" x="18" y="37" width="267" height="20"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" placeholderString="蚊子蚊子" usesSingleLineMode="YES" id="QOH-dD-lcO">
-                        <font key="font" metaFont="system" size="12"/>
+                        <font key="font" metaFont="cellTitle"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -65,7 +65,7 @@
                 <button misplaced="YES" id="swD-Mr-0fm">
                     <rect key="frame" x="380" y="20" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSActionTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="hrM-J3-1I2">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="addcontact" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="hrM-J3-1I2">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -77,8 +77,8 @@
         </customView>
     </objects>
     <resources>
-        <image name="LoginLeft" width="207" height="320"/>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="addcontact" width="26" height="27"/>
+        <image name="filetransfer" width="29" height="25"/>
+        <image name="fold" width="34" height="22"/>
     </resources>
 </document>

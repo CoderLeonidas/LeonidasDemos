@@ -38,7 +38,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="L8n-Sq-4Pz">
                                 <rect key="frame" x="134" y="206" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_photo_self" id="AKT-3n-DAC"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_photo_default" id="AKT-3n-DAC"/>
                             </imageView>
                             <textField focusRingType="none" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="r6i-mi-JJi">
                                 <rect key="frame" x="134" y="167" width="140" height="22"/>
@@ -128,6 +128,6 @@
         <image name="login_ico_entry_pre" width="36" height="36"/>
         <image name="login_ico_key_nor2" width="36" height="36"/>
         <image name="login_ico_tao_nor_small" width="18" height="18"/>
-        <image name="login_photo_self" width="160" height="160"/>
+        <image name="login_photo_default" width="160" height="160"/>
     </resources>
 </document>

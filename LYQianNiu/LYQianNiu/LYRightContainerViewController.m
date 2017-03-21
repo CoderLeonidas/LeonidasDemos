@@ -45,9 +45,9 @@
 - (LYRightViewContainer *)rightViewContainer {
     if (!_rightViewContainer) {
         _rightViewContainer = [[LYRightViewContainer alloc] init];
-        _rightViewContainer.view.autoresizingMask = 1|2|4|8|16|32;
     }
     return _rightViewContainer;
 }
+
 
 @end

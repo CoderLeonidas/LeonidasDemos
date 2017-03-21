@@ -73,7 +73,7 @@
                 <button verticalHuggingPriority="750" misplaced="YES" id="iRd-NR-Z2m">
                     <rect key="frame" x="31" y="25" width="18" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="WWGroupAddNewButtonHighlighted" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="z3d-d5-Hww">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="add" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="z3d-d5-Hww">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -81,7 +81,7 @@
                 <button verticalHuggingPriority="750" misplaced="YES" id="LFX-29-NvT">
                     <rect key="frame" x="31" y="57" width="18" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="5bN-Vg-mfo">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="buyercenter" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="5bN-Vg-mfo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -89,7 +89,7 @@
                 <button verticalHuggingPriority="750" misplaced="YES" id="FZ0-w2-7Uk">
                     <rect key="frame" x="31" y="95" width="18" height="18"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Statusbar_Messages_Hover" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="UJ4-dt-egO">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="msgcenter" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="UJ4-dt-egO">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -98,12 +98,12 @@
         </customView>
     </objects>
     <resources>
-        <image name="NSAdvanced" width="32" height="32"/>
         <image name="Statusbar_History" width="28" height="28"/>
-        <image name="Statusbar_Messages_Hover" width="54" height="54"/>
-        <image name="WWGroupAddNewButtonHighlighted" width="36" height="36"/>
         <image name="WWGroupIconUngrouped" width="36" height="36"/>
         <image name="WWMessageManagerTribeIcon" width="18" height="18"/>
+        <image name="add" width="19" height="17"/>
+        <image name="buyercenter" width="18" height="16"/>
+        <image name="msgcenter" width="17" height="14"/>
         <image name="qipao" width="29" height="26"/>
     </resources>
 </document>

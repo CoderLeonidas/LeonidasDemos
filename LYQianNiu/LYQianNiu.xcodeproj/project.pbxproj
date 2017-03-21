@@ -61,6 +61,15 @@
 		264E76DC1E7E73F100A02C6B /* NSImage+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DB1E7E73F100A02C6B /* NSImage+LY.m */; };
 		264E76DF1E7FC88000A02C6B /* LYChattingCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */; };
 		264E76E61E8047A700A02C6B /* LYFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E76E51E8047A700A02C6B /* LYFlippedView.m */; };
+		264E770C1E81B0A700A02C6B /* unfold.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E77091E81B0A700A02C6B /* unfold.png */; };
+		264E770D1E81B0A700A02C6B /* addcontact.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E770A1E81B0A700A02C6B /* addcontact.png */; };
+		264E770E1E81B0A700A02C6B /* filetransfer.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E770B1E81B0A700A02C6B /* filetransfer.png */; };
+		264E77121E81B29000A02C6B /* buyercenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E770F1E81B29000A02C6B /* buyercenter.png */; };
+		264E77131E81B29000A02C6B /* msgcenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E77101E81B29000A02C6B /* msgcenter.png */; };
+		264E77141E81B29000A02C6B /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E77111E81B29000A02C6B /* add.png */; };
+		264E77191E81B53700A02C6B /* LYWebViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 264E77171E81B53700A02C6B /* LYWebViewContainer.m */; };
+		264E771A1E81B53700A02C6B /* LYWebViewContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 264E77181E81B53700A02C6B /* LYWebViewContainer.xib */; };
+		264E771C1E81B6F100A02C6B /* fold.png in Resources */ = {isa = PBXBuildFile; fileRef = 264E771B1E81B6F100A02C6B /* fold.png */; };
 		268F94FC1E7BCBE800317196 /* LYChattingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F94FB1E7BCBE800317196 /* LYChattingCell.m */; };
 		268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268F94FD1E7BCC0100317196 /* LYChattingCell.xib */; };
 		268F95021E7BCF1800317196 /* LYChattingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 268F95011E7BCF1800317196 /* LYChattingCellModel.m */; };
@@ -356,6 +365,16 @@
 		264E76DE1E7FC88000A02C6B /* LYChattingCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCellFrame.m; sourceTree = "<group>"; };
 		264E76E41E8047A700A02C6B /* LYFlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFlippedView.h; sourceTree = "<group>"; };
 		264E76E51E8047A700A02C6B /* LYFlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFlippedView.m; sourceTree = "<group>"; };
+		264E77091E81B0A700A02C6B /* unfold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfold.png; sourceTree = "<group>"; };
+		264E770A1E81B0A700A02C6B /* addcontact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addcontact.png; sourceTree = "<group>"; };
+		264E770B1E81B0A700A02C6B /* filetransfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filetransfer.png; sourceTree = "<group>"; };
+		264E770F1E81B29000A02C6B /* buyercenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buyercenter.png; sourceTree = "<group>"; };
+		264E77101E81B29000A02C6B /* msgcenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcenter.png; sourceTree = "<group>"; };
+		264E77111E81B29000A02C6B /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		264E77161E81B53700A02C6B /* LYWebViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWebViewContainer.h; sourceTree = "<group>"; };
+		264E77171E81B53700A02C6B /* LYWebViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWebViewContainer.m; sourceTree = "<group>"; };
+		264E77181E81B53700A02C6B /* LYWebViewContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYWebViewContainer.xib; sourceTree = "<group>"; };
+		264E771B1E81B6F100A02C6B /* fold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fold.png; sourceTree = "<group>"; };
 		268F94FA1E7BCBE800317196 /* LYChattingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYChattingCell.h; sourceTree = "<group>"; };
 		268F94FB1E7BCBE800317196 /* LYChattingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYChattingCell.m; sourceTree = "<group>"; };
 		268F94FD1E7BCC0100317196 /* LYChattingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYChattingCell.xib; sourceTree = "<group>"; };
@@ -882,6 +901,13 @@
 		2632C79E1E6D97B3001278CA /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				264E770F1E81B29000A02C6B /* buyercenter.png */,
+				264E77101E81B29000A02C6B /* msgcenter.png */,
+				264E77111E81B29000A02C6B /* add.png */,
+				264E77091E81B0A700A02C6B /* unfold.png */,
+				264E771B1E81B6F100A02C6B /* fold.png */,
+				264E770A1E81B0A700A02C6B /* addcontact.png */,
+				264E770B1E81B0A700A02C6B /* filetransfer.png */,
 				264E76B41E7D691900A02C6B /* bubble_left@2x.png */,
 				264E76B51E7D691900A02C6B /* bubble_right@2x.png */,
 				264E76B61E7D691900A02C6B /* img_bubble_left_0.png */,
@@ -970,6 +996,16 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		264E77151E81B4E100A02C6B /* 右侧网页容器 */ = {
+			isa = PBXGroup;
+			children = (
+				264E77161E81B53700A02C6B /* LYWebViewContainer.h */,
+				264E77171E81B53700A02C6B /* LYWebViewContainer.m */,
+				264E77181E81B53700A02C6B /* LYWebViewContainer.xib */,
+			);
+			name = "右侧网页容器";
+			sourceTree = "<group>";
+		};
 		268F94FF1E7BCEFE00317196 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1031,6 +1067,7 @@
 		2698E28D1E6FDE3B009CED7B /* 右侧大容器 */ = {
 			isa = PBXGroup;
 			children = (
+				264E77151E81B4E100A02C6B /* 右侧网页容器 */,
 				2698E28E1E6FDE6A009CED7B /* LYRightContainerViewController.h */,
 				2698E28F1E6FDE6A009CED7B /* LYRightContainerViewController.m */,
 				2698E2901E6FDE6A009CED7B /* LYRightContainerViewController.xib */,
@@ -2237,6 +2274,7 @@
 				2632C7F81E6EB8FA001278CA /* Statusbar_SellerCenter.png in Resources */,
 				2632C7FA1E6EB914001278CA /* WWMainWindowSearchIcon.png in Resources */,
 				26B56B721E7189C20085AAED /* WWMainWindowSearchIcon_16x16.png in Resources */,
+				264E770D1E81B0A700A02C6B /* addcontact.png in Resources */,
 				264E76C81E7D691900A02C6B /* img_bubble_left_4.png in Resources */,
 				26B56B6E1E7179230085AAED /* LoginLeft.png in Resources */,
 				2698E2A51E6FE562009CED7B /* LYRightViewContainer.xib in Resources */,
@@ -2244,12 +2282,14 @@
 				2632C7F21E6EB8A7001278CA /* Statusbar_History.png in Resources */,
 				2632C7BD1E6DA42B001278CA /* LYMainWindowController.xib in Resources */,
 				2632C7AA1E6DA0E8001278CA /* login_Arrow_Down.png in Resources */,
+				264E770C1E81B0A700A02C6B /* unfold.png in Resources */,
 				269988E81E7468520037FF7A /* LYChattingAreaViewController.xib in Resources */,
 				26D044DD1E729FB80018AF36 /* README.txt in Resources */,
 				2632C7A61E6DA0AC001278CA /* login_ico_entry_pre.png in Resources */,
 				269988D91E742AEC0037FF7A /* LYWelcomeView.xib in Resources */,
 				269988F01E7527650037FF7A /* LYAssistantLoginViewController.xib in Resources */,
 				2632C7F41E6EB8B8001278CA /* Statusbar_Messages_Hover.png in Resources */,
+				264E771C1E81B6F100A02C6B /* fold.png in Resources */,
 				2632C7B31E6DA167001278CA /* login_ico_tao_nor_small.png in Resources */,
 				26D044E21E729FB80018AF36 /* build-libidn.sh in Resources */,
 				2698E2991E6FE310009CED7B /* LYLeftViewContainer.xib in Resources */,
@@ -2257,6 +2297,7 @@
 				264E76CB1E7D691900A02C6B /* img_bubble_right_1.png in Resources */,
 				2632C7B61E6DA218001278CA /* login_photo_default.png in Resources */,
 				264E76C21E7D691900A02C6B /* bubble_left@2x.png in Resources */,
+				264E77141E81B29000A02C6B /* add.png in Resources */,
 				268F95401E7C540700317196 /* ScreenCapture_toolbar_cross_normal.tiff in Resources */,
 				26DDEFCC1E784DE000B5104A /* juzheng_btn.png in Resources */,
 				2632C7271E6D56FB001278CA /* Assets.xcassets in Resources */,
@@ -2287,6 +2328,7 @@
 				268F95331E7C500100317196 /* SnipWindowController.xib in Resources */,
 				264E76C71E7D691900A02C6B /* img_bubble_left_3.png in Resources */,
 				2632C7AB1E6DA0E8001278CA /* login_Arrow_Up.png in Resources */,
+				264E771A1E81B53700A02C6B /* LYWebViewContainer.xib in Resources */,
 				26B56B801E718D650085AAED /* LYZuiJinHuiHuaViewController.xib in Resources */,
 				2632C7FE1E6EB96C001278CA /* WWMessageManagerTribeIcon.tiff in Resources */,
 				2632C8001E6EBAB3001278CA /* qipao.png in Resources */,
@@ -2296,16 +2338,19 @@
 				268F95451E7C540700317196 /* ScreenCapture_toolbar_tick_normal.tiff in Resources */,
 				2632C7AC1E6DA0E8001278CA /* login_ico_key_nor2.png in Resources */,
 				264E76C91E7D691900A02C6B /* img_bubble_left_5.png in Resources */,
+				264E77121E81B29000A02C6B /* buyercenter.png in Resources */,
 				2632C7A41E6D97E7001278CA /* appIcon_32x32@1x.png in Resources */,
 				264E76CD1E7D691900A02C6B /* img_bubble_right_3.png in Resources */,
 				268F94FE1E7BCC0100317196 /* LYChattingCell.xib in Resources */,
 				26B56B851E718D770085AAED /* LYLianXiRenViewController.xib in Resources */,
 				2632C7F61E6EB8D5001278CA /* WWGroupAddNewButtonHighlighted.png in Resources */,
+				264E77131E81B29000A02C6B /* msgcenter.png in Resources */,
 				268F95411E7C540700317196 /* ScreenCapture_toolbar_ellipse_effect.tiff in Resources */,
 				2632C7B41E6DA167001278CA /* login_ico_tao_nor.png in Resources */,
 				264E76CF1E7D691900A02C6B /* img_bubble_right_5.png in Resources */,
 				2632C7B11E6DA167001278CA /* login_ico_ali_nor_small.png in Resources */,
 				26DDEFE01E785CEE00B5104A /* LeonCafe.png in Resources */,
+				264E770E1E81B0A700A02C6B /* filetransfer.png in Resources */,
 				268F95431E7C540700317196 /* ScreenCapture_toolbar_rect_effect.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2545,6 +2590,7 @@
 				26B56B7A1E718D470085AAED /* LYJinRiJieDaiViewController.m in Sources */,
 				268F95311E7C500100317196 /* SnipWindow.m in Sources */,
 				26B56B891E718D870085AAED /* LYQunZuViewController.m in Sources */,
+				264E77191E81B53700A02C6B /* LYWebViewContainer.m in Sources */,
 				26D044C41E729FB80018AF36 /* XMPPPing.m in Sources */,
 				268F952F1E7C500100317196 /* SnipUtil.m in Sources */,
 				26D044DA1E729FB80018AF36 /* DDTTYLogger.m in Sources */,

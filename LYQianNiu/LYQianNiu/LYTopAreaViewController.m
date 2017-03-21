@@ -7,18 +7,16 @@
 //
 
 #import "LYTopAreaViewController.h"
-
 @interface LYTopAreaViewController ()
 @property (weak) IBOutlet NSTextField *nameAndStatusTextField;//名字和在线状态
 @property (weak) IBOutlet NSTextField *mottoTextField;//签名(说说)
 @property (weak) IBOutlet NSButton *fileTransferBtn;//文件传输
 @property (weak) IBOutlet NSButton *addContactsBtn;//添加联系人
 @property (weak) IBOutlet NSButton *foldRightViewBtn;//右边视图折叠
-
 @end
 
 @implementation LYTopAreaViewController
-
+@synthesize foldRightWebViewBlock = _foldRightWebViewBlock;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -68,6 +66,25 @@
 }
 
 - (IBAction)foldRightViewBtnClicked:(id)sender {
+    NSButton *btn = sender;
+    BOOL shouldFold;
+    if ([btn.image.name isEqualToString:@"fold"]) {
+        btn.image = [NSImage imageNamed:@"unfold"];
+        shouldFold = YES;
+    } else {
+        btn.image = [NSImage imageNamed:@"fold"];
+        shouldFold = NO;
+    }
+    if (self.foldRightWebViewBlock) {
+        self.foldRightWebViewBlock(shouldFold);
+    }
 }
+
+- (void)setFoldRightWebViewBlock:(FoldRightWebViewBlock)foldRightWebViewBlock {
+    if (!foldRightWebViewBlock) return;
+    
+    _foldRightWebViewBlock = foldRightWebViewBlock;
+}
+
 
 @end

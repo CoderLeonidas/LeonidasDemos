@@ -23,7 +23,7 @@
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="1I0-xm-6RP">
                     <rect key="frame" x="11" y="16" width="48" height="48"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_photo_self" id="7DT-1h-BVc"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="login_photo_default" id="7DT-1h-BVc"/>
                     <connections>
                         <action selector="avatarViewClicked:" target="-2" id="ADi-4E-QGY"/>
                     </connections>
@@ -48,6 +48,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="login_photo_self" width="160" height="160"/>
+        <image name="login_photo_default" width="160" height="160"/>
     </resources>
 </document>

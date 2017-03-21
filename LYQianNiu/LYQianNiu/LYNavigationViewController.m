@@ -9,6 +9,8 @@
 #import "LYNavigationViewController.h"
 #import "CommonDef.h"
 #import "LYAvatarImageView.h"
+#import "NSColor+LY.h"
+
 @interface LYNavigationViewController ()
 @property (weak) IBOutlet NSView *avatarArea;
 @property (weak) IBOutlet NSButton *jinRiJieDaiBtn;
@@ -23,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: 调整背景色
+    
+    [LYTool changeBGColor:[NSColor colorWithR:79 G:159 B:217 Alpha:0.8] inView:self.view];
 }
 
 - (void)viewWillAppear {

@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef void(^FoldRightWebViewBlock)(BOOL shouldFold);
+
 @interface LYTopAreaViewController : NSViewController
 
+@property (nonatomic, copy) FoldRightWebViewBlock foldRightWebViewBlock;
+- (void)setFoldRightWebViewBlock:(FoldRightWebViewBlock)foldRightWebViewBlock;
 @end

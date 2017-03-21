@@ -8,7 +8,7 @@
 
 #import "LYRightViewContainer.h"
 #import "LYWelcomeView.h"
-
+#import "LYWebViewContainer.h"
 #import "LYTopAreaViewController.h"
 #import "LYChattingAreaViewController.h"
 
@@ -17,6 +17,8 @@
 @property (nonatomic, strong) LYTopAreaViewController *topAreaViewController;
 @property (nonatomic, strong) LYChattingAreaViewController *chattingAreaViewController;
 
+
+@property (nonatomic, strong) LYWebViewContainer *webViewContainer ;
 @end
 
 @implementation LYRightViewContainer
@@ -39,7 +41,6 @@
     CGFloat chattingAreaH = self.view.bounds.size.height - topAreaH;
     self.chattingAreaViewController.view.frame = NSMakeRect(0, 0, w, chattingAreaH);
     self.topAreaViewController.view.frame = NSMakeRect(0, chattingAreaH, w, topAreaH);
-    
     [self.view addSubview:self.chattingAreaViewController.view];
     [self.view addSubview:self.topAreaViewController.view];
 }
@@ -57,8 +58,36 @@
 - (LYTopAreaViewController*) topAreaViewController{
     if (!_topAreaViewController) {
         _topAreaViewController = [[LYTopAreaViewController alloc] init];
+        WS(weakSelf);
+        [_topAreaViewController setFoldRightWebViewBlock:^(BOOL shouldFold) {
+            [weakSelf foldRightWebView:shouldFold];
+        }];
     }
     return _topAreaViewController;
+}
+
+- (void)foldRightWebView:(BOOL)shouldFold {
+    CGFloat webViewW = 300;
+    if (shouldFold) {
+
+        
+        webViewW = -webViewW;
+    } else {
+    }
+    
+    CGFloat webViewH = self.view.frame.size.height;
+    CGFloat webViewX = self.view.frame.size.width - webViewW;
+    CGFloat webViewY = 0;
+    self.webViewContainer.view.frame = NSMakeRect(webViewX, webViewY, self.webViewContainer.view.frame.size.width + webViewW, webViewH);
+    if (![self.view.subviews containsObject:self.webViewContainer.view]) {
+        [self.view addSubview: self.webViewContainer.view];
+    }
+    
+    NSRect caFrame = self.chattingAreaViewController.view.frame;
+    NSRect taFrame = self.topAreaViewController.view.frame;
+    self.chattingAreaViewController.view.frame = (CGRect){caFrame.origin, {caFrame.size.width-webViewW,caFrame.size.height}};
+    self.topAreaViewController.view.frame = (CGRect){taFrame.origin, {taFrame.size.width-webViewW,taFrame.size.height}};
+    [self.view setNeedsLayout:YES];
 }
 
 
@@ -67,6 +96,13 @@
         _chattingAreaViewController = [[LYChattingAreaViewController alloc] init];
     }
     return _chattingAreaViewController;
+}
+
+- (LYWebViewContainer*) webViewContainer{
+    if (!_webViewContainer) {
+        _webViewContainer = [[LYWebViewContainer alloc] init];
+    }
+    return _webViewContainer;
 }
 
 @end
