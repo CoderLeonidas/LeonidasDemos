@@ -1,8 +1,8 @@
 //
 //  main.m
-//  testWindow
+//  多线程测试
 //
-//  Created by Leonidas on 2017/3/6.
+//  Created by Leonidas on 2017/4/6.
 //  Copyright © 2017年 Leon. All rights reserved.
 //
 

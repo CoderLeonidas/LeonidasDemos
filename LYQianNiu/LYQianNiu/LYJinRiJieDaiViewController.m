@@ -118,6 +118,10 @@
     return 40.0;
 }
 
+- (void)tableViewSelectionIsChanging:(NSNotification *)notification {
+    NSLog(@"tableViewSelectionIsChanging");
+}
+
 - (void)tableViewSelectionDidChange:(NSNotification *)notification {
     NSUInteger selectRowIndex =  self.tableView.selectedRow;
     XMPPUserCoreDataStorageObject *model = _dataSource[selectRowIndex];
